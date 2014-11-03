@@ -1,3 +1,15 @@
 A faire :
 
+-Classes de base : Plateau, Case, Joueur, MotherClass Peuple, chaque peuple qui herite de peuple, pouvoir en maman et chaque pouvoir qui herite de Pouvoir.
+
+-debut interface 4 panels (1 plateau, 1 case joueur, 1 pile de peuples, 1 résumé du tour)
+
+-on se base sur 3 joueurs POUR LE MOMENT
+
+-classe d'initialisation de plateu
+
+-classe de fin de partie
+
+-classe par phase de jeu : déploiement, combat .. 
+
 -
