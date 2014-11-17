@@ -1,0 +1,14 @@
+package view;
+
+import javax.swing.JFrame;
+
+public class Window extends JFrame{
+
+	private ConnectionPanel connection;
+	private MapPanel map;
+	private PlayerPanel player;
+	private StackPanel stack;
+	private InfoPanel info;
+	
+	
+}

@@ -1,0 +1,24 @@
+package view;
+
+import javax.swing.JFrame;
+
+public class Window extends JFrame
+{
+
+	private ConnectionPanel connection;
+	private MapPanel map;
+	private PlayerPanel player;
+	private StackPanel stack;
+	private InfoPanel info;
+	private int windowWidth;
+	private int windowHeight;
+	
+	public Window()
+	{
+		windowHeight=(int)getToolkit().getScreenSize().getHeight();
+		windowWidth=(int)getToolkit().getScreenSize().getWidth();
+		this.setsize(windowWidth,windowHeight);
+	}
+	
+	
+}

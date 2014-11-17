@@ -1,0 +1,22 @@
+!SESSION 2014-11-17 16:36:38.931 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-11-17 16:56:56.204
+!MESSAGE Failed to open search index.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-11-17 16:56:56.303
+!MESSAGE 'remote-models (http://download.eclipse.org/recommenders/models/kepler/, releases+snapshots)' did not send ETAG header for 'org.eclipse.recommenders:index:pom:0.0.0'.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-11-17 16:56:56.306
+!MESSAGE Couldn't download search index. No (direct) internet connection? Need a proxy?
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-11-17 16:56:56.308
+!MESSAGE Failed to open search index.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-11-17 18:16:37.289
+!MESSAGE Unable to update index for central|http://repo.maven.apache.org/maven2
