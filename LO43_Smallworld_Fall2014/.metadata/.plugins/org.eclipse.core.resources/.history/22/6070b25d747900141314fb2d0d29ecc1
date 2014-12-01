@@ -1,0 +1,47 @@
+package view;
+
+import javax.swing.JFrame;
+import net.miginfocom.swing.MigLayout;
+
+public class Window extends JFrame
+{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ConnectionPanel connection;
+	private MapPanel map;
+	private PlayerPanel player;
+	private StackPanel stack;
+	private InfoPanel info;
+	private int windowWidth;
+	private int windowHeight;
+	
+	public Window()
+	{
+		windowHeight=(int)getToolkit().getScreenSize().getHeight();
+		windowWidth=(int)getToolkit().getScreenSize().getWidth();
+		this.setSize(windowWidth,windowHeight);
+		
+		MigLayout layout = new MigLayout("fillx", "[right]rel[grow,fill]", "[]10[]");
+		this.setLayout(layout);
+		
+		connection=new ConnectionPanel();
+		map=new MapPanel();
+		stack=new StackPanel();
+		info= new InfoPanel();
+		player=new PlayerPanel();
+		
+		this.add(map,"span 6 5, grow");
+		this.add(stack,"span 2 5, grow, wrap");
+		this.add(player,"span 6 3, grow");
+		this.add(info,"span 2 3, grow");
+		
+		
+	}
+	
+}	
+
+
+

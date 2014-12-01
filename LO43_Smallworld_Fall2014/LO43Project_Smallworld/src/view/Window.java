@@ -6,6 +6,10 @@ import net.miginfocom.swing.MigLayout;
 public class Window extends JFrame
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ConnectionPanel connection;
 	private MapPanel map;
 	private PlayerPanel player;
@@ -20,7 +24,7 @@ public class Window extends JFrame
 		windowWidth=(int)getToolkit().getScreenSize().getWidth();
 		this.setSize(windowWidth,windowHeight);
 		
-		MigLayout layout = new MigLayout("fillx", "[right]rel[grow,fill]", "[]10[]");
+		MigLayout layout = new MigLayout("fill, gap 10px 10px");
 		this.setLayout(layout);
 		
 		connection=new ConnectionPanel();
@@ -29,13 +33,15 @@ public class Window extends JFrame
 		info= new InfoPanel();
 		player=new PlayerPanel();
 		
-		this.add("span 6 5",map);
-		this.add("span 2 5 wrap",stack);
-		this.add("span 6 3",player);
-		this.add("span 2 3",info);
+		this.add(map,"grow, span 6 5, top");
+		this.add(stack,"grow, span 2 5, top, wrap");
+		this.add(player,"grow, span 6 3, top");
+		this.add(info,"grow, span 2 3, top");
 		
 		
 	}
 	
-	
-}
+}	
+
+
+

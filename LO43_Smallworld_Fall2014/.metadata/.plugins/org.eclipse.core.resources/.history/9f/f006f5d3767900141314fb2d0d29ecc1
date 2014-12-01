@@ -1,0 +1,16 @@
+package view;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class MapPanel extends JPanel{
+	
+	private JButton test;
+	
+	public MapPanel()
+	{
+		test=new JButton();
+		this.add(test);
+	}
+
+}
