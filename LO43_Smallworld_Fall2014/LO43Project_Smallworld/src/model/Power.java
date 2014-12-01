@@ -8,4 +8,10 @@ public class Power {
 
   private Boolean decline;
 
+    public People power;
+    public Draw deckPow;
+
+  public Power() {
+  }
+
 }

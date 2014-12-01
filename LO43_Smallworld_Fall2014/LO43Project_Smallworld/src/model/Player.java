@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 public class Player {
 
   private Integer number;
@@ -10,7 +12,25 @@ public class Player {
 
   private Integer gold;
 
-  public void newOperation() {
+    public Turn player[];
+    public People activePpl;
+    public People declinePpl;
+    /**
+   * 
+   * @element-type Square
+   */
+  public Vector  conquierred;
+
+  public void choosePpl(People people) {
+  }
+
+  public void conquer() {
+  }
+
+  public void deploy() {
+  }
+
+  public Player() {
   }
 
 }

@@ -6,6 +6,13 @@ public class Board {
 
   private Integer nbPlayer;
 
-    public Vector  contient;
+    /**
+   * 
+   * @element-type Square
+   */
+  public Vector  squareTable[];
+
+  public Board() {
+  }
 
 }

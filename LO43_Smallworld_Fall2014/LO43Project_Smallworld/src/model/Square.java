@@ -12,6 +12,22 @@ public class Square {
 
   private Attribute specialAttribute;
 
-    public Vector  contient;
+    public Board squareTable[];
+    /**
+   * 
+   * @element-type Unit
+   */
+  public Vector  unitList[];
+    /**
+   * 
+   * @element-type Square
+   */
+  public Vector  adjacency[];
+    public Square adjacency[];
+    public Attribute specialAttribute;
+    public Player conquierred;
+
+  public Square() {
+  }
 
 }

@@ -8,4 +8,15 @@ public class Turn {
 
   private java.util.Vector players;
 
+    public Player player[];
+
+  public void nextPlayer() {
+  }
+
+  public void nextTurn() {
+  }
+
+  public Turn() {
+  }
+
 }

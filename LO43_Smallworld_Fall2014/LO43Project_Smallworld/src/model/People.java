@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 public class People {
 
   private String name;
@@ -8,16 +10,28 @@ public class People {
 
   private Integer pawnPlayed;
 
-  private Integer state;
+  private State state;
 
   private Integer gold;
 
   private Power power;
 
+    public Player activePpl;
+    public Player declinePpl;
+    public Power power;
+    public State state;
+    public Draw deckPpl;
+    public Draw availaible[];
+    /**
+   * 
+   * @element-type PplUnit
+   */
+  public Vector  people;
+
   public void newOperation() {
   }
 
-  public void newOperation() {
+  public People() {
   }
 
 }

@@ -4,4 +4,9 @@ public class Unit {
 
   private Integer atk;
 
+    public Square unitList[];
+
+  public Unit() {
+  }
+
 }
