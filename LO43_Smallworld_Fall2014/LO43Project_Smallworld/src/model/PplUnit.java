@@ -1,7 +1,9 @@
 package model;
 
-public class PplUnit extends Dynamic {
+public class PplUnit extends Dynamic { //OK
 
-    public People people;
+		//attribute
+    private People people;
 
+    	//method
 }

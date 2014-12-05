@@ -4,11 +4,11 @@ public class Turn { //OK
 	
 	// attribute
 
-  private Integer number;
+  private int number;
 
-  private Integer maxNumber;
+  private int maxNumber;
 
-  private Integer activePlayer;
+  private int activePlayer;
 
   private Player player;
   

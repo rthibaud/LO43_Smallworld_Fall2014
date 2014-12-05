@@ -1,13 +1,13 @@
 package model;
 
-public class Unit {
+public class Unit {//OK
 
-  private Integer def;
+	//attribute
+  private int def;
 
-  private Integer atk;
+  private int atk;
 
-    public Square unitList;
-
+  	//method
   public Unit() {
   }
 

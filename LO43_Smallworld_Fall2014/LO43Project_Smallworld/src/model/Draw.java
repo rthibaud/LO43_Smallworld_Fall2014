@@ -2,26 +2,20 @@ package model;
 
 import java.util.Vector;
 
-public class Draw {
+public class Draw { //OK
 
-    /**
-   * 
-   * @element-type People
-   */
-  public Vector <People>  deckPpl;
-    /**
-   * 
-   * @element-type Power
-   */
-  public Vector <Power> deckPow;
-    /**
-   * 
-   * @element-type People
-   */
-  public Vector <People>  availaible;
+	//attribute
+   
+  private Vector <People>  deckPpl;
 
-  public People draw(Integer number) {
-  return null;
+  private Vector <Power> deckPow;
+   
+  private Vector <People>  availaible;
+
+  	//method
+  
+  public People draw(int number) {
+	  return null;
   }
 
   public void newOperation() {

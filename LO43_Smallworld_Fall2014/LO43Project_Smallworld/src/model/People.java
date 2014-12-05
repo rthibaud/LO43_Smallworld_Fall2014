@@ -2,25 +2,24 @@ package model;
 
 import java.util.Vector;
 
-public class People {
+public class People {//OK
 
+	//attribute
   private String name;
 
-  private Integer number;
+  private int number;
 
-  private Integer maxPawn;
+  private int maxPawn;
 
-  private Integer pawnPlayed;
+  private int pawnPlayed;
 
-  private Integer gold;
+  private int gold;
 
-    public Player activePpl;
-    public Player declinePpl;
-    public Power power;
-    public State state;
-    public Draw deckPpl;
-    public Draw availaible[];
-
+  private Power power;
+  
+  private State state;
+  
+  	//method
   public Vector <PplUnit>  people;
 
   public void newOperation() {

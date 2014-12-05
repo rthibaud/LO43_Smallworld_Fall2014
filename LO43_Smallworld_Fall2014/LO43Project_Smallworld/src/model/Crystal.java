@@ -1,4 +1,4 @@
 package model;
 
-public class Crystal extends Attribute {
+public class Crystal extends Attribute { //OK
 }

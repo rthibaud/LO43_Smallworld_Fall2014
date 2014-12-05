@@ -1,13 +1,11 @@
 package model;
 
-public enum State {
+public enum State { //OK
 
   active,
 
   inDecline,
 
   draw;
-
-    public People state;
 
 }

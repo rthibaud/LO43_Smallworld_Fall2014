@@ -2,24 +2,18 @@ package model;
 
 import java.util.Vector;
 
-public class Square {
+public class Square { //OK
 
-  private Integer number;
+	//attribute
+  private int number;
 
   private Attribute specialAttribute;
 
-    public Board squareTable;
-    /**
-   * 
-   * @element-type Unit
-   */
-  public Vector  unitList;
-    /**
-   * 
-   * @element-type Square
-   */
-  public Vector <Square>  adjacency;
-
+  private Vector <Unit>  unitList;
+   
+  private Vector <Square>  adjacency;
+  
+  	//method
   public Square() {
   }
 

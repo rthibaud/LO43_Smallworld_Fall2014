@@ -2,11 +2,15 @@ package model;
 
 import java.util.Vector;
 
-public class Board {
+public class Board { //OK
 
-  private Integer nbPlayer;
+	//attribute
+	
+  private int nbPlayer;
 
-  public Vector <Square>  squareTable;
+  private Vector <Square>  squareTable;
+  
+  	//method
 
   public Board() {
   }

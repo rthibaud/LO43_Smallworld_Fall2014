@@ -1,19 +1,18 @@
 package model;
 
-import java.util.Vector;
-
 public class Player { //OK
 
 	//attribute
 	
-  private Integer number;
+  private int number;
 
   private String name;
 
-  private Integer gold;
-
-    private People activePpl;
-    private People declinePpl;
+  private int gold;
+    
+  private People activePpl;
+    
+  private People declinePpl;
  
     // method
 

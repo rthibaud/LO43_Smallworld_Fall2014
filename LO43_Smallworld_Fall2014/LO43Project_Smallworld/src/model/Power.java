@@ -1,18 +1,17 @@
 package model;
 
-public class Power {
+public class Power { //OK
 
+	//attribute
   private String name;
 
-  private Integer number;
+  private int number;
 
-  private Integer maxPawn;
+  private int maxPawn;
 
   private Boolean decline;
 
-    public People power;
-    public Draw deckPow;
-
+  	//method
   public Power() {
   }
 

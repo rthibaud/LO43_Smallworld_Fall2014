@@ -1,9 +1,13 @@
 package model;
 
-public class Dynamic extends Unit {
+public class Dynamic extends Unit { //OK
 
-    public Player player;
+	//attribute
+	
+    private Player player;
 
+    //method
+    
   public Dynamic() {
   }
 

@@ -1,14 +1,12 @@
 package model;
 
-import java.util.Vector;
-
-public class Attribute {
+public class Attribute { //OK
 	
 	//attribute
 
   private String name;
 
-  private Integer number;
+  private int number;
   
    //method
 
