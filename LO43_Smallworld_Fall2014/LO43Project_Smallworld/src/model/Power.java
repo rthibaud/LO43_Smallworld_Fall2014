@@ -1,3 +1,5 @@
+package model;
+
 public class Power {
 
   private String name;

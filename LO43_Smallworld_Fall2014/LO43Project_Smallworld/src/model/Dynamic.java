@@ -1,6 +1,8 @@
+package model;
+
 public class Dynamic extends Unit {
 
-  private Player player;
+    public Player player;
 
   public Dynamic() {
   }

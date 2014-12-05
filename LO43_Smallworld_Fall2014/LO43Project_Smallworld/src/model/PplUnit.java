@@ -1,6 +1,6 @@
-public class PplUnit extends Dynamic {
+package model;
 
-  private People people;
+public class PplUnit extends Dynamic {
 
     public People people;
 

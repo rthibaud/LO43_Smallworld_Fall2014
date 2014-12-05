@@ -1,3 +1,5 @@
+package model;
+
 import java.util.Vector;
 
 public class People {
@@ -10,11 +12,7 @@ public class People {
 
   private Integer pawnPlayed;
 
-  private State state;
-
   private Integer gold;
-
-  private Power power;
 
     public Player activePpl;
     public Player declinePpl;
@@ -22,11 +20,8 @@ public class People {
     public State state;
     public Draw deckPpl;
     public Draw availaible[];
-    /**
-   * 
-   * @element-type PplUnit
-   */
-  public Vector  people;
+
+  public Vector <PplUnit>  people;
 
   public void newOperation() {
   }

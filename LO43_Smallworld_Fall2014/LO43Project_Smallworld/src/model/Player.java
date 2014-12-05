@@ -1,25 +1,21 @@
+package model;
+
 import java.util.Vector;
 
-public class Player {
+public class Player { //OK
 
+	//attribute
+	
   private Integer number;
 
   private String name;
 
-  private People activePpl;
-
-  private People declinePpl;
-
   private Integer gold;
 
-    public Turn player[];
-    public People activePpl;
-    public People declinePpl;
-    /**
-   * 
-   * @element-type Square
-   */
-  public Vector  conquierred;
+    private People activePpl;
+    private People declinePpl;
+ 
+    // method
 
   public void choosePpl(People people) {
   }

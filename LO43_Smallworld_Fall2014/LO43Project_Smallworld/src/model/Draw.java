@@ -1,28 +1,24 @@
+package model;
+
 import java.util.Vector;
 
 public class Draw {
 
-  private People deckPpl;
-
-  private Power deckPow;
-
-  private People availaible;
-
     /**
    * 
    * @element-type People
    */
-  public Vector  deckPpl;
+  public Vector <People>  deckPpl;
     /**
    * 
    * @element-type Power
    */
-  public Vector  deckPow;
+  public Vector <Power> deckPow;
     /**
    * 
    * @element-type People
    */
-  public Vector  availaible[];
+  public Vector <People>  availaible;
 
   public People draw(Integer number) {
   return null;

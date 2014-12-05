@@ -1,4 +1,8 @@
-public class Turn {
+package model;
+
+public class Turn { //OK
+	
+	// attribute
 
   private Integer number;
 
@@ -6,9 +10,9 @@ public class Turn {
 
   private Integer activePlayer;
 
-  private java.util.Vector players;
-
-    public Player player[];
+  private Player player;
+  
+  	// method
 
   public void nextPlayer() {
   }
