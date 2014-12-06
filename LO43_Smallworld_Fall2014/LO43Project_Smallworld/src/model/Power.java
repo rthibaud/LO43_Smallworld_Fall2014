@@ -13,6 +13,10 @@ public class Power { //OK
 
   	//method
   public Power() {
+	  name="";
+	  number=0;
+	  maxPawn=0;
+	  decline=false;
   }
 
 }

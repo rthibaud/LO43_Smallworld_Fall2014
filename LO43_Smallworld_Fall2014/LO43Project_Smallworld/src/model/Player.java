@@ -16,7 +16,10 @@ public class Player { //OK
  
     // method
 
+  
   public void choosePpl(People people) {
+	  declinePpl=activePpl;
+	  activePpl=people;
   }
 
   public void conquer() {
@@ -26,6 +29,18 @@ public class Player { //OK
   }
 
   public Player() {
+	  this.number=0;
+	  this.name="player";
+	  this.gold=5;
+	  activePpl=null;
+	  declinePpl=null;
   }
-
+  
+ public Player(String name, int number) {
+	  this.number=number;
+	  this.name=name;
+	  this.gold=5;
+	  activePpl=null;
+	  declinePpl=null;
+  }
 }

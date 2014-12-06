@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Vector;
+
 public class Turn { //OK
 	
 	// attribute
@@ -10,11 +12,12 @@ public class Turn { //OK
 
   private int activePlayer;
 
-  private Player player;
+  private Vector <Player> players;
   
   	// method
 
   public void nextPlayer() {
+	  activePlayer=activePlayer+1;
   }
 
   public void nextTurn() {
