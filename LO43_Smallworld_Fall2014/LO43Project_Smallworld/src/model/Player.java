@@ -16,10 +16,14 @@ public class Player { //OK
  
     // method
 
+<<<<<<< HEAD
   
   public void choosePpl(People people) {
 	  declinePpl=activePpl;
 	  activePpl=people;
+=======
+  public void choosePpl(People people) { //same than addActivePeople ???
+>>>>>>> origin/master
   }
 
   public void conquer() {
@@ -43,4 +47,18 @@ public class Player { //OK
 	  activePpl=null;
 	  declinePpl=null;
   }
+<<<<<<< HEAD
 }
+=======
+
+  public void addGold(int gold){
+	  gold+=gold;
+  }
+  
+  public void addActivePeople(People ppl){ // add gold, reset gold and add new activePeople
+	 addGold(ppl.getGold());
+	 ppl.setGold(0);
+	 activePpl=ppl;
+  }
+  }
+>>>>>>> origin/master
