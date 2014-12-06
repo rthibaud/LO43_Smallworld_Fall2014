@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Vector;
-
 public class People {//OK
 
 	//attribute
@@ -19,12 +17,6 @@ public class People {//OK
   
   private State state;
   
-<<<<<<< HEAD
-  private Vector <PplUnit>  people;
-  
-  
-  	//method
-=======
   //getters and setters
   
     public int getGold() {
@@ -43,7 +35,6 @@ public class People {//OK
 	  
 	  power = pow;
 	}
->>>>>>> origin/master
 
   public People() {
 	  name="";
@@ -53,9 +44,7 @@ public class People {//OK
 	  gold=0;
 	  power=null;
 	  state=State.draw;
-	  for (int i=0; i<maxPawn; i++){
-		  people.add(new PplUnit());
-	  }
+	  
   }
   
   public People(String name, int number, int max, Power pow) {
@@ -66,9 +55,6 @@ public class People {//OK
 	  gold=0;
 	  power=pow;
 	  state=State.draw;
-	  for (int i=0; i<maxPawn; i++){
-		  people.add(new PplUnit());
-	  }
   }
 
 }

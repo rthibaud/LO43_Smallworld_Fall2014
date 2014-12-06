@@ -16,14 +16,13 @@ public class Player { //OK
  
     // method
 
-<<<<<<< HEAD
+
   
-  public void choosePpl(People people) {
+  public void choosePpl(People people) { // Need modifications I think (Romain Dulieu)
 	  declinePpl=activePpl;
 	  activePpl=people;
-=======
-  public void choosePpl(People people) { //same than addActivePeople ???
->>>>>>> origin/master
+
+
   }
 
   public void conquer() {
@@ -47,9 +46,6 @@ public class Player { //OK
 	  activePpl=null;
 	  declinePpl=null;
   }
-<<<<<<< HEAD
-}
-=======
 
   public void addGold(int gold){
 	  gold+=gold;
@@ -60,5 +56,5 @@ public class Player { //OK
 	 ppl.setGold(0);
 	 activePpl=ppl;
   }
-  }
->>>>>>> origin/master
+}
+
