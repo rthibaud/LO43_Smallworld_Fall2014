@@ -16,7 +16,7 @@ public class Player { //OK
  
     // method
 
-  public void choosePpl(People people) {
+  public void choosePpl(People people) { //same than addActivePeople ???
   }
 
   public void conquer() {
@@ -28,4 +28,13 @@ public class Player { //OK
   public Player() {
   }
 
-}
+  public void addGold(int gold){
+	  gold+=gold;
+  }
+  
+  public void addActivePeople(People ppl){ // add gold, reset gold and add new activePeople
+	 addGold(ppl.getGold());
+	 ppl.setGold(0);
+	 activePpl=ppl;
+  }
+  }

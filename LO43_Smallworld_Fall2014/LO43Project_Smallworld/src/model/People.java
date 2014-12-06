@@ -19,11 +19,24 @@ public class People {//OK
   
   private State state;
   
-  	//method
-  public Vector <PplUnit>  people;
+  //getters and setters
+  
+    public int getGold() {
+		return gold;
+	}
 
-  public void newOperation() {
-  }
+	public void setGold(int gold) {
+		this.gold = gold;
+	}
+  
+  	//method
+
+ 
+
+	public void linkPower(Power pow) { // equivalent to setPower, a classic setter
+	  
+	  power = pow;
+	}
 
   public People() {
   }
