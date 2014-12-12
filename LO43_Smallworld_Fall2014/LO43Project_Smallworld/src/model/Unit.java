@@ -7,8 +7,16 @@ public class Unit {//OK
 
   private int atk;
 
-  	//method
+  	//constructors
   public Unit() {
+	  def = 0;
+	  atk = 0;
   }
 
+	public Unit(int def, int atk) {
+		this.def = def;
+		this.atk = atk;
+	}
+  
+  	//method
 }

@@ -62,7 +62,32 @@ public class Draw { //OK
    Before remove it from the list, link it with the next element in the power deck. */
   public People drawDeck(){
 	  
-	  deckPpl.getFirst().linkPower(removePow()); 
+	  deckPpl.getFirst().setPower(removePow()); 
 	  return removePpl();
+  }
+  
+  // replace all elements in the deck in a random order 
+  public void shufflePeople(){
+	  
+  }
+  
+  // replace all elements in the deck in a random order 
+  public void shufflePower(){
+	  
+  }  
+  
+  // replace in the decks all available "combinaison" of power/people
+  public void clearAvailable(){
+	  People tmp = new People();
+	  
+	  while(!available.isEmpty()){
+		  tmp=available.remove(0);
+		  addPow(tmp.getPower());
+		  tmp.setPower(null);
+		  addPpl(tmp);
+	  }
+	  
+	  shufflePeople();
+	  shufflePower();
   }
 }

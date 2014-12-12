@@ -10,7 +10,7 @@ public class Board { //OK
 
   private Vector <Square>  squareTable;
   
-  	//method
+  	// Constructor
 
   public Board() {
 	  nbPlayer = 0;
@@ -22,5 +22,7 @@ public class Board { //OK
 	  // if we have time we can add several boards in function of the number of player
 	  squareTable = new Vector <Square>();
   }
+  
+  	//method
 
 }

@@ -11,7 +11,8 @@ public class Power { //OK
 
   private Boolean decline;
 
-  	//method
+  //Constructors
+  	
   public Power() {
 	  name="";
 	  number=0;
@@ -19,4 +20,14 @@ public class Power { //OK
 	  decline=false;
   }
 
+
+  public Power(String name, int number, int maxPawn) {
+	this.name = name;
+	this.number = number;
+	this.maxPawn = maxPawn;
+	this.decline = false;
+  }
+  	
+  
+  	//method
 }

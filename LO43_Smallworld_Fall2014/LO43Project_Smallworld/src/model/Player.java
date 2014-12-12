@@ -13,24 +13,9 @@ public class Player { //OK
   private People activePpl;
     
   private People declinePpl;
- 
-    // method
-
-
   
-  public void choosePpl(People people) { // Need modifications I think (Romain Dulieu)
-	  declinePpl=activePpl;
-	  activePpl=people;
-
-
-  }
-
-  public void conquer() {
-  }
-
-  public void deploy() {
-  }
-
+  	//constructors 
+  
   public Player() {
 	  this.number=0;
 	  this.name="player";
@@ -46,15 +31,35 @@ public class Player { //OK
 	  activePpl=null;
 	  declinePpl=null;
   }
+ 
+    // method
+
+
+  
+  /*public void choosePpl(People people) { // Need modifications I think (Romain Dulieu) -> I merged choosePpl and addActivePeople 
+	  declinePpl=activePpl;
+	  activePpl=people;
+  }*/
+  
+  public void addActivePeople(People ppl){ // add gold, reset gold and add new activePeople -> switch activePpl to declinePpl
+	 addGold(ppl.getGold());
+	 ppl.setGold(0);
+	 declinePpl=activePpl;
+	 activePpl=ppl;
+  }
+
+  public void conquer() {
+  }
+
+  public void deploy() {
+  }
+
+
 
   public void addGold(int gold){
 	  gold+=gold;
   }
   
-  public void addActivePeople(People ppl){ // add gold, reset gold and add new activePeople
-	 addGold(ppl.getGold());
-	 ppl.setGold(0);
-	 activePpl=ppl;
-  }
+
 }
 

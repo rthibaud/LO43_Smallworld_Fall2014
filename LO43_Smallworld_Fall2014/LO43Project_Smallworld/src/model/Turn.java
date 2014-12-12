@@ -14,6 +14,21 @@ public class Turn { //OK
 
   private Vector <Player> players;
   
+  	//Constructors
+  public Turn(){
+	  number = 0;
+	  maxNumber = 0;
+	  activePlayer = 0;
+	  players = new Vector <Player>();
+  }
+  
+  public Turn(int pnumber, int pmaxNumber, int pactivePlayer){
+	  number = pnumber;
+	  maxNumber = pmaxNumber;
+	  activePlayer = pactivePlayer;
+	  players = new Vector <Player>();
+  }
+  
   	// method
 
   public void nextPlayer() {
@@ -23,7 +38,5 @@ public class Turn { //OK
   public void nextTurn() {
   }
 
-  public Turn() {
-  }
 
 }

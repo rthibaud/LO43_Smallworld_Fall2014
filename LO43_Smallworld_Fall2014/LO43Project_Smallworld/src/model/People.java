@@ -26,15 +26,20 @@ public class People {//OK
 	public void setGold(int gold) {
 		this.gold = gold;
 	}
+	
+	public Power getPower() {
+		return power;
+	}
+
+	public void setPower(Power power) {
+		this.power = power;
+	}
   
   	//method
 
  
 
-	public void linkPower(Power pow) { // equivalent to setPower, a classic setter
-	  
-	  power = pow;
-	}
+
 
   public People() {
 	  name="";
