@@ -29,6 +29,24 @@ public class Turn { //OK
 	  players = new Vector <Player>();
   }
   
+  public Turn(int nbPlayers){
+	  players=new Vector<Player>(nbPlayers);
+	  for (Player p : players){
+		  p = new Player(players.indexOf(p)+1);
+	  }
+	  switch(nbPlayers){
+	  	case 2: maxNumber = 8;
+	  		break;
+	  	case 3 : maxNumber = 8;
+	  		break;
+	  	case 4 : maxNumber = 9;
+	  		break;
+	  	case 5 : maxNumber = 10;
+	  		break;
+		  
+	  }
+  }
+  
   	// method
 
   public void nextPlayer() {
@@ -36,6 +54,7 @@ public class Turn { //OK
   }
 
   public void nextTurn() {
+	  	number=number+1;
   }
 
 

@@ -9,6 +9,8 @@ public class Application {
 	{
 		win=new Window();
 		win.setVisible(true);
+		
+		NbPlayersWindow nbplay = new NbPlayersWindow();
 	}
 	public static void main(String [] args)
 	{
