@@ -1,5 +1,7 @@
 package model;
 
+import view.*;
+
 public class Player { //OK
 
 	//attribute
@@ -24,6 +26,16 @@ public class Player { //OK
 	  declinePpl=null;
   }
   
+  public Player(int i) {
+	  this.number=i;
+	  gold = 5;
+	  activePpl=null;
+	  declinePpl=null;
+	  
+	  NewPlayerWindow playerWin = new NewPlayerWindow(i);
+	  playerWin.setVisible(true);
+  }
+
  public Player(String name, int number) {
 	  this.number=number;
 	  this.name=name;
@@ -41,7 +53,8 @@ public class Player { //OK
 	  activePpl=people;
   }*/
   
-  public void addActivePeople(People ppl){ // add gold, reset gold and add new activePeople -> switch activePpl to declinePpl
+
+public void addActivePeople(People ppl){ // add gold, reset gold and add new activePeople -> switch activePpl to declinePpl
 	 addGold(ppl.getGold());
 	 ppl.setGold(0);
 	 declinePpl=activePpl;
