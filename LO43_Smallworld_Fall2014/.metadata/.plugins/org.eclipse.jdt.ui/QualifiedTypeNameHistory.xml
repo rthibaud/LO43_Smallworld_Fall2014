@@ -2,11 +2,14 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="view.ConnectionPanel"/>
-<fullyQualifiedTypeName name="view.MapPanel"/>
 <fullyQualifiedTypeName name="view.StackPanel"/>
 <fullyQualifiedTypeName name="view.InfoPanel"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
 <fullyQualifiedTypeName name="view.PlayerPanel"/>
 <fullyQualifiedTypeName name="view.Window"/>
 <fullyQualifiedTypeName name="model.Application"/>
+<fullyQualifiedTypeName name="view.MapPanel"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
 </qualifiedTypeNameHistroy>
