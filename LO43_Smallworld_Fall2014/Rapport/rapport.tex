@@ -1,73 +1,89 @@
 \documentclass[11pt]{report}
 
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+
 \title{ Projet LO43 : SmallUTBM}
 \author{Salomé \bsc{Welche} \& Romain \bsc{Dulieu} \& Haocheng \bsc{Xu} \& Romain \bsc{Thibaud}}
 \date{Automne 2014}
 
-\renewcommand{\contentsname}{Votre nouveau titre}
+\renewcommand{\contentsname}{Sommaire}
 
 \begin{document}
 
-	\maketitle{}
+\maketitle
 
-	\tableofcontents
+\tableofcontents
 
-	\chapter{Introduction}
+\chapter{Introduction}
 
-	\chapter{Le jeu : Smallworld}
+C'est dans le cadre de nos études à l'UTBM (Université de Technologie de Belfort-Montbéliard) que nous avons été ammenés à dévelloper une adaptation du jeu de plateau Smallworld\up{\copyright}. L'objectif du cours était d'introduire la programmation orientée objet grâce aux deux languages qui en sont les fers de lances, à savoir le C++ et le Java. C'est en Java que ce logiciel doit être programmé. 
 
-		\section{Description globale}
+Dans un premier temps, nous nous devons de bien assimiller les règles et les subtilités du jeu afin de pouvoir les traduire en language informatique. De plus, une bonne compréhension de ces dernières est nécessaire pour pouvoir les adapter au mieux à l'univers qu'est l'UTBM. En effet, l'objectif est d'offrir une expérience pensé autour de ce qu'est la vie à l'UTBM.
 
-		\section{Règles du jeu}
+Une fois cette première phase terminée, il est nécessaire d'effectuer une analyse technique et profonde du logiciel. Il est important d'effectuer cette expertise en amont pour faciliter l'implementation future. Cette étape repose sur analyse UML mais aussi une réflexion autour de l'organisation du programme et des outils utilisés.
 
-	\chapter{Adaptation des règles}
+Enfin, nous entamons la phase de production. L'ensemble des tâches à effectuer est hiérarchisé afin de rendre une application la plus aboutie possible dans le temps impartit.
 
-		\section{Ambiance recherchée}
+\chapter{Le jeu : Smallworld}
 
-		\section{Les peuples}
+	\section{Description globale}
+		Smallworld\up{\copyright} est jeu de plateau se jouant de 2 à 5 joueurs. C'est un jeu de stratégie militaire au tour par tour à la manière d'un Risk\up{\copyright}. L'originalité du jeu repose sur le fait que le plateau semble trop petit pour tout les joueurs et les unités trop peu nombreuses pour anéantir nos adversaire. Toute la subtilité repose alors sur la gestion d'un peuple de son avénement à lextinction de ce dernier en passant bien entendu par son âge d'or. L'objectif est donc de gérer un peuple et de décider quand un est-ce qu'il n'est plus rentable. On décide alors de le mettre en déclin et ensuite de choisir un nouveau peuple pour jouer avec. 
+		
+		Cette mécanique de jeu, qui demande au joueur d'être pragmatique, est amplifié par une faible présence d'aléatoire dans les phases de combatts. Au contraire de Risk\up{\copyright}, où il y a lancé de dé à chaque combat, le rapport de force s'effectue sur le nombre d'unité en présence, pour prendre un territoire adverse, il faut attaquer avec plus d'unité que la défense. Il y a cependant deux execptions : lors de la dernière bataille d'un joueur il peut jeter un dé de renfort ou en ca de pouvoir spécial (qui sera détaillé plus tard).
+		
+		Bien que la stratégie de conquête soit au centre du gameplay, l'objectif n'est pas d'exterminer tous nos compagnons de jeu. La fin de la partie est déterminée par un nombre de tour par joueur. Le vainqueur étant celui qui a accumulé le plus de points de victoire. Ces mêmes points de victoire servant de monnaie durant la partie, il faut alors savoir évaluer la rentabilité de chaque coup. 
+	\section{Règles du jeu}
 
-		\section{Les pouvoirs}
+\chapter{Adaptation des règles}
 
-	\chapter{Analyse des problèmes}
+	\section{Ambiance recherchée}
 
-		\section{Organisation globale du logiciel}
+	\section{Les peuples}
 
-			\subsection{Gestion du projet}
+	\section{Les pouvoirs}
 
-			\subsection{Structure du logiciel}
+\chapter{Analyse des problèmes}
 
-		\section{Le diagramme de cas d'utilisation}
+	\section{Organisation globale du logiciel}
 
-		\section{Les diagrammes de séquence}
+		\subsection{Gestion du projet}
 
-			\subsection{Conquête}
+		\subsection{Structure du logiciel}
 
-			\subsection{Déclin}
+	\section{Le diagramme de cas d'utilisation}
 
-			\subsection{Nouveau peuple}
+	\section{Les diagrammes de séquence}
 
-			\subsection{Gestion des points}
+		\subsection{Conquête}
 
-		\section{Les diagrammes état-transistion}
+		\subsection{Déclin}
 
-	\chapter{Le modèle}
+		\subsection{Nouveau peuple}
 
-		\section{Le diagramme de classe du modèle}
+		\subsection{Gestion des points}
 
-		\section{Implémentation}
+	\section{Les diagrammes état-transistion}
 
-	\chapter{L'interface}
+\chapter{Le modèle}
 
-		\section{Description et organisation}
+	\section{Le diagramme de classe du modèle}
 
-		\section{Solutions techniques}
+	\section{Implémentation}
 
-	\chapter{Prévisionnel des tâches}
+\chapter{L'interface}
 
-		\section{Fonctionnement général}
+	\section{Description et organisation}
 
-		\section{Interface}
+	\section{Solutions techniques}
 
-	\chapter{Conclusion}
+\chapter{Prévisionnel des tâches}
+
+	\section{Fonctionnement général}
+
+	\section{Interface}
+
+\chapter{Conclusion}
 
 \end{document}
