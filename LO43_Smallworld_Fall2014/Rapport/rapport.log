@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.18)  19 DEC 2014 19:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.18)  19 DEC 2014 19:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -424,7 +424,7 @@ Chapitre 2.
 ] [5]
 Chapitre 3.
 
-Overfull \hbox (15.56992pt too wide) in paragraph at lines 46--47
+Overfull \hbox (15.56992pt too wide) in paragraph at lines 45--46
 []\T1/cmr/m/n/10.95 L'objectif étant seule-ment d'adap-ter l'uni-vers heroic-fa
 ntasy du Smallworld[]
  []
@@ -439,26 +439,26 @@ Chapitre 4.
 File: CasDutilisationPrincipal.png Graphic file (type png)
 
 <use CasDutilisationPrincipal.png>
-Package pdftex.def Info: CasDutilisationPrincipal.png used on input line 129.
+Package pdftex.def Info: CasDutilisationPrincipal.png used on input line 128.
 (pdftex.def)             Requested size: 369.88582pt x 180.69261pt.
 
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 129--130
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 128--129
  [][] 
  []
 
 [11 <./CasDutilisationPrincipal.png>]
-<Tour.png, id=55, 1244.65pt x 695.59875pt>
+<Tour.png, id=55, 602.25pt x 191.21437pt>
 File: Tour.png Graphic file (type png)
  <use Tour.png>
-Package pdftex.def Info: Tour.png used on input line 146.
-(pdftex.def)             Requested size: 369.88582pt x 206.71765pt.
+Package pdftex.def Info: Tour.png used on input line 145.
+(pdftex.def)             Requested size: 369.88582pt x 117.44295pt.
 
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 146--147
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 145--146
  [][] 
  []
 
 
-Overfull \hbox (3.73425pt too wide) in paragraph at lines 150--154
+Overfull \hbox (3.73425pt too wide) in paragraph at lines 149--153
 []\T1/cmr/m/n/10.95 Quand un joueur dé-marre un nou-veau tour nous com-men-çons
  tout d'abord
  []
@@ -467,43 +467,47 @@ Overfull \hbox (3.73425pt too wide) in paragraph at lines 150--154
 File: Conquetesequence.png Graphic file (type png)
 
 <use Conquetesequence.png>
-Package pdftex.def Info: Conquetesequence.png used on input line 162.
-(pdftex.def)             Requested size: 369.88582pt x 171.63646pt.
+Package pdftex.def Info: Conquetesequence.png used on input line 161.
+(pdftex.def)             Requested size: 426.79134pt x 198.04839pt.
 
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 162--163
+Overfull \hbox (66.79134pt too wide) in paragraph at lines 161--162
+ [][] 
+ []
+
+<Declinsequence.png, id=62, 563.85657pt x 449.42906pt>
+File: Declinsequence.png Graphic file (type png)
+
+<use Declinsequence.png>
+Package pdftex.def Info: Declinsequence.png used on input line 169.
+(pdftex.def)             Requested size: 369.88582pt x 294.82736pt.
+
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 169--170
  [][] 
  []
 
 [13 <./Conquetesequence.png>]
-<Declinsequence.png, id=66, 1041.8925pt x 883.3pt>
-File: Declinsequence.png Graphic file (type png)
- <use Declinsequence.png>
-Package pdftex.def Info: Declinsequence.png used on input line 170.
-(pdftex.def)             Requested size: 369.88582pt x 313.58043pt.
-
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 170--171
- [][] 
- []
-
-[14 <./Declinsequence.png>]
-<NouveauPeuplesequence.png, id=71, 1033.8625pt x 704.6325pt>
+<NouveauPeuplesequence.png, id=67, 1033.8625pt x 704.6325pt>
 File: NouveauPeuplesequence.png Graphic file (type png)
 
 <use NouveauPeuplesequence.png>
-Package pdftex.def Info: NouveauPeuplesequence.png used on input line 179.
-(pdftex.def)             Requested size: 369.88582pt x 252.09775pt.
+Package pdftex.def Info: NouveauPeuplesequence.png used on input line 178.
+(pdftex.def)             Requested size: 426.79134pt x 290.87953pt.
 
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 179--180
+Overfull \hbox (66.79134pt too wide) in paragraph at lines 178--179
  [][] 
  []
 
-<Pointssequence.png, id=72, 1178.4025pt x 642.4pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14 <./Declinsequence.png>] <Pointssequence.png, id=72, 1178.4025pt x 642.4pt>
 File: Pointssequence.png Graphic file (type png)
- <use Pointssequence.png>
-Package pdftex.def Info: Pointssequence.png used on input line 187.
+
+<use Pointssequence.png>
+Package pdftex.def Info: Pointssequence.png used on input line 186.
 (pdftex.def)             Requested size: 369.88582pt x 201.64151pt.
 
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 187--188
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 186--187
  [][] 
  []
 
@@ -515,10 +519,10 @@ Chapitre 5.
 <Game.png, id=81, 952.30782pt x 456.20438pt>
 File: Game.png Graphic file (type png)
  <use Game.png>
-Package pdftex.def Info: Game.png used on input line 205.
-(pdftex.def)             Requested size: 369.88582pt x 177.19502pt.
+Package pdftex.def Info: Game.png used on input line 204.
+(pdftex.def)             Requested size: 426.79134pt x 204.45473pt.
 
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 205--206
+Overfull \hbox (66.79134pt too wide) in paragraph at lines 204--205
  [][] 
  []
 
@@ -527,13 +531,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17
 
-] <Board.png, id=85, 1980.64969pt x 1477.77094pt>
+] <Board.png, id=85, 786.68906pt x 339.51843pt>
 File: Board.png Graphic file (type png)
  <use Board.png>
-Package pdftex.def Info: Board.png used on input line 229.
-(pdftex.def)             Requested size: 369.88582pt x 275.95392pt.
+Package pdftex.def Info: Board.png used on input line 228.
+(pdftex.def)             Requested size: 426.79134pt x 184.1972pt.
 
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 229--230
+Overfull \hbox (66.79134pt too wide) in paragraph at lines 228--229
  [][] 
  []
 
@@ -556,7 +560,7 @@ Chapitre 8.
 Here is how much of TeX's memory you used:
  2857 strings out of 493304
  38238 string characters out of 6139870
- 103772 words of memory out of 5000000
+ 102772 words of memory out of 5000000
  6264 multiletter control sequences out of 15000+600000
  17910 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -572,7 +576,7 @@ c1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/shar
 e/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/
 public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
 1728.pfb>
-Output written on rapport.pdf (26 pages, 347911 bytes).
+Output written on rapport.pdf (26 pages, 311455 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  97 compressed objects within 1 object stream
