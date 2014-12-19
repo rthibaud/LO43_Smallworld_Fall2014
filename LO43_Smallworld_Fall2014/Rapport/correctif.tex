@@ -1,0 +1,156 @@
+\documentclass[11pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+
+\title{ Projet LO43 : SmallUTBM}
+\author{Salomé \bsc{Welche} \& Romain \bsc{Dulieu} \& Haocheng \bsc{Xu} \& Romain \bsc{Thibaud}}
+\date{Automne 2014}
+
+\renewcommand{\contentsname}{Sommaire}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Introduction}
+
+C'est dans le cadre de nos études à l'UTBM (Université de Technologie de Belfort-Montbéliard) que nous avons été amenés à déveloper une adaptation du jeu de plateau Smallworld\up{\copyright}. L'objectif du cours était d'introduire la programmation orientée objet grâce aux deux langages qui en sont les fers de lances, à savoir le C++ et le Java. C'est en Java que ce logiciel doit être programmé. 
+
+Dans un premier temps, nous nous devons de bien assimiler les règles et les subtilités du jeu afin de pouvoir les traduire en langage informatique. De plus, une bonne compréhension de ces dernières est nécessaire pour pouvoir les adapter au mieux à l'univers qu'est l'UTBM. En effet, l'objectif est d'offrir une expérience pensé autour de ce qu'est la vie à l'UTBM.
+
+Une fois cette première phase terminée, il est nécessaire d'effectuer une analyse technique et profonde du logiciel. Il est important d'effectuer cette expertise en amont pour faciliter l'implémentation future. Cette étape repose sur analyse UML mais aussi une réflexion autour de l'organisation du programme et des outils utilisés.
+
+Enfin, nous entamons la phase de production. L'ensemble des tâches à effectuer est hiérarchisé afin de rendre une application la plus aboutie possible dans le temps impartit.
+
+\chapter{Le jeu : Smallworld}
+
+	\section{Description globale}
+		Smallworld\up{\copyright} est jeu de plateau se jouant de 2 à 5 joueurs. C'est un jeu de stratégie militaire au tour par tour à la manière d'un Risk\up{\copyright}. L'originalité du jeu repose sur le fait que le plateau semble trop petit pour tout les joueurs et les unités trop peu nombreuses pour anéantir nos adversaire. Toute la subtilité repose alors sur la gestion d'un peuple de son avènement à l'extinction de ce dernier en passant bien entendu par son âge d'or. L'objectif est donc de gérer un peuple et de décider quand un est-ce qu'il n'est plus rentable. On décide alors de le mettre en déclin et ensuite de choisir un nouveau peuple pour jouer avec. 
+		
+		Cette mécanique de jeu, qui demande au joueur d'être pragmatique, est amplifié par une faible présence d'aléatoire dans les phases de combats. Au contraire de Risk\up{\copyright}, où il y a lancé de dé à chaque combat, le rapport de force s'effectue sur le nombre d'unité en présence, pour prendre un territoire adverse, il faut attaquer avec plus d'unité que la défense. Il y a cependant deux exceptions : lors de la dernière bataille d'un joueur il peut jeter un dé de renfort ou en ca de pouvoir spécial (qui sera détaillé plus tard).
+		
+		Bien que la stratégie de conquête soit au centre du gameplay, l'objectif n'est pas d'exterminer tous nos compagnons de jeu. La fin de la partie est déterminée par un nombre de tour par joueur. Le vainqueur étant celui qui a accumulé le plus de points de victoire. Ces mêmes points de victoire servant de monnaie durant la partie, il faut alors savoir évaluer la rentabilité de chaque coup. 
+		
+		De plus, la rejouabilité du jeu est assurée par l'unicité de chaque partie. En effet, tous les peuples n'étant accessibles à tout moment, le joueur doit s'adapter à chaque fois. A cela s'ajoute des pouvoirs qui sont aussi tirés aléatoirement et assigné à un peuple. Cette multiplicité de combinaisons peuple-pouvoir entraine par contre une difficulté d'équilibrage qui se ressent de temps à autres, certaines alliances parraissant plus fortes que d'autres.
+	\section{Règles du jeu}
+
+\chapter{Adaptation des règles}
+
+	\section{Ambiance recherchée}
+	
+	L'objectif étant de seulement d'adapter l'univers heroic-fantasy du Smallworld\up{\copyright} à l'univers de l'UTBM, il n'y a pas de recherche sur le système de jeu à proprement dit. Sans ces notions de gamme design, nous nous sommes intéressés à la cosmétique du jeu pour installer notre ambiance. 
+	
+	Nous avons voulez jouer sur les petites rivalités qu'il peut exister, ou du mois qu'il semble exister entre les différentes instances de l'UTBM. Nous nous sommes appliqués à caricaturer ces rapports entre les différents corps de l'UTBM, en s'appuyant parfois sur des stéréotypes infondés mais quand même sympathique. Notre volonté n'est pas de créer de clivages entre nos camarades. Nous avons d'ailleurs fait preuve d'autodérision par rapport aux instances auxquelles on appartient. 
+	
+	On a donc juste changé les noms des différents peuples, pouvoirs, ou encore élément de jeu. De temps à autres de petites modifications ont été apportées sur les mécaniques de jeux mais c'est essentiellement pour simplifier le passage sur informatique.    
+
+	\section{Les peuples}
+	
+	Nous allons ici exposer les différents peuples en les liants à l'anciens peuple, la description du pouvoir et en expliquant pourquoi nous les avons choisi.
+	
+	\begin{description}
+		\item[EDIM :] (ex Amazones). Les EDIMs commencent avec 4 pions supplémentaires, et tant qu'ils ont plus de 9 pions, ils perdent 2 pions par tour. Le clin d'oeil est ici fait à l'ancien peuple, car EDIM est le département avec le plus gros pourcentage de filles.
+		\item[TC :] (ex Mi-portions). Les TCs ne peuvent rentrés que par le côté droit du plateau (coté Sévenans), ils installent alors leur premier appartement sur les deux premières régions conquises. Ces régions sont imprenables et immunisées. Quand on arrive en tronc commun, c'est souvent du lycée que l'on vient, et donc c'est la première expérience de vie indépendante pour la majorité, d'où le choix des plus petits êtres.
+		\item[Administrarif :] (ex Nains) Tous les bureaux occupée par du personnel administratif (en déclin ou non) rapporte 1 UV supplémentaire en fin de tour. Les nains ayant un rapport particulier à l'argent, on les a mis en relations avec ceux qui gère le budget de l'UTBM.
+		\item[Enseignants chercheurs :] (ex Elfes) Lorsqu'un adversaire s'empare d'une région, vous récupérez tous les pions de la région et les réorganises sur les régions qu'il occupe encore à la fin du tour. On a joué sur la rivalité elfes et orcs pour illustré celle entre enseignant chercheur et vacataire.
+		\item[Vacataires :] (ex Orcs) Toute région conquise par des vacataires rapporte 1 UV supplémentaire à la fin du tour.
+		\item[IMSI :] (ex Géant) Attaquez une région adjacente à un atelier coûte 1 unité de moins. Les IMSI étant les "pousse cartons", il fallait un peuple grand et fort pour les représenter.
+		\item[Associatif :] (ex sorcier) A chaque tour, l'étudiant investit dans l'associatif peut remplacer un pion actif (seul) d'un autre peuple, adjacent à une région contrôlée par cet étudiant, par un pion associatif. L'associatif peut-être une raison d'échec à l'UTBM, c'est pourquoi il est en relation avec ceux qui pervertissent les autres peuples.
+		\item[GMC :] (ex homme-rat) Pas de capacité spécifique, ils sont déjà l'élite (référence caricaturale aux discours de Mr Gomez).
+		\item[Alternants :] (ex Humains) Tout case monde de l'entreprise occupé par vos alternants rapporte une UV supplémentaire en fin de tour. Cela montre la proximité entre alternant et entreprise.
+		\item[EE : ] (ex Mages) Toute région comportant une source d'énergie rapporte une UV supplémentaire à la fin du tour. Le clin d'oeil semble évident (indice : ils étudient l'énergie).
+		\item[Doctorants :] (ex Squelettes) Lors du redéploiement, rajoutez une unité par groupe de deux régions conquises ce tour-ci. Trois ans de plus à être étudiants, il y a de quoi devenir rachitique.
+		\item[Etudiants Etranger :] (ex Tritons) Attaquez une région adjacente à une infrastructure de transport (gare, arrêt de bus,...) coûte 1 unité de moins. Ils remplacent les tritons car eux aussi viennent de contrées lointaines et inexplorées.
+		\item[Info :] (ex Trolls) Placez une chambre avec un ordinateur sur chaque région occupée par des infos. La défense du territoire est augmenté de une unité, la chambre est détruite qu'à la disparition des infos de la région (elle reste en cas de déclin). Essayez de chasser un geek de devant son PC pour comprendre.
+		\item[Décalé :] (ex Zombies) Lors du passage en déclin, toutes les unités restent sur le plateau et vous jouez normalement avec eux avant votre autre peuple. Les décalés sont ceux que les profs souhaitent virés mais qui s'accrochent.
+	\end{description}
+
+	\section{Les pouvoirs}
+	Nous procédons de-même pour les pouvoirs :
+	
+	\begin{description}
+		\item[Proche des entreprises : ] Tant que le peuple est pas en déclin, vous gagnez deux UVs supplémentaires à la fin de votre tour.
+		\item[Fêtard : ]Toutes les régions nécessitent 1 unité de moins pour être envahies.
+		\item[Drogué au café : ] A chaque fin de tour, choisissez deux régions et placez-y un thermos de café sur chaque, ces régions sont imprenables et immunisées.
+		\item[Bilingues : ] Une fois par tour, placez un dictionnaire bilingue. Elle augmente la défense de la région de 1 et rapporte une UV supplémentaire à a fin de chaque tour (sauf si vous êtes en déclin). Elles disparaissent si vous quittez la région.
+		\item[Grande Gueule : ] Vous pouvez jeter le dé de renfort avant de choisir une région à envahir (à chaque fois).
+		\item[Qui sèche : ]Vous pouvez poursuivre votre expansion et passer en déclin juste après.
+		\item[Connecté : ] Toutes les régions qui compte une prise RJ45 sont considérés comme adjacente pour vous. Ces régions nécessitent 1 unité de moins pour être envahie.
+		\item[Et leur prof suiveur : ]Vous pouvez envahir une région avec une seule unité, une seule fois par tour. Placez alors le prof suiveur sur cette région, elle est imprenable et immunisée jusqu'à ce que le prof suiveur aille faire du soutient dans une autre région.
+		\item[Des amphis : ] Prenez une UV supplémentaire pour chaque région avec un amphithéâtre à chaque fin de votre tour.
+		\item[Des salles info : ]Prenez une UV supplémentaire pour chaque région avec une salle info à chaque fin de votre tour.
+		\item[Des lieux de vie : ]Prenez une UV supplémentaire pour chaque région avec un lieu de vie à chaque fin de votre tour.
+		\item[Fayots : ] Choisissez un adversaire que vous n'avez pas attaqué ce tour-ci, il ne pourra pas vous attaqué pendant son tour.
+		\item[Avec équivalences : ] A la fin de votre premier tour, prenez 7 UV supplémentaires.
+		\item[En double filière : ] Prenez une UV supplémentaire pour chaque région que vous occupez en fin de tour.
+		\item[Du club Welcome : ] Vous pouvez envahir les infrastructures de transport.
+		\item[Ponctuel : ] Les régions amphithéâtre et entreprise nécessitent 1 unité de moins pour être envahie.
+		\item[Du père 200 : ] Toute région non vide conquise rapporte une UV supplémentaire à la fin du tour.
+		\item[Revenant d'Erasmus : ] Vous pouvez conquérir n'importe quelle région, même une région non adjacente.
+	\end{description}
+	
+\chapter{Analyse des problèmes}
+
+	\section{Organisation globale du logiciel}
+
+		\subsection{Gestion du projet}
+			Tout d'abord, parmi les étudiants travaillant sur le projet, il y a un étudiant chinois. Pour faciliter la communication entre nous, nous avons donc décidé de travailler en anglais. C'est pourquoi, toute les productions liées à ce projet sont en anglais, mis à part les rapports (ça lui permet aussi de travailler son français). 
+			
+			Pour facilliter le travail en groupe nous avons aussi mis en place un gestionnaire de version, à savoir Git. Hébergé sur GitHub\up{\copyright}, cela permet de travailler en simultanné sur le projet sans se marcher dessus, et d'avoir des sauvegardes des différentes phases de notre projet en cas de bug.
+			
+			D'un point vu logiciel, nous avons utilisé ArgoUML comme AGL (pour la création des diagrammes UML) et Eclipse comme IDE pour la programmation en java. Etant donné que nous avons effectué les diagrammes UML en amont, nous avons pu générer la structure du code via ArgoUML, et nous n'avons plus qu'à remplir les fonctions.
+			
+			Concernant la répartition des tâches, Romain T. s'occupe de la partie interface pendant que Salomé, Haocheng et Romain D. s'occupe de la conception du programme. Ils se sont occupés de construire les diagrammes UML auparavant. Ce rapport étant, lui, un produit collégial.
+			
+			
+		\subsection{Structure du logiciel}
+		
+			Nous avons adopté pour ce projet un patron modèle-vue-contrôleur. La force de ce paradigme est d'être très modulable. En effet, il fonctionne en séparant l'interface du corps du programme et les fait dialoguer via un contrôleur. L'avantage est que si on change le type de la base de données par exemple, cela n'auras que très peu d'impact sur l'interface. 
+			
+			De plus, il est plus simple pour nous de travailler dessus, le code étant plus aérer et bien segmenté, nous pouvons plus facilement nous répartir le travail, et donc être plus efficaces. 
+
+	\section{Le diagramme de cas d'utilisation}
+
+	\section{Les diagrammes de séquence}
+
+		\subsection{Conquête}
+
+		\subsection{Déclin}
+
+		\subsection{Nouveau peuple}
+
+		\subsection{Gestion des points}
+
+	\section{Les diagrammes état-transistion}
+
+\chapter{Le modèle}
+
+	\section{Le diagramme de classe du modèle}
+
+	\section{Implémentation}
+
+\chapter{L'interface}
+
+	\section{Description et organisation}
+		Nous avons décidé de partitionné notre interface en 4 panneaux :
+		\begin{description}
+			\item[-]Un pour le plateaux de jeu
+			\item[-]Un pour les actions du joueur
+			\item[-]Un pour la pioche
+			\item[-]Un pour rappeler l'ordre des actions
+		\end{description}		 
+	\section{Solutions techniques}
+
+\chapter{Prévisionnel des tâches}
+
+	\section{Fonctionnement général}
+
+	\section{Interface}
+
+\chapter{Conclusion}
+
+\end{document}
