@@ -142,15 +142,40 @@ Enfin, nous entamons la phase de production. L'ensemble des tâches à effectuer
 			\item[-]Un pour les actions du joueur
 			\item[-]Un pour la pioche
 			\item[-]Un pour rappeler l'ordre des actions
-		\end{description}		 
+		\end{description}	
+		
+		Le plateau sera une image de fond avec des éléments clicables dessus où apparaitront les peuples. Les actions joueurs et la pioches ne seront que des éléments clicables, alors	que le panneau d'information ne sera qu'une succession d'élements textuels à caractères purement informatif.  
 	\section{Solutions techniques}
-
+		Nous avions commencer une implementation de l'interface en utlisant la bibliothèque graphique Swing. Mais cette bibliothèque ne nous convient pas assez, elle est lourde à mettre en place pour avoir des éléments dynamique, et elle n'est maintenu que pour des correctifs de bug, et donc ne propose plus d'avancées technologiques. 
+		
+		Pour ces raisons, nous sommes entrain d'étudier une migration vers JavaFX. De plus la communauté autour de cette bibliothèque semble très active sur le net, et donc offre un soutien et des tutoriels. Elle offre aussi la possibilité de travaillé avec des formats d'image en plus que ceux disponible sur swing (es : svg) permettant de travaillé avec des logiciels orienté vers l'image tel que Photoshop\up{\copyright}, Illustrator\up{\copyright}, ou encore Gimp\up{\copyright}. 
+		
+		Elle a aussi l'avantage d'être très portable (Linux, Mac, Windows, ou encore Android). Cela permet d'éventuellement penser à un portage multiplateforme.
 \chapter{Prévisionnel des tâches}
 
 	\section{Fonctionnement général}
 
 	\section{Interface}
+	
+	Il y a plusieurs tâches à effectuer :
+	\begin{description}
+	\item Une création et initialisation des panneaux
+	\item Création des éléments clicables
+	\item Rafraichissement de l'interface
+	\item Gestion des cliquer-glisser
+	\item Habillage de l'interface
+	\item Création des cartes pour 2,4, et 5 joueurs
+	\item Optimisation de la détection des régions
+	\item Création d'animations
+	
+	\end{description}
 
 \chapter{Conclusion}
-
+	Ce projet est plutôt plaisant pour nous, vu notre inclinaison pour les jeux de plateux tel Smallworld\up{\copyright} (même si Seasons est mieux quand même). Il ne fut pas trop dur de nous impliquer dans l'analyse du jeu et son adaptation, ce fut même agréable et marrant.
+	
+	Au delà de l'aspect ludique du projet, nous avons pu découvrir ce qu'est un travail en équipe, car nous sommes quatre et que c'est la première fois que nous sommes autant dans un groupe. De plus, notre groupe est multiculturel. Nous avons donc du trouver des solutions afin d'être les plus efficaces possibles.
+	
+	Nous avons aussi mis en place des technologies que nous ne connaissions pas encore ou pas bien, ce qui est toujours enrichissant. Cependant, le temps d'adaptation nous à par contre parfois handicapé, et souvent ralentit.
+	
+	L'objectif était de finir ce rapport à 19h le vendredi 19 décembre et cela tombe bien, nous avons notre soirée jeu de plateaux en suivant. 
 \end{document}

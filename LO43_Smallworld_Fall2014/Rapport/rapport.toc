@@ -24,7 +24,7 @@
 \contentsline {chapter}{\numberline {6}L'interface}{13}
 \contentsline {section}{\numberline {6.1}Description et organisation}{13}
 \contentsline {section}{\numberline {6.2}Solutions techniques}{13}
-\contentsline {chapter}{\numberline {7}Pr\IeC {\'e}visionnel des t\IeC {\^a}ches}{14}
-\contentsline {section}{\numberline {7.1}Fonctionnement g\IeC {\'e}n\IeC {\'e}ral}{14}
-\contentsline {section}{\numberline {7.2}Interface}{14}
-\contentsline {chapter}{\numberline {8}Conclusion}{15}
+\contentsline {chapter}{\numberline {7}Pr\IeC {\'e}visionnel des t\IeC {\^a}ches}{15}
+\contentsline {section}{\numberline {7.1}Fonctionnement g\IeC {\'e}n\IeC {\'e}ral}{15}
+\contentsline {section}{\numberline {7.2}Interface}{15}
+\contentsline {chapter}{\numberline {8}Conclusion}{16}
