@@ -6,25 +6,25 @@
 \contentsline {chapter}{\numberline {3}Adaptation des r\IeC {\`e}gles}{6}
 \contentsline {section}{\numberline {3.1}Ambiance recherch\IeC {\'e}e}{6}
 \contentsline {section}{\numberline {3.2}Les peuples}{6}
-\contentsline {section}{\numberline {3.3}Les pouvoirs}{6}
-\contentsline {chapter}{\numberline {4}Analyse des probl\IeC {\`e}mes}{7}
-\contentsline {section}{\numberline {4.1}Organisation globale du logiciel}{7}
-\contentsline {subsection}{\numberline {4.1.1}Gestion du projet}{7}
-\contentsline {subsection}{\numberline {4.1.2}Structure du logiciel}{7}
-\contentsline {section}{\numberline {4.2}Le diagramme de cas d'utilisation}{7}
-\contentsline {section}{\numberline {4.3}Les diagrammes de s\IeC {\'e}quence}{7}
-\contentsline {subsection}{\numberline {4.3.1}Conqu\IeC {\^e}te}{7}
-\contentsline {subsection}{\numberline {4.3.2}D\IeC {\'e}clin}{7}
-\contentsline {subsection}{\numberline {4.3.3}Nouveau peuple}{7}
-\contentsline {subsection}{\numberline {4.3.4}Gestion des points}{7}
-\contentsline {section}{\numberline {4.4}Les diagrammes \IeC {\'e}tat-transistion}{7}
-\contentsline {chapter}{\numberline {5}Le mod\IeC {\`e}le}{8}
-\contentsline {section}{\numberline {5.1}Le diagramme de classe du mod\IeC {\`e}le}{8}
-\contentsline {section}{\numberline {5.2}Impl\IeC {\'e}mentation}{8}
-\contentsline {chapter}{\numberline {6}L'interface}{9}
-\contentsline {section}{\numberline {6.1}Description et organisation}{9}
-\contentsline {section}{\numberline {6.2}Solutions techniques}{9}
-\contentsline {chapter}{\numberline {7}Pr\IeC {\'e}visionnel des t\IeC {\^a}ches}{10}
-\contentsline {section}{\numberline {7.1}Fonctionnement g\IeC {\'e}n\IeC {\'e}ral}{10}
-\contentsline {section}{\numberline {7.2}Interface}{10}
-\contentsline {chapter}{\numberline {8}Conclusion}{11}
+\contentsline {section}{\numberline {3.3}Les pouvoirs}{7}
+\contentsline {chapter}{\numberline {4}Analyse des probl\IeC {\`e}mes}{8}
+\contentsline {section}{\numberline {4.1}Organisation globale du logiciel}{8}
+\contentsline {subsection}{\numberline {4.1.1}Gestion du projet}{8}
+\contentsline {subsection}{\numberline {4.1.2}Structure du logiciel}{8}
+\contentsline {section}{\numberline {4.2}Le diagramme de cas d'utilisation}{8}
+\contentsline {section}{\numberline {4.3}Les diagrammes de s\IeC {\'e}quence}{8}
+\contentsline {subsection}{\numberline {4.3.1}Conqu\IeC {\^e}te}{8}
+\contentsline {subsection}{\numberline {4.3.2}D\IeC {\'e}clin}{8}
+\contentsline {subsection}{\numberline {4.3.3}Nouveau peuple}{8}
+\contentsline {subsection}{\numberline {4.3.4}Gestion des points}{8}
+\contentsline {section}{\numberline {4.4}Les diagrammes \IeC {\'e}tat-transistion}{8}
+\contentsline {chapter}{\numberline {5}Le mod\IeC {\`e}le}{9}
+\contentsline {section}{\numberline {5.1}Le diagramme de classe du mod\IeC {\`e}le}{9}
+\contentsline {section}{\numberline {5.2}Impl\IeC {\'e}mentation}{9}
+\contentsline {chapter}{\numberline {6}L'interface}{10}
+\contentsline {section}{\numberline {6.1}Description et organisation}{10}
+\contentsline {section}{\numberline {6.2}Solutions techniques}{10}
+\contentsline {chapter}{\numberline {7}Pr\IeC {\'e}visionnel des t\IeC {\^a}ches}{11}
+\contentsline {section}{\numberline {7.1}Fonctionnement g\IeC {\'e}n\IeC {\'e}ral}{11}
+\contentsline {section}{\numberline {7.2}Interface}{11}
+\contentsline {chapter}{\numberline {8}Conclusion}{12}
