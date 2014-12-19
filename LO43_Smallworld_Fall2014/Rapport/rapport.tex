@@ -66,7 +66,7 @@ Enfin, nous entamons la phase de production. L'ensemble des tâches à effectuer
 		\item[Doctorants :] (ex Squelettes) Lors du redéploiement, rajoutez une unité par groupe de deux régions conquises ce tour çi. Trois ans de plus à être étudiants, il y a de quoi devenir rachitique.
 		\item[Etudiants Etranger :] (ex Tritons) Attaquez une région adjacente à une infrastructure de transport (gare, arrêt de bus,...) coûte 1 unité de moins. Ils remplacent les tritons car eux aussi viennent de contrées lointaines et inexplorées.
 		\item[Info :] (ex Trolls) Placez une chambre avec un ordinateur sur chaque région occupée par des infos. La défense du territoire est augmenté de une unité, la chambre est détruite qu'à la disparition des infos de la région (elle reste en cas de déclin). Essayez de chasser un geek de devant son PC pour comprendre.
-		\item[Décalé :] (ex Zombies) Lors du passage en déclin, toutes les unités restent sur le plateau et vous jouez normalement avec eux avant votre autre peuple. Les décalés sont ceux que les profs souhaitent virés mais qui s'accroche.
+		\item[Décalé :] (ex Zombies) Lors du passage en déclin, toutes les unités restent sur le plateau et vous jouez normalement avec eux avant votre autre peuple. Les décalés sont ceux que les profs souhaitent virés mais qui s'accrochent.
 	\end{description}
 
 	\section{Les pouvoirs}
@@ -92,13 +92,26 @@ Enfin, nous entamons la phase de production. L'ensemble des tâches à effectuer
 		\item[Du père 200 : ]Toute région non vide concquise rapporte une UV supplémentaire à la fin du tour.
 		\item[Revenant d'Erasmus : ]Vous pouvez conquérir n'importe quelle région, même une région non adajacente.
 	\end{description}
+	
 \chapter{Analyse des problèmes}
 
 	\section{Organisation globale du logiciel}
 
 		\subsection{Gestion du projet}
-
+			Tout d'abord, parmi les étudiants travaillant sur le projet, il y a un étudiant chinois. Pour facilliter la communication entre nous, nous avons donc décidé de travailler en anglais. C'est pourquoi, toute les productions liées à ce projet sont en anglais, mis à part les rapports (ça lui permet aussi de travailler son français). 
+			
+			Pour facilliter le travail en groupe nous avons aussi mis en place un gestionnaire de version, à savoir Git. Hébergé sur GitHub\up{\copyright}, cela permet de travailler en simultannée sur le projet sans se marcher desssus, et d'avoir des sauvegardes des différentes phases de notre projet en cas de bug.
+			
+			D'un point vue logiciel, nous avons utilisé ArgoUML comme AGL (pour la création des diagrammes UML) et Ecllipse comme IDE pour la programmation en java. Etant donné que nous avons effectué les diagrammes UML en amont, nous avons pu générer la structure du code via ArgoUML, et nous n'avons plus qu'à remplir les fonctions.
+			
+			Concernant la répartition des tâches, Romain T. s'occupe de la partie interface pendant que Salomé, Haocheng et Romain D. s'occupe de la conception du programme. Ils se sont occupés de construire les diagrammes UML auparavant. Ce rapport étant, lui, un produit collégial.
+			
+			
 		\subsection{Structure du logiciel}
+		
+			Nous avons adopté pour ce projet un patron modèle-vue-contrôleur. La force de ce paradigme est d'être très modulable. En effet, il fonctionne en séparant l'interface du corps du programme et les fait dialoguer via un contrôleur. L'avantage est que si on change le type de la base de données par exemple, cela n'auras que très peu d'impact sur l'interface. 
+			
+			De plus, il est plus simple pour nous de travailler dessus, le code étant plus aérer et bien segmenté, nous pouvons plus facillement nous répartir le travail, et donc être plus efficaces. 
 
 	\section{Le diagramme de cas d'utilisation}
 
@@ -123,7 +136,13 @@ Enfin, nous entamons la phase de production. L'ensemble des tâches à effectuer
 \chapter{L'interface}
 
 	\section{Description et organisation}
-
+		Nous avons décidé de partitionné notre interface en 4 panneaux :
+		\begin{description}
+			\item[-]Un pour le plateaux de jeu
+			\item[-]Un pour les actions du joueur
+			\item[-]Un pour la pioche
+			\item[-]Un pour rappeler l'ordre des actions
+		\end{description}		 
 	\section{Solutions techniques}
 
 \chapter{Prévisionnel des tâches}
