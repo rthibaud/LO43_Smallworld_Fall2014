@@ -1,8 +1,6 @@
-Board : La classe Board correspond au plateau. Elle contient un entier qui représente le nombre de joueur. Nous utiliserons cet attribut car le plateau de jeu est différent suivant le nombre de joueurs.
-Elle contient aussi un tableau de Square. C'est l'ensemble des cases qui compose le plateau de jeu. Dans le diagramme de classe nous avons écrit 30 cases mais ce nombre change en fonction du  nombre de joueur. 
+Board : La classe Board correspond au plateau. Elle contient un entier qui représente le nombre de joueur. Nous utiliserons cet attribut car le plateau de jeu est différent suivant le nombre de joueurs. Elle contient aussi un tableau de Square. C'est l'ensemble des cases qui compose le plateau de jeu. Dans le diagramme de classe nous avons écrit 30 cases mais ce nombre change en fonction du  nombre de joueur. 
 
-Square : La classe Square correspond a une case du plateau de jeu. Elle contient un entier qui est l'indice de cet case. Une case peut avoir un attribut. C'est une particularité de la case qui sera utilisé par les pouvoirs des peuples.
-Elle possède aussi un tableau de case pour référencer les autre cases qui lui sont adjacentes. Elle contient une liste d'unité qui représente les pions présents sur cette case. 
+Square : La classe Square correspond a une case du plateau de jeu. Elle contient un entier qui est l'indice de cette case. Une case peut avoir un attribut. C'est une particularité de la case qui sera utilisé par les pouvoirs des peuples. Elle possède aussi un tableau de cases pour référencer les autre cases qui lui sont adjacentes. Elle contient une liste d'unités qui représente les pions présents sur cette case. 
 
 Attribute : La classe Attribute correspond aux différents attributs que les cases peuvent posséder. Elles ont un nom qui est une chaîne de caractère ainsi qu'un entier qui permet de les référencer plus facilement.
 
@@ -10,8 +8,8 @@ Static : La classe Statique est une enfant de Unit. Elle représente tous les pi
 
 Dynamic : La classe Dynamic est une enfant de Unit. Elle représente tous les pions qui peuvent bouger. Son seul attribut est une référence au joueur qui possède cette unité.
 
-PplUnit : La classe PplUnit est une enfant de Dynamic. Elle représente les pions de peuple controllé par les joueurs. Elle possède en attribut une référence vers le peuple de cette unité.
+PplUnit : La classe PplUnit est une enfant de Dynamic. Elle représente les pions de peuple controllés par les joueurs. Elle possède en attribut une référence vers le peuple de cette unité.
 
 //a mettre au début
-Nous avons découpé ce diagramme en 2 parties car il était trop grand pour permettre une lecture convenable. La première partie comporte les classes qui se rapporte au fonctionnement général du jeu tandis que la deuxième partie comporte les classes qui permettent de gérer le plateau de jeu.
-Certaines classes sont représentés dans un rectangle aux bords épais car ils appartiennent a l'autre partie du diagramme mais isl possédent un lien avec la partie représenté.
+Nous avons découpé ce diagramme en 2 parties car il était trop grand pour permettre une lecture convenable. La première partie comporte les classes qui se rapportent au fonctionnement général du jeu tandis que la deuxième partie comporte les classes qui permettent de gérer le plateau de jeu.
+Certaines classes sont représentées dans un rectangle aux bords épais car ils appartiennent a l'autre partie du diagramme mais ils possédent un lien avec la partie représentée.
