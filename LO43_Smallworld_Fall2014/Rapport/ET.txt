@@ -1,0 +1,7 @@
+Le diagramme d'Etat transition représente le déroulement d'un tour de jeu pour un joueur.
+Chaque etat de ce diagramme correspond aux cas d'utilisation du programme et aux diagrammes de séquence.
+
+Quand un joueur démarre un nouveau tour nous commençons tout d'abord par vérifier si il possède un peuple actif ou non.
+Si il n'en possède pas (parce que c'est son premier tour de jeux ou qu'il vient de passer son peuple en déclin) Il doit alors choisir un nouveau peuple. Apres avoir récupérer une combinaison de peuple/pouvoir le joueur entame une phase de conquête pour installer son nouveau peuple sur le plateau de jeux.
+Sinon le joueur devra faire un choix. Il doit maintenant choisir si il veut continuer les conquêtes avec ce peuple ou si il veut passer en déclin. 
+Peut importe le choix que ce joueur aura fait tous les tours doivent se terminer par un décompte des UV que le joueur gagne durant ce tour.
