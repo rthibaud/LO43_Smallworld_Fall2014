@@ -1,33 +1,33 @@
-Prévisionnel des taches :
+PrÃ¨visionnel des taches :
 
-Nous voulions avoir une démarche de projet correcte c'est donc pour cela que nous avons établi un prévisionnel des tâches pour suivre l'avancé du projet.
-Le but de cette liste de tâche est d'obtenir un suivi correcte et de vérifier que nous n'oublions aucune étape importante.
+Nous voulions avoir une dÃ©marche de projet correcte c'est donc pour cela que nous avons Ã©tabli un prÃ©visionnel des tÃ¢ches pour suivre l'avancÃ© du projet.
+Le but de cette liste de tÃ¢che est d'obtenir un suivi correcte et de vÃ©rifier que nous n'oublions aucune Ã©tape importante.
 
-->Etude du problème
+->Etude du problÃ¨me
 ->Diagramme des cas d'utilisation
 ->Diagramme d'etat transition
-->Diagrammes de séquence (4 diagrammes)
+->Diagrammes de sÃ©quence (4 diagrammes)
 ->Diagramme de classes
 
 -> Faire le rapport
 
-->Implémentation du modèle : 
-->Système de pioche
-->Implémentation du choix d'un nouveau peuple
-->Implémentation de la classe turn qui gère le fonctionnement d'un tour
-->Implémentation d'un système de plateau (non rectangulaire)
-->Implementation du passage en déclin
-->Implémentation des combats
-->Implémentation du dé de renfort
-->Implémentation du compte de point
-->Implémentation d'un système qui détermine le vainqueur
+->ImplÃ©mentation du modÃ¨le : 
+->SystÃ¨me de pioche
+->ImplÃ©ntation du choix d'un nouveau peuple
+->ImplÃ©ntation de la classe turn qui gÃ¨re le fonctionnement d'un tour
+->ImplÃ©ntation d'un systÃ¨me de plateau (non rectangulaire)
+->ImplÃ©mentation du passage en dÃ©clin
+->ImplÃ©ntation des combats
+->ImplÃ©ntation du dÃ© de renfort
+->ImplÃ©ntation du compte de point
+->ImplÃ©ntation d'un systÃ¨ qui dÃ©termine le vainqueur
 
 -> Faire des images ( ou honteusement les piquer)
 ->Interface statique
-->Lier le modèle et l'interface
+->Lier le modÃ¨le et l'interface
 
 ->Gestion des pouvoirs
-->Gestion des capacités des peuples
+->Gestion des capacitÃ©s des peuples
 ->Gestion des attributs des cases
 
 ->Animation du jeu
