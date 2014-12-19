@@ -1,7 +1,7 @@
 Nous avons commencé l'étude UML par un diagramme de cas d'utilisation.
 Cela nous paraissait nécessaire pour comprendre quels intéractions avec l'utilisateur nous devrons implementer. 
 
-Dans ce jeu il y 4 joueurs mais seulement 1 seul d'entre eux peut effectuer des actions durant son tour de jeu.
+Dans ce jeu il y 3 joueurs mais seulement 1 seul d'entre eux peut effectuer des actions durant son tour de jeu.
 Il peut effectuer 4 actions différentes en fonction de l'état du jeu et des choix du joueur.
 Nous expliquerons dans le diagramme d'Etat transition le déroulement d'un tour. 
 Les 4 actions représentés ici serons détaillés dans les diagrammes de séquence.
