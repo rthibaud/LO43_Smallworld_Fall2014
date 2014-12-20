@@ -1,9 +1,11 @@
 package controller;
 
+import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JComponent;
 
 import model.Application;
 
@@ -20,7 +22,14 @@ public class ButtonListener implements ActionListener {
 		JButton source=(JButton) e.getSource();
 		if(source.getName()=="okbtNbPlayer"){
 			app.createNewTurn();
-			//app.getNbplay().getContentPane().getTopLevelAncestor()).dispose() ;
+			((Window) ((JComponent) app.nbplay.getContentPane()).getTopLevelAncestor()).dispose() ;
+		}else if (source.getName()=="okbtNew"){
+			app.turn.addPlayer(app.newplay.readJTF(), app.turn.getLenght());
+			((Window) ((JComponent) app.newplay.getContentPane()).getTopLevelAncestor()).dispose() ;
+			if(app.turn.getLenght()!=app.turn.getNbPlayers()){
+				app.createNewPlayerWindow(app.turn.getLenght()+1);
+			}
+			
 		}
 	}
 

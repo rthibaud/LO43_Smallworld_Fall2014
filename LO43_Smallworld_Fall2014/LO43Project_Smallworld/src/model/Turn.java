@@ -11,6 +11,8 @@ public class Turn { //OK
   private int maxNumber;
 
   private int activePlayer;
+  
+  private int nbPlayers;
 
   private Vector <Player> players;
   
@@ -19,6 +21,7 @@ public class Turn { //OK
 	  number = 0;
 	  maxNumber = 0;
 	  activePlayer = 0;
+	  nbPlayers=0;
 	  players = new Vector <Player>();
   }
   
@@ -30,10 +33,6 @@ public class Turn { //OK
   }
   
   public Turn(int nbPlayers){
-	  players=new Vector<Player>(nbPlayers);
-	  for (Player p : players){
-		  p = new Player(players.indexOf(p)+1);
-	  }
 	  switch(nbPlayers){
 	  	case 2: maxNumber = 8;
 	  		break;
@@ -45,6 +44,8 @@ public class Turn { //OK
 	  		break;
 		  
 	  }
+	  this.nbPlayers=nbPlayers;
+	  players = new Vector <Player>();
   }
   
   	// method
@@ -56,6 +57,21 @@ public class Turn { //OK
   public void nextTurn() {
 	  	number=number+1;
   }
+  
+  public void addPlayer(String nom, int nb){
+	  
+	  players.add(new Player(nom, nb));
+  }
+  
+  public int getLenght(){
+	  if (players!=null)
+		  return players.size();
+	  return 0;
+  }
+
+public int getNbPlayers() {
+	return nbPlayers;
+}
 
 
 }
