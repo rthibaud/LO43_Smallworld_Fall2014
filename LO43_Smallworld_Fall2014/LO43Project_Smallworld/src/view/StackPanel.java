@@ -1,17 +1,21 @@
 package view;
 
-import javax.swing.JButton;
-import javax.swing.JPanel;
 
-public class StackPanel extends JPanel {
-	
-	private JButton test;
-	
-	public StackPanel()
-	{
-		test=new JButton();
-		this.add(test);
+import org.eclipse.swt.widgets.Composite;
+
+
+
+public class StackPanel extends Composite {
+
+	public StackPanel(Composite arg0, int arg1) {
+		super(arg0, arg1);
+		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
+	
+	
 
 
 }

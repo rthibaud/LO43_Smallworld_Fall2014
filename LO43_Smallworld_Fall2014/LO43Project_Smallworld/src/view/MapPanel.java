@@ -1,23 +1,19 @@
 package view;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import org.eclipse.swt.widgets.Composite;
 
-public class MapPanel extends JPanel{
+
+
+
+public class MapPanel extends Composite{
 	
-	private JButton test;
-	private JLabel fond;
-	
-	public MapPanel()
-	{
-		test=new JButton();
-		fond=new JLabel(new ImageIcon("./img/UTBM.jpg"));
-		this.add(test);
-		this.add(fond);
-		
-		 
+	public MapPanel(Composite arg0, int arg1) {
+		super(arg0, arg1);
+		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
+	
 
 }

@@ -1,17 +1,19 @@
 package view;
 
-import javax.swing.JButton;
-import javax.swing.JPanel;
+import org.eclipse.swt.widgets.Composite;
 
-public class PlayerPanel extends JPanel{
-	
-	private JButton test;
-	
-	public PlayerPanel()
-	{
-		test=new JButton();
-		this.add(test);
+
+
+
+public class PlayerPanel extends Composite{
+
+	public PlayerPanel(Composite arg0, int arg1) {
+		super(arg0, arg1);
+		// TODO Auto-generated constructor stub
 	}
+	
 
+	
+	
 
 }
