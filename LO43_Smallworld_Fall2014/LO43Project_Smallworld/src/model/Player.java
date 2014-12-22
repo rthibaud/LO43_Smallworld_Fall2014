@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Random;
+
 import view.*;
 
 public class Player { //OK
@@ -67,7 +69,18 @@ public void addActivePeople(People ppl){ // add gold, reset gold and add new act
   public void deploy() {
   }
 
-
+  public int dice(){
+	  Random rand = new Random();
+	  int result = 0;
+	  
+	  int dice = rand.nextInt(6); 
+	  if(dice<3){
+		  result = dice+1;		  
+	  }else{
+		  result = 0;
+	  }
+	  return result;
+  }
 
   public void addGold(int gold){
 	  gold+=gold;
