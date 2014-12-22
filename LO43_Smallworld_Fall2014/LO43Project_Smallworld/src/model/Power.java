@@ -27,6 +27,11 @@ public class Power { //OK
 	this.maxPawn = maxPawn;
 	this.decline = false;
   }
+
+
+public String getName() {
+	return name;
+}
   	
   
   	//method

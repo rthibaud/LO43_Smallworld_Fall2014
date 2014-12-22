@@ -22,7 +22,11 @@ public class Draw { //OK
 	  available = new Vector <People>();
 	  
 	  createPpl();
+	  createPow();
+	  createAva();
   }
+  
+  
   
   // the LinkedList should be use by adding object at the end and remove them at the beginning to represent a deck.
   public void addPpl(People ppl){
@@ -43,8 +47,8 @@ public class Draw { //OK
   }
 
   // available is a vector and will contains 6 to 1 People.
-  public void addAvailable(People ppl,int index){
-	  available.add(index, ppl); ; // It shifts the current element to the right (add 1 to the index).
+  public void addAvailable(People ppl){
+	  available.add( ppl); ; // It shifts the current element to the right (add 1 to the index).
   }
   
   /* draw a people from the 6 available people and give it to a player. 
@@ -59,6 +63,7 @@ public class Draw { //OK
 	  available.add(index, drawDeck());
 	  player.addActivePeople(toReturn);  	  
   }
+ 
   
   /* draw the next element in the people deck.
    Before remove it from the list, link it with the next element in the power deck. */
@@ -89,7 +94,7 @@ public class Draw { //OK
 		Random rand = new Random();
 		 
 	 while(!deckPow.isEmpty()){
-	 	int indexAleatoire = rand.nextInt(deckPow.size() + 1); //  a random index of the old deck.
+	 	int indexAleatoire = rand.nextInt(deckPow.size()); //  a random index of the old deck.
 	 	tmp.add(deckPow.remove(indexAleatoire));
 	 }
 	 
@@ -111,7 +116,14 @@ public class Draw { //OK
 	  shufflePower();
   }
   
-  
+  public void createAva(){
+	  for (int i=0; i<6; i++){
+		  addAvailable(drawDeck());
+	  }
+	  
+	  for(People p : available)
+		  System.out.println(p.getName()+"    "+p.getPower().getName());
+  }
   
   //create the people   POUR HAOCHENG
   public void createPpl(){
@@ -139,7 +151,29 @@ public class Draw { //OK
 	  deckPpl.add(ppl10);
 	  
 	  shufflePeople();
-	  for(People p : deckPpl)
-	  System.out.println(p.getName());
+  }
+  
+  public void createPow(){
+	  Power pow1 = new Power ("pow 1", 1, 5);
+	  Power pow2 = new Power ("pow 2", 2, 5);
+	  Power pow3 = new Power ("pow 3", 3, 5);
+	  Power pow4 = new Power ("pow 4", 4, 5);
+	  Power pow5 = new Power ("pow 5", 5, 5);
+	  Power pow6 = new Power ("pow 6", 6, 5);
+	  Power pow7 = new Power ("pow 7", 7, 5);
+	  Power pow8 = new Power ("pow 8", 8, 5);
+	  Power pow9 = new Power ("pow 9", 9, 5);
+	  
+	  deckPow.add(pow1);
+	  deckPow.add(pow2);
+	  deckPow.add(pow3);
+	  deckPow.add(pow4);
+	  deckPow.add(pow5);
+	  deckPow.add(pow6);
+	  deckPow.add(pow7);
+	  deckPow.add(pow8);
+	  deckPow.add(pow9);
+	  
+	  shufflePower();	    
   }
 }
