@@ -19,6 +19,16 @@ public class People {//OK
   
   //getters and setters
   
+  	public People(String name, int nb){
+  		this.name = name;
+  		this.number = nb;
+  		maxPawn = 5;
+  		pawnPlayed = 0;
+  		gold = 0;
+  		power = null;
+  		state = state.draw;
+  	}
+  
     public int getGold() {
 		return gold;
 	}
@@ -61,5 +71,9 @@ public class People {//OK
 	  power=pow;
 	  state=State.draw;
   }
+
+public String getName() {
+	return name;
+}
 
 }

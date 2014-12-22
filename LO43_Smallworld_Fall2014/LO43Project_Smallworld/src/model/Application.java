@@ -19,6 +19,8 @@ public class Application {
 		nbplay = new NbPlayersWindow();
 		nbplay.okbtAddListener(new ButtonListener(this));
 		
+		Draw draw = new Draw();
+		
 	}
 	
 	//methods
