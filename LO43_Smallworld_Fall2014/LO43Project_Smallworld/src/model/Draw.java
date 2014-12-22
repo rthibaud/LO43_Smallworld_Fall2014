@@ -30,7 +30,7 @@ public class Draw { //OK
   }
   
   public People removePpl(){
-	  return deckPpl.removeLast();
+	  return deckPpl.removeFirst();
   }
   
   public void addPow(Power pow){
@@ -38,7 +38,7 @@ public class Draw { //OK
   }
   
   public Power removePow(){
-	  return deckPow.removeLast();
+	  return deckPow.removeFirst();
 	  
   }
 
@@ -76,7 +76,7 @@ public class Draw { //OK
 	 Random rand = new Random();
 	 
 	 while(!deckPpl.isEmpty()){
-	 	int indexAleatoire = rand.nextInt(deckPpl.size() + 1); //  a random index of the old deck.
+	 	int indexAleatoire = rand.nextInt(deckPpl.size()); //  a random index of the old deck.
 	 	tmp.add(deckPpl.remove(indexAleatoire));
 	 }
 	 
