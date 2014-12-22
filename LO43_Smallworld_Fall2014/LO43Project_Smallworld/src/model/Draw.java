@@ -20,6 +20,8 @@ public class Draw { //OK
 	  deckPpl = new LinkedList <People>();
 	  deckPow = new LinkedList <Power>();
 	  available = new Vector <People>();
+	  
+	  createPpl();
   }
   
   // the LinkedList should be use by adding object at the end and remove them at the beginning to represent a deck.
@@ -37,6 +39,7 @@ public class Draw { //OK
   
   public Power removePow(){
 	  return deckPow.removeFirst();
+	  
   }
 
   // available is a vector and will contains 6 to 1 People.
@@ -54,9 +57,7 @@ public class Draw { //OK
 	  People toReturn = new People();
 	  toReturn = available.remove(index);
 	  available.add(index, drawDeck());
-	  player.addActivePeople(toReturn);
-	  
-	  
+	  player.addActivePeople(toReturn);  	  
   }
   
   /* draw the next element in the people deck.
@@ -75,7 +76,7 @@ public class Draw { //OK
 	 Random rand = new Random();
 	 
 	 while(!deckPpl.isEmpty()){
-	 	int indexAleatoire = rand.nextInt(deckPpl.size() + 1); //  a random index of the old deck.
+	 	int indexAleatoire = rand.nextInt(deckPpl.size()); //  a random index of the old deck.
 	 	tmp.add(deckPpl.remove(indexAleatoire));
 	 }
 	 
@@ -108,5 +109,37 @@ public class Draw { //OK
 	  
 	  shufflePeople();
 	  shufflePower();
+  }
+  
+  
+  
+  //create the people   POUR HAOCHENG
+  public void createPpl(){
+	  People ppl1 = new People("ppl 1", 1);
+	  People ppl2 = new People("ppl 2", 2);
+	  People ppl3 = new People("ppl 3", 3);
+	  People ppl4 = new People("ppl 4", 4);
+	  People ppl5 = new People("ppl 5", 5);
+	  People ppl6 = new People("ppl 6", 6);
+	  People ppl7 = new People("ppl 7", 7);
+	  People ppl8 = new People("ppl 8", 8);
+	  People ppl9 = new People("ppl 9", 9);
+	  People ppl10 = new People("ppl 10", 10);
+
+
+	  deckPpl.add(ppl1);
+	  deckPpl.add(ppl2);
+	  deckPpl.add(ppl3);
+	  deckPpl.add(ppl4);
+	  deckPpl.add(ppl5);
+	  deckPpl.add(ppl6);
+	  deckPpl.add(ppl7);
+	  deckPpl.add(ppl8);
+	  deckPpl.add(ppl9);
+	  deckPpl.add(ppl10);
+	  
+	  shufflePeople();
+	  for(People p : deckPpl)
+	  System.out.println(p.getName());
   }
 }
