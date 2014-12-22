@@ -1,7 +1,6 @@
 package model;
 
 import java.util.LinkedList;
-import java.util.Random;
 import java.util.Vector;
 
 public class Draw { //OK
@@ -67,32 +66,14 @@ public class Draw { //OK
 	  return removePpl();
   }
   
-  /* replace all elements in the deck in a random order 
-  We create a new deck and we place each people from the old deck in a random order  
-  */
+  // replace all elements in the deck in a random order 
   public void shufflePeople(){
-	 LinkedList <People> tmp = new LinkedList <People>();
-	 Random rand = new Random();
-	 
-	 while(!deckPpl.isEmpty()){
-	 	int indexAleatoire = rand.nextInt(deckPpl.size() + 1); //  a random index of the old deck.
-	 	tmp.add(deckPpl.remove(indexAleatoire));
-	 }
-	 
-	 deckPpl=tmp;
+	  
   }
   
-  // replace all elements in the deck in a random order. Same algorithm than shufflePeople
+  // replace all elements in the deck in a random order 
   public void shufflePower(){
-	  LinkedList <Power> tmp = new LinkedList <Power>();
-		Random rand = new Random();
-		 
-	 while(!deckPow.isEmpty()){
-	 	int indexAleatoire = rand.nextInt(deckPow.size() + 1); //  a random index of the old deck.
-	 	tmp.add(deckPow.remove(indexAleatoire));
-	 }
-	 
-	 deckPow=tmp;
+	  
   }  
   
   // replace in the decks all available "combinaison" of power/people
