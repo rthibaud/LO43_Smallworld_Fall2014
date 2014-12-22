@@ -41,7 +41,7 @@ public class Draw { //OK
 
   // available is a vector and will contains 6 to 1 People.
   public void addAvailable(People ppl,int index){
-	  available.add(index, ppl); ; // It shifts the current element to the right (add 1 to the index).
+	  available.add(index, ppl); // It shifts the current element to the right (add 1 to the index).
   }
   
   /* draw a people from the 6 available people and give it to a player. 
