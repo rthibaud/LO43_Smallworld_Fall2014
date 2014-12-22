@@ -177,4 +177,5 @@ public class Draw { //OK
 	  
 	  shufflePower();	    
   }
+  
 }
