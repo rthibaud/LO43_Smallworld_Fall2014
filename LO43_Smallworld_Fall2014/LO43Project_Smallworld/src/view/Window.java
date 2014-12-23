@@ -32,7 +32,7 @@ public class Window extends Shell
 		setLayout(new BorderLayout(0, 0));		
 		
 		
-		connection=new ConnectionPanel(this, SWT.BORDER);
+		connection=new ConnectionPanel(this, SWT.NONE);
 		map=new MapPanel(this, windowHeight);
 		info=new InfoPanel(this, windowHeight);
 		player=new PlayerPanel(this, windowHeight);
@@ -41,7 +41,11 @@ public class Window extends Shell
 		
 		
 	}
+	
+	
 }	
+
+
 
 
 
