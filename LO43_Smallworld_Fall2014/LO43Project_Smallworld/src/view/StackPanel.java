@@ -1,21 +1,15 @@
 package view;
 
 
-import org.eclipse.swt.widgets.Composite;
+import javax.swing.JPanel;
 
 
 
-public class StackPanel extends Composite {
 
-	public StackPanel(Composite arg0, int arg1) {
-		super(arg0, arg1);
-		// TODO Auto-generated constructor stub
+
+public class StackPanel extends JPanel {
+
+	public StackPanel() {
+		
 	}
-	
-	
-	
-	
-	
-
-
 }

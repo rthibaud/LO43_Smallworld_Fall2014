@@ -19,7 +19,7 @@ public class ButtonListener implements ActionListener {
 	
 	
 	public void actionPerformed(ActionEvent e) {
-		JButton source=(JButton) e.getSource();
+		/*JButton source=(JButton) e.getSource();
 		if(source.getName()=="okbtNbPlayer"){
 			app.createNewTurn();
 			((Window) ((JComponent) app.nbplay.getContentPane()).getTopLevelAncestor()).dispose() ;
@@ -30,7 +30,7 @@ public class ButtonListener implements ActionListener {
 				app.createNewPlayerWindow(app.turn.getLenght()+1);
 			}
 			
-		}
+		}*/
 	}
 
 }
