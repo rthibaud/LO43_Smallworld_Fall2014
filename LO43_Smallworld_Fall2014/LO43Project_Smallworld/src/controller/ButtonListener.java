@@ -28,6 +28,10 @@ public class ButtonListener implements ActionListener {
 			((Window) ((JComponent) app.newplay.getContentPane()).getTopLevelAncestor()).dispose() ;
 			if(app.turn.getLenght()!=app.turn.getNbPlayers()){
 				app.createNewPlayerWindow(app.turn.getLenght()+1);
+			}else{
+				//FAUDRA FAIRE APPARAITRE LE PLATEAU ICI !!!!!!
+				app.createNewChoice();
+				
 			}
 			
 		}
