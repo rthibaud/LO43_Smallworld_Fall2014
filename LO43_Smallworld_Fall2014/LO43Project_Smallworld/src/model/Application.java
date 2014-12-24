@@ -20,6 +20,8 @@ public class Application {
 		nbplay.okbtAddListener(new ButtonListener(this));
 		
 		Draw draw = new Draw();
+		Board board = new Board(2);
+		board.printBoard();
 		
 	}
 	
