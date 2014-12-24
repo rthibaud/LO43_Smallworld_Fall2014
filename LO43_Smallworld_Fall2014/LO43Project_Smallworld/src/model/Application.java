@@ -10,6 +10,8 @@ public class Application {
 	public NbPlayersWindow nbplay;
 	public NewPlayerWindow newplay;
 	public Turn turn;
+	public Draw draw;
+	public ChoicePpl choice;
 	
 	public Application()
 	{
@@ -19,7 +21,7 @@ public class Application {
 		nbplay = new NbPlayersWindow();
 		nbplay.okbtAddListener(new ButtonListener(this));
 		
-		Draw draw = new Draw();
+		draw = new Draw();
 		Board board = new Board(2);
 		board.printBoard();
 		
@@ -39,12 +41,29 @@ public class Application {
 		newplay.okbtAddListener(new ButtonListener(this));	
 	}
 	
+	public void createNewChoice() {
+		choice = new ChoicePpl(turn, draw);	
+		choice.choiceAddListeners(new ChoicePplListener(this));
+	}
+
+	public void replaceAvailable() {
+		choice.replaceButtons(draw, turn);	
+	}
 	
 	
 	public static void main(String [] args)
 	{
 		Application app=new Application();
 	}
+
+	public void choiceErrorMess1() {
+		choice.mess1();
+		
+	}
+
+	
+
+
 
 	
 }

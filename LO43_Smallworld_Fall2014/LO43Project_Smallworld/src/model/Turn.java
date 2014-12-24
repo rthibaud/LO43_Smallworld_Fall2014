@@ -73,5 +73,12 @@ public int getNbPlayers() {
 	return nbPlayers;
 }
 
+public Vector<Player> getPlayers() {
+	return players;
+}
+
+public int getActive(){
+	return activePlayer;
+}
 
 }

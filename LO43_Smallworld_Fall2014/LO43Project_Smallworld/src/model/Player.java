@@ -46,6 +46,18 @@ public class Player { //OK
 	  declinePpl=null;
   }
  
+ public boolean putPplDecline(){
+	 if (activePpl != null){
+		 declinePpl=activePpl;
+		 activePpl = null;
+		 return true ;
+	 }
+	 return false ;
+ }
+ 
+ public boolean canDraw(){
+	 return activePpl==null;
+ }
     // method
 
 
@@ -85,6 +97,10 @@ public void addActivePeople(People ppl){ // add gold, reset gold and add new act
   public void addGold(int gold){
 	  gold+=gold;
   }
+
+public String getName() {
+	return name;
+}
   
 
 }

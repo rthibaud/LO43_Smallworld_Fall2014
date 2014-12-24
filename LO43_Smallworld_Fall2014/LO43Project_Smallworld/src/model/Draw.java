@@ -56,20 +56,15 @@ public class Draw { //OK
   * then replace it in the available list with a new association of people/power.
   * Need to check the gold amount on the people, give it the player and reset it.
   *
-  **/
-  public void drawAvailable(int index, Player player) {
-	  
-	  People toReturn = new People();
-	  toReturn = available.remove(index);
-	  available.add(index, drawDeck());
-	  player.addActivePeople(toReturn);  	  
+  **/ 
+  public void drawAvailable (int index, Player play){
+	  play.addActivePeople(available.remove(index));
+	  addAvailable(drawDeck());
   }
- 
   
   /* draw the next element in the people deck.
    Before remove it from the list, link it with the next element in the power deck. */
   public People drawDeck(){
-	  
 	  deckPpl.getFirst().setPower(removePow()); 
 	  return removePpl();
   }
@@ -164,6 +159,7 @@ public class Draw { //OK
 	  Power pow7 = new Power ("pow 7", 7, 5);
 	  Power pow8 = new Power ("pow 8", 8, 5);
 	  Power pow9 = new Power ("pow 9", 9, 5);
+	  Power pow10 = new Power ("pow 10", 10, 5);
 	  
 	  deckPow.add(pow1);
 	  deckPow.add(pow2);
@@ -174,8 +170,16 @@ public class Draw { //OK
 	  deckPow.add(pow7);
 	  deckPow.add(pow8);
 	  deckPow.add(pow9);
+	  deckPow.add(pow10);
 	  
 	  shufflePower();	    
   }
+
+
+
+public Vector<People> getAvailable() {
+	return available;
+}
+
   
 }
