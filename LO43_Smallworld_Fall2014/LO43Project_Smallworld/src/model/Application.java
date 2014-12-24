@@ -12,6 +12,7 @@ public class Application {
 	public Turn turn;
 	public Draw draw;
 	public ChoicePpl choice;
+	public Board board;
 	
 	public Application()
 	{
@@ -22,8 +23,6 @@ public class Application {
 		nbplay.okbtAddListener(new ButtonListener(this));
 		
 		draw = new Draw();
-		Board board = new Board(2);
-		board.printBoard();
 		
 	}
 	
@@ -31,6 +30,8 @@ public class Application {
 	public void createNewTurn(){
 		int i = nbplay.getNbPlayer();
 		turn = new Turn(i);
+		board = new Board(i);
+		board.printBoard();
 		
 		newplay = new NewPlayerWindow(1);
 		newplay.okbtAddListener(new ButtonListener(this));

@@ -117,8 +117,8 @@ public class Draw { //OK
 		  addAvailable(drawDeck());
 	  }
 	  
-	  for(People p : available)
-		  System.out.println(p.getName()+"    "+p.getPower().getName());
+	/*  for(People p : available)
+		  System.out.println(p.getName()+"    "+p.getPower().getName());*/
   }
   
   //create the people   POUR HAOCHENG
