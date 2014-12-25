@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="LO43_Smallworld_Fall2014/LO43Project_Smallworld/src"/>
+	<classpathentry excluding="LO43_Smallworld_Fall2014/LO43Project_Smallworld/src/" kind="src" path=""/>
+	<classpathentry kind="lib" path="LO43_Smallworld_Fall2014/LO43Project_Smallworld/miglayout-4.0-swing.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="LO43_Smallworld_Fall2014/LO43Project_Smallworld/bin"/>
+</classpath>

@@ -1,5 +1,7 @@
 package model;
 
+import java.awt.Image;
+
 import javax.swing.JFrame;
 
 import view.*;
@@ -18,8 +20,8 @@ public class Application {
 		win=new Window();
 		win.setVisible(true);
 		
-		nbplay = new NbPlayersWindow();
-		nbplay.okbtAddListener(new ButtonListener(this));
+		/*nbplay = new NbPlayersWindow();
+		nbplay.okbtAddListener(new ButtonListener(this));*/
 		
 		draw = new Draw();
 		
@@ -48,16 +50,21 @@ public class Application {
 		choice.replaceButtons(draw, turn);	
 	}
 	
+	public void choiceErrorMess1() {
+		choice.mess1();
+		
+	}
+	
+	
 	
 	public static void main(String [] args)
 	{
 		Application app=new Application();
 	}
+	
+	
 
-	public void choiceErrorMess1() {
-		choice.mess1();
-		
-	}
+	
 
 	
 

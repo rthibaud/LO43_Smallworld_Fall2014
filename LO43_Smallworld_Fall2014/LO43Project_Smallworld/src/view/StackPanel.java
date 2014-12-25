@@ -2,15 +2,20 @@ package view;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.BoxLayout;
 
 public class StackPanel extends JPanel {
 	
-	private JButton test;
+	private CardPanel cards;
 	
 	public StackPanel()
 	{
-		test=new JButton();
-		this.add(test);
+		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		
+		cards=new CardPanel();		
+		this.add(cards);
+		
+		
 	}
 
 
