@@ -72,8 +72,12 @@ public class People {//OK
 	  state=State.draw;
   }
 
-public String getName() {
+  public String getName() {
 	return name;
-}
+  }
+
+  public void addGold(int nb){
+	  gold+=nb;
+  }
 
 }

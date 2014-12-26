@@ -58,6 +58,10 @@ public class Draw { //OK
   *
   **/ 
   public void drawAvailable (int index, Player play){
+	  for(int i=index;i<7;i++){
+		  available.get(i).addGold(1);
+		  play.addGold(-1); 	//in theory it's always possible
+	  }
 	  play.addActivePeople(available.remove(index));
 	  addAvailable(drawDeck());
   }
