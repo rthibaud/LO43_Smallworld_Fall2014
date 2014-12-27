@@ -44,12 +44,12 @@ public class People {//OK
 	public void setPower(Power power) {
 		this.power = power;
 	}
-  
+	
+	public void setState(State st){
+		state = st;
+	}
+	
   	//method
-
- 
-
-
 
   public People() {
 	  name="";
@@ -78,6 +78,15 @@ public class People {//OK
 
   public void addGold(int nb){
 	  gold+=nb;
+  }
+  
+  
+  //initialize a people that was already used
+  public void init(){
+	  this.gold=0;
+	  this.power=null;
+	  this.pawnPlayed=0;
+	  state=State.draw;
   }
 
 }

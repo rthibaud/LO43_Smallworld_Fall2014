@@ -21,8 +21,8 @@ public class Application {
 		win=new Window();
 		win.setVisible(true);
 		
-		/*nbplay = new NbPlayersWindow();
-		nbplay.okbtAddListener(new ButtonListener(this));*/
+		nbplay = new NbPlayersWindow();
+		nbplay.okbtAddListener(new ButtonListener(this));
 		
 		draw = new Draw();
 		
@@ -53,9 +53,21 @@ public class Application {
 		choice.replaceButtons(draw, turn);	
 	}
 	
-	public void choiceErrorMess1() {
-		choice.mess1();
-		
+	public void choiceErrorMess(int i) {
+		switch (i) {
+			case 1 :
+				choice.mess1();
+				break;
+			case 2 :
+				choice.mess2();
+				break;
+			case 3 : 
+				choice.mess3();
+				break;
+			case 4 :
+				choice.mess4();
+				break;
+		}
 	}
 	
 	

@@ -43,11 +43,13 @@ public class ChoicePpl extends JFrame{
 	    choicebt4 = new JButton(draw.getAvailable().get(3).getName() + " with power " + draw.getAvailable().get(3).getPower().getName() + " and " + draw.getAvailable().get(3).getGold() + " gold on it" );
 	    choicebt5 = new JButton(draw.getAvailable().get(4).getName() + " with power " + draw.getAvailable().get(4).getPower().getName() + " and " + draw.getAvailable().get(4).getGold() + " gold on it" );
 	    choicebt6 = new JButton(draw.getAvailable().get(5).getName() + " with power " + draw.getAvailable().get(5).getPower().getName() + " and " + draw.getAvailable().get(5).getGold() + " gold on it" );
-	    lab1 = new JLabel("     " +turn.getPlayers().get(turn.getActive()).getName()+ " choose a new People if you want : ");
+	    lab1= new JLabel("     " +turn.getPlayers().get(turn.getActive()).getName()+ " ("+turn.getPlayers().get(turn.getActive()).getGold()+" gold) choose a new People if you want : ");	
 	    lab2 = new JLabel();
 	    declinebt = new JButton("    Put your active people in decline ");
-	    //options on the elements
 	    
+	    
+	    //options on the elements
+	    lab2.setForeground(Color.red);
 	    
 	    
 	    
@@ -89,18 +91,22 @@ public class ChoicePpl extends JFrame{
 	    choicebt4.setText(draw.getAvailable().get(3).getName() + " with power " + draw.getAvailable().get(3).getPower().getName() + " and " + draw.getAvailable().get(3).getGold() + " gold on it" );
 	    choicebt5.setText(draw.getAvailable().get(4).getName() + " with power " + draw.getAvailable().get(4).getPower().getName() + " and " + draw.getAvailable().get(4).getGold() + " gold on it" );
 	    choicebt6.setText(draw.getAvailable().get(5).getName() + " with power " + draw.getAvailable().get(5).getPower().getName() + " and " + draw.getAvailable().get(5).getGold() + " gold on it" );
-	    lab1.setText("     " +turn.getPlayers().get(turn.getActive()).getName()+ " choose a new People if you want : ");	
+	    lab1.setText("     " +turn.getPlayers().get(turn.getActive()).getName()+ " ("+turn.getPlayers().get(turn.getActive()).getGold()+" gold) choose a new People if you want : ");	
+	    lab2.setText("");
 	}
 
 	public void mess1() {
 		lab2.setText("You don't have enough money");
 	}
-	
 	public void mess2(){
-		lab2.setText("You don't have an active ppl");
+		lab2.setText("You don't have an active people");
 	}
-	
-	
+	public void mess3(){
+		lab2.setText("You already have an active people");
+	}
+	public void mess4(){
+		lab2.setText("You don't have any active people");
+	}
 }
 
 

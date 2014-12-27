@@ -47,6 +47,11 @@ public class Player { //OK
   }
  
  public boolean putPplDecline(){
+	 this.activePpl.setState(State.inDecline);
+	 
+	 if (this.declinePpl!=null)
+		 this.declinePpl.setState(State.draw);
+	 
 	 if (activePpl != null){
 		 declinePpl=activePpl;
 		 activePpl = null;
@@ -57,6 +62,10 @@ public class Player { //OK
  
  public boolean canDraw(){
 	 return activePpl==null;
+ }
+ 
+ public int getGold(){
+	 return gold;
  }
     // method
 
@@ -71,8 +80,7 @@ public class Player { //OK
 public void addActivePeople(People ppl){ // add gold, reset gold and add new activePeople -> switch activePpl to declinePpl
 	 addGold(ppl.getGold());
 	 ppl.setGold(0);
-	 declinePpl=activePpl;
-	 activePpl=ppl;
+	 this.activePpl=ppl;
   }
 
   public void conquer() {
@@ -95,13 +103,20 @@ public void addActivePeople(People ppl){ // add gold, reset gold and add new act
   }
 
   public void addGold(int gold){
-	  gold+=gold;
+	  this.gold+=gold;
   }
 
 public String getName() {
 	return name;
 }
   
+public People getDeclinePpl(){
+	return declinePpl;
+}
+
+public Power getDeclinePower() {
+	return declinePpl.getPower();
+}
 
 }
 

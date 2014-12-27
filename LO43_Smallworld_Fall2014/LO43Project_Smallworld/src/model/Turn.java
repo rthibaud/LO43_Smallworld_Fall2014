@@ -51,7 +51,11 @@ public class Turn { //OK
   	// method
 
   public void nextPlayer() {
-	  activePlayer=activePlayer+1;
+	  if (activePlayer == players.size()-1){
+		  activePlayer = 0 ;
+		  number=number+1;
+	  }else
+		  activePlayer=activePlayer+1;
   }
 
   public void nextTurn() {
