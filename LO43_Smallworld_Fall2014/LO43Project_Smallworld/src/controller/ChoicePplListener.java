@@ -108,6 +108,7 @@ public class ChoicePplListener implements ActionListener {
 					app.turn.getPlayers().get(app.turn.getActive()).getDeclinePpl().init();
 					app.draw.addPpl(app.turn.getPlayers().get(app.turn.getActive()).getDeclinePpl());
 				}
+				app.board.putUnitsAway(app.turn.getPlayers().get(app.turn.getActive()));
 				app.turn.getPlayers().get(app.turn.getActive()).putPplDecline();
 				app.replaceAvailable();
 				app.lockButtons(false);

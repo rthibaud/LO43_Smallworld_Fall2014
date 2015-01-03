@@ -80,6 +80,13 @@ public class People {//OK
 	  gold+=nb;
   }
   
+  public void setPawnPlayed(int i){
+	  this.pawnPlayed=i;
+  }
+  
+  public int getPawnPlayed(){
+	  return this.pawnPlayed;
+  }
   
   //initialize a people that was already used
   public void init(){

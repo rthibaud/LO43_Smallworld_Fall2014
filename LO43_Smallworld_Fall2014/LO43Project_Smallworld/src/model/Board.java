@@ -87,11 +87,23 @@ public class Board { //OK
 			  System.out.print(i+" ");
 		  }
 		  System.out.println();
-	  }
-	  
+	  }	  
   }
   
-
+  
+  //the function to leave only 1 unit per square
+  public void putUnitsAway(Player p){
+	  for (Square sq : squareTable){
+		  if (!sq.getUnitList().isEmpty()){
+			  if (sq.getUnitList().get(0).getPeople()==p.getPeople()){
+				  p.getPeople().setPawnPlayed(p.getPeople().getPawnPlayed()-sq.getUnitList().size()+1);
+				  for (int i = 1; i<sq.getUnitList().size(); i++ ){
+					  sq.getUnitList().remove(sq.getUnitList().size()-1);
+				  }
+			  }
+		  }
+	  }
+  }
 }
 
 
