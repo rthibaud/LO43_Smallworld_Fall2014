@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Image;
+import java.awt.event.MouseListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -26,6 +27,11 @@ public class CardPanel extends JPanel{
 		civilisation=new JLabel(civilisationimg);
 		this.add(civilisation);
 		
+	}
+	
+	public void addCardListener(MouseListener click)
+	{
+		this.addMouseListener(click);
 	}
 
 }

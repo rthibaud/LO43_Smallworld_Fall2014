@@ -2,15 +2,40 @@ package view;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.BoxLayout;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.JLabel;
 
 public class InfoPanel extends JPanel {
 	
-	private JButton test;
+	private int nbTurn;
+	
+	private JLabel nbTurnask;
+	private JLabel nbTurnprint;
 	
 	public InfoPanel()
 	{
-		test=new JButton();
-		this.add(test);
+		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		
+		nbTurnask = new JLabel("Nombre de tour restant");
+		add(nbTurnask);
+		
+		nbTurnprint = new JLabel(" " +nbTurn);
+		add(nbTurnprint);
+		
+		JLabel lblNewLabel_2 = new JLabel("Possibilité de passer en déclin");
+		add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("Phase d'expansion");
+		add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("Redéploiement des unités");
+		add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("Fin du tour");
+		add(lblNewLabel_5);
+		
 	}
 
 

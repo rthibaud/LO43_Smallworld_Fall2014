@@ -1,0 +1,29 @@
+\select@language {french}
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {chapter}{\numberline {2}Le jeu : Smallworld}{4}
+\contentsline {section}{\numberline {2.1}Description globale}{4}
+\contentsline {chapter}{\numberline {3}Adaptation des r\IeC {\`e}gles}{6}
+\contentsline {section}{\numberline {3.1}Ambiance recherch\IeC {\'e}e}{6}
+\contentsline {section}{\numberline {3.2}Les peuples}{6}
+\contentsline {section}{\numberline {3.3}Les pouvoirs}{8}
+\contentsline {chapter}{\numberline {4}Analyse des probl\IeC {\`e}mes}{10}
+\contentsline {section}{\numberline {4.1}Organisation globale du logiciel}{10}
+\contentsline {subsection}{\numberline {4.1.1}Gestion du projet}{10}
+\contentsline {subsection}{\numberline {4.1.2}Structure du logiciel}{10}
+\contentsline {section}{\numberline {4.2}Le diagramme de cas d'utilisation}{11}
+\contentsline {section}{\numberline {4.3}Le diagramme d'\IeC {\'e}tat-transistion}{12}
+\contentsline {section}{\numberline {4.4}Les diagrammes de s\IeC {\'e}quence}{12}
+\contentsline {subsection}{\numberline {4.4.1}Conqu\IeC {\^e}te}{13}
+\contentsline {subsection}{\numberline {4.4.2}D\IeC {\'e}clin}{14}
+\contentsline {subsection}{\numberline {4.4.3}Nouveau peuple}{14}
+\contentsline {subsection}{\numberline {4.4.4}Gestion des UVs}{15}
+\contentsline {chapter}{\numberline {5}Le mod\IeC {\`e}le}{17}
+\contentsline {section}{\numberline {5.1}Le diagramme de classe du mod\IeC {\`e}le}{17}
+\contentsline {section}{\numberline {5.2}Impl\IeC {\'e}mentation}{20}
+\contentsline {chapter}{\numberline {6}L'interface}{21}
+\contentsline {section}{\numberline {6.1}Description et organisation}{21}
+\contentsline {section}{\numberline {6.2}Solutions techniques}{21}
+\contentsline {chapter}{\numberline {7}Pr\IeC {\'e}visionnel des t\IeC {\^a}ches}{23}
+\contentsline {section}{\numberline {7.1}Fonctionnement g\IeC {\'e}n\IeC {\'e}ral}{23}
+\contentsline {section}{\numberline {7.2}Interface}{24}
+\contentsline {chapter}{\numberline {8}Conclusion}{25}

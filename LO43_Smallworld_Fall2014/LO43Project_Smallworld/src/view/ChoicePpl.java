@@ -1,31 +1,39 @@
 package view;
 
+import java.awt.BorderLayout;
+import java.awt.Button;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import model.Draw;
 import model.Turn;
 
+//A TRANSFORMER EN PANEL POUR DROUM, GARDES BIEN LES NOMS DES VARIABLES PR LES CONSTRUCTEURS
 
-public class ChoicePpl extends JPanel{
+public class ChoicePpl extends JFrame{
 	
 	JLabel lab1, lab2;
 	JButton choicebt1, choicebt2, choicebt3, choicebt4, choicebt5, choicebt6, declinebt;
 	
 	public ChoicePpl(Turn turn, Draw draw){
+		JPanel container = new JPanel();
 		
 	    this.setSize(350, 600);
+	    this.setContentPane(container);
 	    this.setVisible(true); 
-	   // this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
-	    //this.setLocationRelativeTo(null);
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+	    this.setLocationRelativeTo(null);
 	    
-	    this.setLayout(new GridLayout(9,1));
+	    container.setLayout(new GridLayout(9,1));
 	    Font police = new Font("Arial", Font.BOLD, 14);
 	    
 	    //creates the elements
@@ -35,26 +43,24 @@ public class ChoicePpl extends JPanel{
 	    choicebt4 = new JButton(draw.getAvailable().get(3).getName() + " with power " + draw.getAvailable().get(3).getPower().getName() + " and " + draw.getAvailable().get(3).getGold() + " gold on it" );
 	    choicebt5 = new JButton(draw.getAvailable().get(4).getName() + " with power " + draw.getAvailable().get(4).getPower().getName() + " and " + draw.getAvailable().get(4).getGold() + " gold on it" );
 	    choicebt6 = new JButton(draw.getAvailable().get(5).getName() + " with power " + draw.getAvailable().get(5).getPower().getName() + " and " + draw.getAvailable().get(5).getGold() + " gold on it" );
-	    lab1= new JLabel("     " +turn.getPlayers().get(turn.getActive()).getName()+ " ("+turn.getPlayers().get(turn.getActive()).getGold()+" gold) choose a new People if you want : ");	
+	    lab1 = new JLabel("     " +turn.getPlayers().get(turn.getActive()).getName()+ " choose a new People if you want : ");
 	    lab2 = new JLabel();
 	    declinebt = new JButton("    Put your active people in decline ");
-	    
-	    
 	    //options on the elements
-	    lab2.setForeground(Color.red);
-	    lab2.setFont(police);
 	    
 	    
-	    //add elements to the this
-	    this.add(lab1);
-	    this.add(choicebt1);
-	    this.add(choicebt2);
-	    this.add(choicebt3);
-	    this.add(choicebt4);
-	    this.add(choicebt5);
-	    this.add(choicebt6);
-	    this.add(lab2);
-	    this.add(declinebt);    
+	    
+	    
+	    //add elements to the container
+	    container.add(lab1);
+	    container.add(choicebt1);
+	    container.add(choicebt2);
+	    container.add(choicebt3);
+	    container.add(choicebt4);
+	    container.add(choicebt5);
+	    container.add(choicebt6);
+	    container.add(lab2);
+	    container.add(declinebt);    
 
 	  
 	} 
@@ -83,42 +89,18 @@ public class ChoicePpl extends JPanel{
 	    choicebt4.setText(draw.getAvailable().get(3).getName() + " with power " + draw.getAvailable().get(3).getPower().getName() + " and " + draw.getAvailable().get(3).getGold() + " gold on it" );
 	    choicebt5.setText(draw.getAvailable().get(4).getName() + " with power " + draw.getAvailable().get(4).getPower().getName() + " and " + draw.getAvailable().get(4).getGold() + " gold on it" );
 	    choicebt6.setText(draw.getAvailable().get(5).getName() + " with power " + draw.getAvailable().get(5).getPower().getName() + " and " + draw.getAvailable().get(5).getGold() + " gold on it" );
-	    lab1.setText("     " +turn.getPlayers().get(turn.getActive()).getName()+ " ("+turn.getPlayers().get(turn.getActive()).getGold()+" gold) choose a new People if you want : ");	
-	    lab2.setText("");
+	    lab1.setText("     " +turn.getPlayers().get(turn.getActive()).getName()+ " choose a new People if you want : ");	
 	}
 
 	public void mess1() {
 		lab2.setText("You don't have enough money");
 	}
+	
 	public void mess2(){
-		lab2.setText("You don't have an active people");
-	}
-	public void mess3(){
-		lab2.setText("You already have an active people");
-	}
-	public void mess4(){
-		lab2.setText("You don't have any active people");
-	}
-
-	public void lockbt() {
-		choicebt1.setEnabled(false);
-		choicebt2.setEnabled(false);
-		choicebt3.setEnabled(false);
-		choicebt4.setEnabled(false);
-		choicebt5.setEnabled(false);
-		choicebt6.setEnabled(false);
-		declinebt.setEnabled(false);
+		lab2.setText("You don't have an active ppl");
 	}
 	
-	public void unlockbt() {
-		choicebt1.setEnabled(true);
-		choicebt2.setEnabled(true);
-		choicebt3.setEnabled(true);
-		choicebt4.setEnabled(true);
-		choicebt5.setEnabled(true);
-		choicebt6.setEnabled(true);
-		declinebt.setEnabled(true);
-	}
+	
 }
 
 

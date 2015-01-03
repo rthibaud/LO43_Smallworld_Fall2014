@@ -1,0 +1,35 @@
+Prévisionnel des tâches :
+
+Nous voulions avoir une démarche de projet correcte c'est donc pour cela que nous avons établi un prévisionnel des tâches pour suivre l'avancé du projet.
+Le but de cette liste de tâches est d'obtenir un suivi correct et de vérifier que nous n'oublions aucune étape importante.
+
+->Etude du problème
+->Diagramme des cas d'utilisation
+->Diagramme d'etat transition
+->Diagrammes de séquence (4 diagrammes)
+->Diagramme des classes
+
+-> Faire le rapport
+
+->Implémentation du modèle : 
+->Système de pioche
+->Impléntation du choix d'un nouveau peuple
+->Impléntation de la classe Turn qui gère le fonctionnement d'un tour
+->Impléntation d'un système de plateau (non rectangulaire)
+->Implémentation du passage en déclin
+->Impléntation des combats
+->Impléntation du dé de renfort
+->Impléntation du compte de point
+->Impléntation d'un système qui détermine le vainqueur
+
+-> Faire des images (ou honteusement les piquer)
+->Interface statique
+->Lier le modèle et l'interface
+
+->Gestion des pouvoirs
+->Gestion des capacités des peuples
+->Gestion des attributs des cases
+
+->Animation du jeu
+
+->Ecran-titre + Menu
