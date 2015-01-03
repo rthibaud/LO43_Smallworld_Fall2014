@@ -13,7 +13,7 @@ public class Application {
 	public NewPlayerWindow newplay;
 	public Turn turn;
 	public Draw draw;
-	public ChoicePpl choice;
+	public ActionsPanel actions;
 	public Board board;
 	
 	public Application()
@@ -44,32 +44,18 @@ public class Application {
 		newplay.okbtAddListener(new ButtonListener(this));	
 	}
 	
-	public void createNewChoice() {
-		choice = new ChoicePpl(turn, draw);	
-		choice.choiceAddListeners(new ChoicePplListener(this));
+	public void createNewActionsWindow() {
+		actions = new ActionsPanel(turn, draw);	
+		actions.addListeners(new ActionChoiceListener(this), new ChoicePplListener(this));
 	}
 
 	public void replaceAvailable() {
-		choice.replaceButtons(draw, turn);	
+		actions.actualise(draw, turn);	
 	}
 	
 	public void choiceErrorMess(int i) {
-		switch (i) {
-			case 1 :
-				choice.mess1();
-				break;
-			case 2 :
-				choice.mess2();
-				break;
-			case 3 : 
-				choice.mess3();
-				break;
-			case 4 :
-				choice.mess4();
-				break;
-		}
+		actions.choiceErrMsg(i);
 	}
-	
 	
 	
 	public static void main(String [] args)

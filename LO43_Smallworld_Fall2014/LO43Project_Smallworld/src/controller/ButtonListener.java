@@ -30,7 +30,7 @@ public class ButtonListener implements ActionListener {
 				app.createNewPlayerWindow(app.turn.getLenght()+1);
 			}else{
 				//FAUDRA FAIRE APPARAITRE LE PLATEAU ICI !!!!!!
-				app.createNewChoice();
+				app.createNewActionsWindow();
 				
 			}
 			

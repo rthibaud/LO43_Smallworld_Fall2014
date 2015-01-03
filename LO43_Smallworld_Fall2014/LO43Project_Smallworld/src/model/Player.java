@@ -118,5 +118,9 @@ public Power getDeclinePower() {
 	return declinePpl.getPower();
 }
 
+public People getPeople(){
+	return activePpl;
+}
+
 }
 

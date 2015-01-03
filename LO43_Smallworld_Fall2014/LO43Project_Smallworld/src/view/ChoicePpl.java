@@ -1,39 +1,31 @@
 package view;
 
-import java.awt.BorderLayout;
-import java.awt.Button;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 import model.Draw;
 import model.Turn;
 
-//A TRANSFORMER EN PANEL POUR DROUM, GARDES BIEN LES NOMS DES VARIABLES PR LES CONSTRUCTEURS
 
-public class ChoicePpl extends JFrame{
+public class ChoicePpl extends JPanel{
 	
 	JLabel lab1, lab2;
 	JButton choicebt1, choicebt2, choicebt3, choicebt4, choicebt5, choicebt6, declinebt;
 	
 	public ChoicePpl(Turn turn, Draw draw){
-		JPanel container = new JPanel();
 		
 	    this.setSize(350, 600);
-	    this.setContentPane(container);
 	    this.setVisible(true); 
-	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
-	    this.setLocationRelativeTo(null);
+	   // this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+	    //this.setLocationRelativeTo(null);
 	    
-	    container.setLayout(new GridLayout(9,1));
+	    this.setLayout(new GridLayout(9,1));
 	    Font police = new Font("Arial", Font.BOLD, 14);
 	    
 	    //creates the elements
@@ -50,19 +42,19 @@ public class ChoicePpl extends JFrame{
 	    
 	    //options on the elements
 	    lab2.setForeground(Color.red);
+	    lab2.setFont(police);
 	    
 	    
-	    
-	    //add elements to the container
-	    container.add(lab1);
-	    container.add(choicebt1);
-	    container.add(choicebt2);
-	    container.add(choicebt3);
-	    container.add(choicebt4);
-	    container.add(choicebt5);
-	    container.add(choicebt6);
-	    container.add(lab2);
-	    container.add(declinebt);    
+	    //add elements to the this
+	    this.add(lab1);
+	    this.add(choicebt1);
+	    this.add(choicebt2);
+	    this.add(choicebt3);
+	    this.add(choicebt4);
+	    this.add(choicebt5);
+	    this.add(choicebt6);
+	    this.add(lab2);
+	    this.add(declinebt);    
 
 	  
 	} 
