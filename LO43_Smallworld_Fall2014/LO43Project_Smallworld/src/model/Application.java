@@ -67,11 +67,6 @@ public class Application {
 		actions.lockbt(bool);	
 	}
 	
-	
-
-	
-
-	
 
 
 
