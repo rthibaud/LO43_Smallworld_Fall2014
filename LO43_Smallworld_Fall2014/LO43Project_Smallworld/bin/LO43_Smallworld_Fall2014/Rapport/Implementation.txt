@@ -1,2 +1,0 @@
-Après avoir généré les classes à partir de l'AGL, nous avons enfin pu rentrer dans le vif du sujet. Pour commencer, nous avons choisi de considérer le fait que nous aurions 3 joueurs pour ne pas avoir à se soucier des différents plateaux.
-Ensuite, on a commencé à écrire les constructeurs et les méthodes principales. La classe Draw est presque complète et arrive a bien gérer la pioche. Nous avons aussi fait les écouteurs (listenners) sur le premières fenêtres (Demande du nombre de joueurs et l'entrée des noms des différents joueurs). 

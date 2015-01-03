@@ -100,6 +100,21 @@ public class ChoicePpl extends JFrame{
 		lab2.setText("You don't have an active ppl");
 	}
 	
+	public void mess3(){
+		lab2.setText("mess3");
+	}
+	
+	public void mess4(){
+		lab2.setText("mess4");
+	}
+	
+	public void lockbt(){
+		System.out.println("lockbt");
+	}
+	
+	public void unlockbt(){
+		System.out.println("lockbt");
+	}
 	
 }
 

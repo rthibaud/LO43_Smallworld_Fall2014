@@ -13,7 +13,7 @@ public class Application {
 	public NewPlayerWindow newplay;
 	public Turn turn;
 	public Draw draw;
-	/*public ActionsPanel actions;*/
+	public ActionsPanel actions;
 	public Board board;
 	
 	public Application()
@@ -44,7 +44,7 @@ public class Application {
 		newplay.okbtAddListener(new ButtonListener(this));	
 	}
 	
-	/*public void createNewActionsWindow() {
+	public void createNewActionsWindow() {
 		actions = new ActionsPanel(turn, draw);	
 		actions.addListeners(new ActionChoiceListener(this), new ChoicePplListener(this));
 	}
@@ -55,7 +55,7 @@ public class Application {
 	
 	public void choiceErrorMess(int i) {
 		actions.choiceErrMsg(i);
-	}*/
+	}
 	
 	
 	public static void main(String [] args)
@@ -63,9 +63,9 @@ public class Application {
 		Application app=new Application();
 	}
 
-	/*public void lockButtons(boolean bool) {
+	public void lockButtons(boolean bool) {
 		actions.lockbt(bool);	
-	}*/
+	}
 	
 	
 
