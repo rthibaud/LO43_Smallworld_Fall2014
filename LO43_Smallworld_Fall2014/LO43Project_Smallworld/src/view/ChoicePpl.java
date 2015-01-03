@@ -99,6 +99,26 @@ public class ChoicePpl extends JPanel{
 	public void mess4(){
 		lab2.setText("You don't have any active people");
 	}
+
+	public void lockbt() {
+		choicebt1.setEnabled(false);
+		choicebt2.setEnabled(false);
+		choicebt3.setEnabled(false);
+		choicebt4.setEnabled(false);
+		choicebt5.setEnabled(false);
+		choicebt6.setEnabled(false);
+		declinebt.setEnabled(false);
+	}
+	
+	public void unlockbt() {
+		choicebt1.setEnabled(true);
+		choicebt2.setEnabled(true);
+		choicebt3.setEnabled(true);
+		choicebt4.setEnabled(true);
+		choicebt5.setEnabled(true);
+		choicebt6.setEnabled(true);
+		declinebt.setEnabled(true);
+	}
 }
 
 

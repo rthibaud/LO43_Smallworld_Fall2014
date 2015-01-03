@@ -62,6 +62,10 @@ public class Application {
 	{
 		Application app=new Application();
 	}
+
+	public void lockButtons(boolean bool) {
+		actions.lockbt(bool);	
+	}
 	
 	
 

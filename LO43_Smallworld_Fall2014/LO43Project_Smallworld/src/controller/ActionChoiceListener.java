@@ -23,6 +23,10 @@ private Application app;
 		}else if (source.getName()=="bt2"){
 				
 			
+		}else if (source.getName()=="bt3"){
+			app.turn.nextPlayer();
+			app.lockButtons(true);
+			app.replaceAvailable();
 		}
 	}
 }

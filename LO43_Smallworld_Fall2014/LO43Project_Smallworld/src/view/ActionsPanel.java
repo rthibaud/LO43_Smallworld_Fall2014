@@ -68,4 +68,11 @@ public class ActionsPanel extends JFrame {
 	}
 
 	}
+
+	public void lockbt(boolean bool) {
+		if (bool == false)
+			pan2.lockbt();
+		else
+			pan2.unlockbt();
+	}
 }

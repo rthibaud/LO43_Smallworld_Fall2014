@@ -24,8 +24,8 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=0){
 					app.draw.drawAvailable(0, app.turn.getPlayers().get(app.turn.getActive()));
-					app.turn.nextPlayer();
 					app.replaceAvailable();
+					app.lockButtons(false);
 				}else
 					app.choiceErrorMess(1);	
 			}else{
@@ -35,8 +35,8 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=1){
 					app.draw.drawAvailable(1, app.turn.getPlayers().get(app.turn.getActive()));
-					app.turn.nextPlayer();
 					app.replaceAvailable();
+					app.lockButtons(false);
 				}else
 					app.choiceErrorMess(1);	
 			}else{
@@ -46,8 +46,8 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=2){
 					app.draw.drawAvailable(2, app.turn.getPlayers().get(app.turn.getActive()));
-					app.turn.nextPlayer();
 					app.replaceAvailable();
+					app.lockButtons(false);
 				}else
 					app.choiceErrorMess(1);	
 				
@@ -58,8 +58,8 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=3){
 					app.draw.drawAvailable(3, app.turn.getPlayers().get(app.turn.getActive()));
-					app.turn.nextPlayer();
 					app.replaceAvailable();
+					app.lockButtons(false);
 				}else
 					app.choiceErrorMess(1);			
 			}else{
@@ -69,8 +69,8 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=4){
 					app.draw.drawAvailable(4, app.turn.getPlayers().get(app.turn.getActive()));
-					app.turn.nextPlayer();
 					app.replaceAvailable();
+					app.lockButtons(false);
 				}else
 					app.choiceErrorMess(1);	
 			}else{
@@ -80,8 +80,8 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=5){
 					app.draw.drawAvailable(5, app.turn.getPlayers().get(app.turn.getActive()));
-					app.turn.nextPlayer();
 					app.replaceAvailable();
+					app.lockButtons(false);
 				}else
 					app.choiceErrorMess(1);	
 			}else{
@@ -97,8 +97,8 @@ public class ChoicePplListener implements ActionListener {
 					app.draw.addPpl(app.turn.getPlayers().get(app.turn.getActive()).getDeclinePpl());
 				}
 				app.turn.getPlayers().get(app.turn.getActive()).putPplDecline();
-				app.turn.nextPlayer();
 				app.replaceAvailable();
+				app.lockButtons(false);
 			}
 			
 		}
