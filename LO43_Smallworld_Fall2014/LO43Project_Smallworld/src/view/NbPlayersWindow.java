@@ -45,7 +45,7 @@ public class NbPlayersWindow extends JFrame{
 		
 		// minimal value = 2, max = 5, default = 3 and the step = 1.
 		spinnerEditor.getModel().setMinimum(2);
-		spinnerEditor.getModel().setMaximum(5);
+		spinnerEditor.getModel().setMaximum(4);
 		spinnerEditor.getModel().setStepSize(1);
 		spinnerEditor.getModel().setValue(3);
 				
