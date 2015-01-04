@@ -10,6 +10,8 @@ public class People {//OK
   private int maxPawn;
 
   private int pawnPlayed;
+  
+  private int stock;
 
   private int gold;
 
@@ -24,12 +26,23 @@ public class People {//OK
   		this.number = nb;
   		maxPawn = 5;
   		pawnPlayed = 0;
+  		stock = 0;
   		gold = 0;
   		power = null;
   		state = state.draw;
   	}
+  	
+  	
   
-    public int getGold() {
+    public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+
+	public int getGold() {
 		return gold;
 	}
 
@@ -88,7 +101,14 @@ public class People {//OK
 	  return this.pawnPlayed;
   }
   
-  //initialize a people that was already used
+  public void addPawnPlayed(int nb){
+	  pawnPlayed+=nb;
+  }
+
+  public void addStock(int nb){
+	  stock+=nb;
+  }
+//initialize a people that was already used
   public void init(){
 	  this.gold=0;
 	  this.power=null;

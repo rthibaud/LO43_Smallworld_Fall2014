@@ -14,6 +14,8 @@ public class Square { //OK
   private Vector <Unit>  unitList;
    
   private Vector <Integer>  adjacency;
+  
+  private Player owner; //the player who control the ACTIVE People on this board
 
   	//Constructors
   
@@ -23,6 +25,7 @@ public class Square { //OK
 	 specialAttribute = 0;
 	 unitList = new Vector <Unit>();
 	 adjacency = new Vector <Integer>();
+	 owner = null;
   }
   
   public Square(int number,int type, int specialAttribute) {
@@ -31,6 +34,7 @@ public class Square { //OK
 	this.specialAttribute = specialAttribute;
 	this.unitList = new Vector <Unit>();
 	this.adjacency = new Vector <Integer>();
+	this.owner = null;
   }
 
 public int getNumber() {
@@ -71,13 +75,17 @@ public Vector<Integer> getAdjacency() {
 
 public void setAdjacency(Vector<Integer> adjacency) {
 	this.adjacency = adjacency;
+}  
+  
+  	public Player getOwner() {
+	return owner;
 }
 
+public void setOwner(Player owner) {
+	this.owner = owner;
+}
 
-  
-  
-  
-  	//method
+//method
 public int def(){
 	int def=0;
 	

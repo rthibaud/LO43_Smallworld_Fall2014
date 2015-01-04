@@ -1,6 +1,7 @@
 package model;
 
 import java.util.Random;
+import java.util.Vector;
 
 import view.*;
 
@@ -83,12 +84,6 @@ public void addActivePeople(People ppl){ // add gold, reset gold and add new act
 	 this.activePpl=ppl;
   }
 
-  public void conquer() {
-  }
-
-  public void deploy() {
-  }
-
   public int dice(){
 	  Random rand = new Random();
 	  int result = 0;
@@ -120,6 +115,10 @@ public Power getDeclinePower() {
 
 public People getPeople(){
 	return activePpl;
+}
+
+public Power getPower(){
+	return activePpl.getPower();
 }
 
 }

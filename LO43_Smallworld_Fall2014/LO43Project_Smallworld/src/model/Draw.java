@@ -75,8 +75,9 @@ public class Draw { //OK
 	  return removePpl();
   }
   
-  /* replace all elements in the deck in a random order 
-  We create a new deck and we place each people from the old deck in a random order  
+  /*
+   *  	Replace all elements in the deck in a random order 
+   *	We create a new deck and we place each people from the old deck in a random order  
   */
   public void shufflePeople(){
 	 LinkedList <People> tmp = new LinkedList <People>();

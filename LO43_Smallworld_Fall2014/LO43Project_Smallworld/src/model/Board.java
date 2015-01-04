@@ -104,8 +104,62 @@ public class Board { //OK
 		  }
 	  }
   }
-}
 
+
+	/*
+	 * Create a list of availaible square to conquer
+	 * Choose a square
+	 * count def
+	 * if possible place def+2 pawns
+	 * 
+	 */
+	public void conquer(Player activePlayer,int choice) {
+	  
+	  Vector <Integer>  possible = new Vector<Integer>();
+	  Unit unit = new Unit(); //constructeur avec un peuple
+	  int def=0; //pas forcement utile une fois intégrer à l'interface
+	  
+	  if(activePlayer.getPeople().getPawnPlayed()==0){
+		  possible=squareTable.get(0).getAdjacency();
+	  }else{
+		  for(int i=0;i<size;i++){
+			  if(squareTable.get(i).getOwner()==activePlayer){
+				  possible.addAll(squareTable.get(i).getAdjacency()); // je ne suis pas sur que ça marche 
+			  }
+		  }
+	  }
+	  
+	  //choosing section
+	  System.out.println("Choose a square from this list :");
+	  for(int i=0;i<possible.size();i++){
+		  System.out.print(possible+" ");
+	  }
+	  System.out.println();
+	  //A demander l'utilisateur, pour le moment je le rentre en parametre : choice
+	  
+	  def=squareTable.get(choice).def();
+	  if(activePlayer.getPeople().getStock()>=def+2){
+		  //Warning ! should be modify to include power 
+			  squareTable.get(choice).getOwner().getPeople().addPawnPlayed(-squareTable.get(choice).getUnitList().size());
+			  squareTable.get(choice).getOwner().getPeople().addStock(+1);
+			  squareTable.get(choice).getUnitList().clear();
+			  
+			  for(int i=0;i<def+2;i++){
+				  squareTable.get(choice).getUnitList().add(unit);
+				  activePlayer.getPeople().addStock(-1);
+				  activePlayer.getPeople().addPawnPlayed(+1);
+			  }
+	  }
+	  
+	}
+	
+	public void deploy() {
+		
+	
+	}
+
+
+}
 
 /*	
  * 	txt file model :
