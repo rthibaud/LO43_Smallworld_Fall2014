@@ -204,14 +204,14 @@ public class Board { //OK
 	public void conquer(Player activePlayer,int choice) {
 	  
 	  Vector <Integer>  possible = new Vector<Integer>();
-	  Unit unit = new Unit(); //constructeur avec un peuple
+	  PplUnit unit = new PplUnit(1,1,activePlayer.getPeople()); 
 	  int def=0; //pas forcement utile une fois intégrer à l'interface
 	  
 	  if(activePlayer.getPeople().getPawnPlayed()==0){
 		  possible=squareTable.get(0).getAdjacency();
 	  }else{
 		  for(int i=0;i<size;i++){
-			  if(squareTable.get(i).getOwner()==activePlayer){
+			  if(squareTable.get(i).getPeopleOfUnit()==activePlayer.getPeople()){
 				  possible.addAll(squareTable.get(i).getAdjacency()); // je ne suis pas sur que ça marche 
 			  }
 		  }
@@ -238,7 +238,7 @@ public class Board { //OK
 				  activePlayer.getPeople().addPawnPlayed(+1);
 			  }
 	  }
-	  
+	  // derniere conquete (avec le dé)
 	}
 	
 	public void deploy() {

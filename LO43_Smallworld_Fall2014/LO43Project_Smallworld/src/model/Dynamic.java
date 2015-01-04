@@ -8,7 +8,7 @@ public class Dynamic extends Unit { //OK
 
     //constructors
     
-  public Dynamic() {
+  public Dynamic(int atk, int def) {
 	  super();
 	  owner = null;
   }

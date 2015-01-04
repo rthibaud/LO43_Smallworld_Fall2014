@@ -19,7 +19,7 @@ public class Unit {//OK
 		this.atk = atk;
 	}
   
-  	//constructors
+  	//getters and setters
 
 	public int getDef() {
 		return def;

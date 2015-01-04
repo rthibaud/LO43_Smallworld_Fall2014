@@ -6,12 +6,12 @@ public class PplUnit extends Dynamic { //OK
     private People people;
 
     public PplUnit(){
-    	super();
+    	super(0,0);
     	people = null;
     }
     
-    public PplUnit(People people) {
-    	super();
+    public PplUnit(int atk, int def,People people) {
+    	super(atk,def);
     	this.people = people;
     }
 
