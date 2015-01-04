@@ -46,6 +46,16 @@ public class People {//OK
 		this.stock = stock;
 	}
 
+	public int getMaxPawn() {
+		return maxPawn;
+	}
+
+	public void setMaxPawn(int maxPawn) {
+		this.maxPawn = maxPawn;
+	}
+
+
+
 	public int getGold() {
 		return gold;
 	}

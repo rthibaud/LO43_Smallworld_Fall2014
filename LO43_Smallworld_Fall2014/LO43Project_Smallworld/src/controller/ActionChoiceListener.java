@@ -26,7 +26,7 @@ private Application app;
 			/*****!!!****/
 		}else if(source.getName()=="fbt1"){ //1st conquest -> normalement ce cas est inclus dans la methode conquer
 			/*****!!!****/
-			app.board.conquer(app.turn.getPlayers().get(app.turn.getActive()),3,true); //DEBUG
+			app.board.conquer(app.turn.getPlayers().get(app.turn.getActive()),3,false); //DEBUG
 			/*****!!!****/
 			
 		}else if (source.getName()=="bt2"){//deploy

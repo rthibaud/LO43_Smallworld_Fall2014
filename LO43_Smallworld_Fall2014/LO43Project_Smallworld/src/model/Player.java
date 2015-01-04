@@ -82,6 +82,7 @@ public void addActivePeople(People ppl){ // add gold, reset gold and add new act
 	 addGold(ppl.getGold());
 	 ppl.setGold(0);
 	 this.activePpl=ppl;
+	 ppl.setStock(ppl.getMaxPawn()+ppl.getPower().getMaxPawn());
   }
 
 
