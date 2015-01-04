@@ -37,7 +37,7 @@ private Application app;
 			//mtn faut aussi les replacer
 			
 		}else if (source.getName()=="bt3"){ //finish turn
-	//		app.turn.getPlayers().get(app.turn.getActive()).addGold(app.board.countPoints(app.turn.getPlayers().get(app.turn.getActive())));
+			app.turn.getPlayers().get(app.turn.getActive()).addGold(app.board.countPoints(app.turn.getPlayers().get(app.turn.getActive())));
 			app.turn.nextPlayer();
 			app.lockButtons(true);
 			app.actions.pan1.conquerbt.setText("Conquer");
