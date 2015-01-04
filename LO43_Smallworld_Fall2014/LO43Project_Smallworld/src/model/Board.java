@@ -2,6 +2,8 @@ package model;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.HashSet;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -201,50 +203,67 @@ public class Board { //OK
 	 * if possible place def+2 pawns
 	 * 
 	 */
-	public void conquer(Player activePlayer,int choice) {
+	public void conquer(Player activePlayer,int choice,boolean lastConquest) {
 	  
-	  Vector <Integer>  possible = new Vector<Integer>();
+	  HashSet <Integer>  possible = new HashSet<Integer>();
 	  PplUnit unit = new PplUnit(1,1,activePlayer.getPeople()); 
-	  int def=0; //pas forcement utile une fois intégrer à l'interface
+	  int dice = 0, def=0; //def pas forcement utile une fois intégré à l'interface
 	  
 	  if(activePlayer.getPeople().getPawnPlayed()==0){
-		  possible=squareTable.get(0).getAdjacency();
+		  possible.addAll(squareTable.get(0).getAdjacency());
 	  }else{
 		  for(int i=0;i<size;i++){
 			  if(squareTable.get(i).getPeopleOfUnit()==activePlayer.getPeople()){
-				  possible.addAll(squareTable.get(i).getAdjacency()); // je ne suis pas sur que ça marche 
+				  possible.addAll(squareTable.get(i).getAdjacency());  
 			  }
 		  }
 	  }
 	  
 	  //choosing section
 	  System.out.println("Choose a square from this list :");
-	  for(int i=0;i<possible.size();i++){
-		  System.out.print(possible+" ");
-	  }
+	 // for(int i=0;i<possible.size();i++){
+		  System.out.print(possible);
+	//  }
 	  System.out.println();
 	  //A demander l'utilisateur, pour le moment je le rentre en parametre : choice
 	  
 	  def=squareTable.get(choice).def();
-	  if(activePlayer.getPeople().getStock()>=def+2){
+	  if(lastConquest){
+		  dice = dice();
+	  }else{
+		  dice = 0;
+	  }
+	  if(activePlayer.getPeople().getStock()+dice>=def+2){
 		  //Warning ! should be modify to include power 
-			  squareTable.get(choice).getOwner().getPeople().addPawnPlayed(-squareTable.get(choice).getUnitList().size());
+			  squareTable.get(choice).getOwner().getPeople().addPawnPlayed(-squareTable.get(choice).getUnitList().size());// error here(null pointer exception
 			  squareTable.get(choice).getOwner().getPeople().addStock(+1);
 			  squareTable.get(choice).getUnitList().clear();
 			  
-			  for(int i=0;i<def+2;i++){
+			  for(int i=dice;i<def+2;i++){
 				  squareTable.get(choice).getUnitList().add(unit);
 				  activePlayer.getPeople().addStock(-1);
 				  activePlayer.getPeople().addPawnPlayed(+1);
 			  }
 	  }
-	  // derniere conquete (avec le dé)
 	}
 	
 	public void deploy() {
 		
 	
 	}
+	
+	  public int dice(){
+		  Random rand = new Random();
+		  int result = 0;
+		  
+		  int dice = rand.nextInt(6); 
+		  if(dice<3){
+			  result = dice+1;		  
+		  }else{
+			  result = 0;
+		  }
+		  return result;
+	  }
 
 
 }

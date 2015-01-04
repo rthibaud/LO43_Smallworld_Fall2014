@@ -84,18 +84,6 @@ public void addActivePeople(People ppl){ // add gold, reset gold and add new act
 	 this.activePpl=ppl;
   }
 
-  public int dice(){
-	  Random rand = new Random();
-	  int result = 0;
-	  
-	  int dice = rand.nextInt(6); 
-	  if(dice<3){
-		  result = dice+1;		  
-	  }else{
-		  result = 0;
-	  }
-	  return result;
-  }
 
   public void addGold(int gold){
 	  this.gold+=gold;
