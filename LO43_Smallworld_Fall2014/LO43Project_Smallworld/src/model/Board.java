@@ -249,35 +249,9 @@ public class Board { //OK
 	  }
 	}
 	
-	public void deploy(Player p) {
-		HashSet <Integer>  possible = new HashSet<Integer>();
-		for(Square sq : this.squareTable){
-			if (sq.getPeopleOfUnit()==p.getPeople()){
-				possible.add(sq.getNumber());
-			}
-		}
+	public void deploy() {
 		
-		String str="0";
-		
-		while (str!="N"){
-		 System.out.println("Choose a square from this list :");
-		  for(int i=0;i<possible.size();i++){
-			  System.out.print(possible);
-		  }
-		  System.out.println();
-		  
-		  Scanner sc = new Scanner(System.in);
-		  int choiceSq, choiceNb;
-		  choiceSq = sc.nextInt();
-		  
-		  System.out.println("How many units?");
-		  System.out.println();
-		  choiceNb = sc.nextInt();
-		  
-		  System.out.println("Do you want to continue? (No = N)");
-		  str = sc.next();  
-		} 
-		  
+	
 	}
 	
 	  public int dice(){

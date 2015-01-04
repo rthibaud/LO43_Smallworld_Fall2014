@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 import model.Application;
+import model.Player;
 
 public class ActionChoiceListener implements ActionListener{
 	
@@ -29,7 +30,6 @@ private Application app;
 			app.actions.pan1.deploybt.setEnabled(false);getClass();
 			app.lockButtons(false);
 			app.board.putUnitsAway(app.turn.getPlayers().get(app.turn.getActive()));
-			app.board.deploy(app.turn.getPlayers().get(app.turn.getActive()));
 			//mtn faut aussi les replacer
 			
 		}else if (source.getName()=="bt3"){ //finish turn
@@ -39,7 +39,8 @@ private Application app;
 			app.actions.pan1.conquerbt.setText("Conquer");
 			app.actions.pan1.conquerbt.setVisible(true);
 			app.actions.pan1.deploybt.setEnabled(true);
-			app.replaceAvailable();			
+			app.replaceAvailable();
+			
 		}
 	}
 }
