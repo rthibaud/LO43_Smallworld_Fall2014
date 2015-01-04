@@ -93,17 +93,26 @@ public class Board { //OK
   
   //the function to leave only 1 unit per square
   public void putUnitsAway(Player p){
+	  int i;
 	  for (Square sq : squareTable){
 		  if (!sq.getUnitList().isEmpty()){
 			  if (sq.getPeopleOfUnit()==p.getPeople()){
-				  p.getPeople().setPawnPlayed(p.getPeople().getPawnPlayed()-sq.getUnitList().size()+1);
-				  for (int i = 1; i<sq.getUnitList().size(); i++ ){
-					  sq.getUnitList().remove(sq.getUnitList().size()-1);
+				  i = sq.countPplUnit();
+				  int j =0;
+				  while (j <i-1){
+					  for(Unit u : sq.getUnitList()){
+						  if (u instanceof PplUnit){
+							  sq.getUnitList().remove(u);
+						  }	  
+					  }
 				  }
+				  p.getPeople().setPawnPlayed(p.getPeople().getPawnPlayed()-i+1);
 			  }
 		  }
 	  }
   }
+  
+  
   
   //The function to count the number of points earned by player p during this turn
   public int countPoints(Player p){
