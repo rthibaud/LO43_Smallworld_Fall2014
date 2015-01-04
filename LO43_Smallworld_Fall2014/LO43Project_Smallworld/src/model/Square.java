@@ -78,6 +78,14 @@ public void setAdjacency(Vector<Integer> adjacency) {
   
   
   	//method
-
+public int def(){
+	int def=0;
+	
+	if (type==6)def++;
+	for(int i=0;i<unitList.size();i++){
+		def+=unitList.get(i).getDef();
+	}
+	return def;
+}
 
 }

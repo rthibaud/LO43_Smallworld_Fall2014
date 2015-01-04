@@ -21,9 +21,36 @@ public class Unit {//OK
 		this.atk = atk;
 	}
   
-  	//method
+  	//constructors
 	public People getPeople(){
 		return people;
 	}
+
+
+	public int getDef() {
+		return def;
+	}
+
+
+	public void setDef(int def) {
+		this.def = def;
+	}
+
+
+	public int getAtk() {
+		return atk;
+	}
+
+
+	public void setAtk(int atk) {
+		this.atk = atk;
+	}
+
+
+	public void setPeople(People people) {
+		this.people = people;
+	}
+	
+	
 
 }

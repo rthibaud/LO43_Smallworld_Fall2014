@@ -107,7 +107,18 @@ public class Board { //OK
 }
 
 
-/*	type
+/*	
+ * 	txt file model :
+	
+	int : nb of squares
+	0 type attribute nb of adjacency squares 0 1 .. X (list of squares) 
+	1
+	.
+	.
+	.
+	nb of squares - 1
+ * 
+ * type
 	0 -> outside of the board
 	1 -> eau
 	2 -> champs
@@ -122,14 +133,5 @@ public class Board { //OK
 	2 -> mine
 	3 -> tunnel
 	
-	txt file model :
-	
-	int : nb of squares
-	0 type attribute nb of adjacency squares 0 1 .. X (list of squares) 
-	1
-	.
-	.
-	.
-	nb of squares - 1
 */
 	
