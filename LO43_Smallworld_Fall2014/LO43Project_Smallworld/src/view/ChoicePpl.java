@@ -14,7 +14,7 @@ import model.Turn;
 
 
 public class ChoicePpl extends JPanel{
-	
+
 	JLabel lab1, lab2;
 	JButton choicebt1, choicebt2, choicebt3, choicebt4, choicebt5, choicebt6, declinebt;
 	
