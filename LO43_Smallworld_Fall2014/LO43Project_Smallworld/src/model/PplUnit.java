@@ -19,4 +19,9 @@ public class PplUnit extends Dynamic { //OK
     
     
     	//method
+    
+    public People getPeople(){
+    	return people;
+    }
+    
 }

@@ -6,8 +6,6 @@ public class Unit {//OK
   private int def;
 
   private int atk;
-  
-  private People people;
 
   	//constructors
   public Unit() {
@@ -22,10 +20,6 @@ public class Unit {//OK
 	}
   
   	//constructors
-	public People getPeople(){
-		return people;
-	}
-
 
 	public int getDef() {
 		return def;
@@ -45,12 +39,5 @@ public class Unit {//OK
 	public void setAtk(int atk) {
 		this.atk = atk;
 	}
-
-
-	public void setPeople(People people) {
-		this.people = people;
-	}
-	
-	
 
 }

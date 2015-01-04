@@ -95,7 +95,7 @@ public class Board { //OK
   public void putUnitsAway(Player p){
 	  for (Square sq : squareTable){
 		  if (!sq.getUnitList().isEmpty()){
-			  if (sq.getUnitList().get(0).getPeople()==p.getPeople()){
+			  if (sq.getPeopleOfUnit()==p.getPeople()){
 				  p.getPeople().setPawnPlayed(p.getPeople().getPawnPlayed()-sq.getUnitList().size()+1);
 				  for (int i = 1; i<sq.getUnitList().size(); i++ ){
 					  sq.getUnitList().remove(sq.getUnitList().size()-1);
@@ -111,7 +111,7 @@ public class Board { //OK
 	
 	for(Square sq : squareTable){ // pour toutes les cases
 		 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-			 if (sq.getUnitList().get(0).getPeople()==p.getPeople() || sq.getUnitList().get(0).getPeople()==p.getDeclinePpl()) 
+			 if (sq.getOwner()==p) 
 				 nbpt=nbpt+1;
 		 }
 	}
@@ -119,21 +119,21 @@ public class Board { //OK
 	if (p.getPeople().getName()=="Administratif" || p.getPeople().getName()=="Vacataire"){ 
 		for(Square sq : squareTable){ // pour toutes les cases
 			 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-				if (sq.getUnitList().get(0).getPeople()==p.getPeople()) 
+				if (sq.getPeopleOfUnit()==p.getPeople()) 
 					 nbpt=nbpt+1;
 			 }
 		}
 	}else if(p.getPeople().getName()=="Alternant"){
 		for(Square sq : squareTable){ // pour toutes les cases
 			 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-				if (sq.getUnitList().get(0).getPeople()==p.getPeople() && sq.getType()==2)  //LES CHAMPS ?
+				if (sq.getPeopleOfUnit()==p.getPeople() && sq.getType()==2)  //LES CHAMPS ?
 					 nbpt=nbpt+1;
 			 }
 		}
 	}else if(p.getPeople().getName()=="EE"){
 		for(Square sq : squareTable){ // pour toutes les cases
 			 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-				if (sq.getUnitList().get(0).getPeople()==p.getPeople() && sq.getSpecialAttribute()==1)  //LES CHAMPS ?
+				if (sq.getPeopleOfUnit()==p.getPeople() && sq.getSpecialAttribute()==1)  //LES CHAMPS ?
 					nbpt=nbpt+1;
 			 }
 		}
@@ -142,28 +142,28 @@ public class Board { //OK
 	if  (p.getPeople().getPower().getName()=="des amphis") {//AMPHI = marais ???
 		for(Square sq : squareTable){ // pour toutes les cases
 			 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-				if (sq.getUnitList().get(0).getPeople()==p.getPeople() && sq.getType()==5)  
+				if (sq.getPeopleOfUnit()==p.getPeople() && sq.getType()==5)  
 					nbpt=nbpt+1;
 			 }
 		}
 	}else if  (p.getPeople().getPower().getName()=="des salles info") {//INFO = MONTAGNE  ???
 		for(Square sq : squareTable){ // pour toutes les cases
 			 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-				if (sq.getUnitList().get(0).getPeople()==p.getPeople() && sq.getType()==6)  //LES CHAMPS ?
+				if (sq.getPeopleOfUnit()==p.getPeople() && sq.getType()==6)  //LES CHAMPS ?
 					nbpt=nbpt+1;
 			 }
 		}
 	}else if  (p.getPeople().getPower().getName()=="des lieux de vie") {//LIEU DE VIE = PLAINE???
 		for(Square sq : squareTable){ // pour toutes les cases
 			 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-				if (sq.getUnitList().get(0).getPeople()==p.getPeople() && sq.getType()==4)  
+				if (sq.getPeopleOfUnit()==p.getPeople() && sq.getType()==4)  
 					nbpt=nbpt+1;
 			 }
 		}
 	}else if  (p.getPeople().getPower().getName()=="en double filière" || p.getPeople().getPower().getName()=="du père 200") {
 		for(Square sq : squareTable){ // pour toutes les cases
 			 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-				if (sq.getUnitList().get(0).getPeople()==p.getPeople() )  
+				if (sq.getPeopleOfUnit()==p.getPeople() )  
 					nbpt=nbpt+1;
 			 }
 		}
@@ -172,7 +172,7 @@ public class Board { //OK
 	if (p.getDeclinePpl().getName()=="Administratif"){ 
 		for(Square sq : squareTable){ // pour toutes les cases
 			 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-				if (sq.getUnitList().get(0).getPeople()==p.getDeclinePpl()) 
+				if (sq.getPeopleOfUnit()==p.getDeclinePpl()) 
 					 nbpt=nbpt+1;
 			 }
 		}
@@ -183,18 +183,6 @@ public class Board { //OK
 	
 	return nbpt;
   }
-
-
-/*else if (p.getDeclinePpl().getName()=="Administratif"){
-	for(Square sq : squareTable){ // pour toutes les cases
-		 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-			if (sq.getUnitList().get(0).getPeople()==p.getDeclinePpl()) 
-				 nbpt=nbpt+2;
-			if(sq.getUnitList().get(0).getPeople()==p.getPeople())
-				 nbpt=nbpt+1;
-		 }
-	}
-}/*
 
 
 	/*

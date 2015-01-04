@@ -77,7 +77,7 @@ public void setAdjacency(Vector<Integer> adjacency) {
 	this.adjacency = adjacency;
 }  
   
-  	public Player getOwner() {
+  public Player getOwner() {
 	return owner;
 }
 
@@ -94,6 +94,28 @@ public int def(){
 		def+=unitList.get(i).getDef();
 	}
 	return def;
+}
+
+//compte le nb d'unités appartenant à un joueur
+public int countPplUnit(){
+	int i=0;
+	for(Unit u : this.unitList){
+		if (u instanceof PplUnit)
+			i=i+1;
+	}
+	return i;
+}
+
+//récupère le peuple sur la case
+public People getPeopleOfUnit(){
+	int i = countPplUnit();
+	if (i!=0){
+		for(Unit u : this.unitList){
+			if (u instanceof PplUnit)
+				return ((PplUnit) u).getPeople();
+		}
+	}
+	return null;
 }
 
 }
