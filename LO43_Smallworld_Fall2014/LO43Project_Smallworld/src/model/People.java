@@ -34,6 +34,7 @@ public class People {//OK
   		gold = 0;
   		power = null;
   		state = state.draw;
+  		
   	}
   	
   	
@@ -60,6 +61,10 @@ public class People {//OK
 
 	public void setPower(Power power) {
 		this.power = power;
+		this.realMax = power.getMaxPawn() + this.maxPawn;
+		for (int i=0; i<realMax; i++){
+			this.pplUnitList.add(new PplUnit());
+		}
 	}
 	
 	public void setState(State st){

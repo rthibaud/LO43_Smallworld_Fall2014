@@ -24,11 +24,6 @@ private Application app;
 			/*****!!!****/
 			app.board.conquer(app.turn.getPlayers().get(app.turn.getActive()),3,false); //DEBUG
 			/*****!!!****/
-		}else if(source.getName()=="fbt1"){ //1st conquest -> normalement ce cas est inclus dans la methode conquer
-			/*****!!!****/
-			app.board.conquer(app.turn.getPlayers().get(app.turn.getActive()),3,true); //DEBUG
-			/*****!!!****/
-			
 		}else if (source.getName()=="bt2"){//deploy
 			app.actions.pan1.conquerbt.setVisible(false);
 			app.actions.pan1.deploybt.setEnabled(false);getClass();
@@ -41,7 +36,6 @@ private Application app;
 			app.turn.nextPlayer();
 			app.lockButtons(true);
 			app.actions.pan1.conquerbt.setText("Conquer");
-			app.actions.pan1.conquerbt.setName("bt1");
 			app.actions.pan1.conquerbt.setVisible(true);
 			app.actions.pan1.deploybt.setEnabled(true);
 			app.replaceAvailable();
