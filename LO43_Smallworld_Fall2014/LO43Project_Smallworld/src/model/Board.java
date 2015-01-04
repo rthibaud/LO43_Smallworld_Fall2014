@@ -171,13 +171,6 @@ public class Board { //OK
 					nbpt=nbpt+1;
 			 }
 		}
-	}else if  (p.getPeople().getPower().getName()=="en double filière" || p.getPeople().getPower().getName()=="du père 200") {
-		for(Square sq : squareTable){ // pour toutes les cases
-			 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
-				if (sq.getPeopleOfUnit()==p.getPeople() )  
-					nbpt=nbpt+1;
-			 }
-		}
 	}
 	
 	if (p.getDeclinePpl().getName()=="Administratif"){ 

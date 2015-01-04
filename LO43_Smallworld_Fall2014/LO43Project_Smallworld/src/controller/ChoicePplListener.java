@@ -1,11 +1,9 @@
 package controller;
 
-import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JComponent;
 
 import model.Application;
 
@@ -24,8 +22,6 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=0){
 					app.draw.drawAvailable(0, app.turn.getPlayers().get(app.turn.getActive()));
-					app.actions.pan1.conquerbt.setText("First Conquest");
-					app.actions.pan1.conquerbt.setName("fbt1");
 					app.replaceAvailable();
 					app.lockButtons(false);
 				}else
@@ -37,8 +33,6 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=1){
 					app.draw.drawAvailable(1, app.turn.getPlayers().get(app.turn.getActive()));
-					app.actions.pan1.conquerbt.setText("First Conquest");
-					app.actions.pan1.conquerbt.setName("fbt1");
 					app.replaceAvailable();
 					app.lockButtons(false);
 				}else
@@ -50,8 +44,6 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=2){
 					app.draw.drawAvailable(2, app.turn.getPlayers().get(app.turn.getActive()));
-					app.actions.pan1.conquerbt.setText("First Conquest");
-					app.actions.pan1.conquerbt.setName("fbt1");
 					app.replaceAvailable();
 					app.lockButtons(false);
 				}else
@@ -64,8 +56,6 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=3){
 					app.draw.drawAvailable(3, app.turn.getPlayers().get(app.turn.getActive()));
-					app.actions.pan1.conquerbt.setText("First Conquest");
-					app.actions.pan1.conquerbt.setName("fbt1");
 					app.replaceAvailable();
 					app.lockButtons(false);
 				}else
@@ -77,8 +67,6 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=4){
 					app.draw.drawAvailable(4, app.turn.getPlayers().get(app.turn.getActive()));
-					app.actions.pan1.conquerbt.setText("First Conquest");
-					app.actions.pan1.conquerbt.setName("fbt1");
 					app.replaceAvailable();
 					app.lockButtons(false);
 				}else
@@ -90,8 +78,6 @@ public class ChoicePplListener implements ActionListener {
 			if (app.turn.getPlayers().get(app.turn.getActive()).canDraw()){
 				if (app.turn.getPlayers().get(app.turn.getActive()).getGold()>=5){
 					app.draw.drawAvailable(5, app.turn.getPlayers().get(app.turn.getActive()));
-					app.actions.pan1.conquerbt.setText("First Conquest");
-					app.actions.pan1.conquerbt.setName("fbt1");
 					app.replaceAvailable();
 					app.lockButtons(false);
 				}else
