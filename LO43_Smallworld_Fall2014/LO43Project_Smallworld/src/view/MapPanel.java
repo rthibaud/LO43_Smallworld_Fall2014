@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.GridLayout;
 import java.awt.Image;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -171,6 +172,26 @@ public class MapPanel extends JPanel{
 					case 2:board.get(position).setBorder(greyraisebevelBorder);break;
 					case 3:board.get(position).setBorder(greymatteBorder);break;
 					}break;
+		}
+	}
+	
+	public ArrayList<Integer> getType()
+	{
+		return typeOfArea;
+	}
+	
+	public ArrayList<Integer> getAttribute()
+	{
+		return attribute;
+	}
+	
+	public void addMouseListener(MouseListener m)
+	{
+		int i;
+		
+		for (i=0;i<nbCases;i++)
+		{
+			board.get(i).addMouseListener(m);
 		}
 	}
 }
