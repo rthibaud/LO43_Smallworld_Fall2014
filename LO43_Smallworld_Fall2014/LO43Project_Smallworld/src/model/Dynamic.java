@@ -4,12 +4,17 @@ public class Dynamic extends Unit { //OK
 
 	//attribute
 	
-    private Player owner;
+    protected Player owner;
 
     //constructors
     
-  public Dynamic(int atk, int def) {
+  public Dynamic(){
 	  super();
+	  owner = null;
+  }
+    
+  public Dynamic(int atk, int def) {
+	  super(atk,def);
 	  owner = null;
   }
   

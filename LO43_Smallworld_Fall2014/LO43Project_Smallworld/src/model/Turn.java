@@ -48,9 +48,27 @@ public class Turn { //OK
 	  players = new Vector <Player>();
   }
   
+  
+  
   	// method
 
-  public void nextPlayer() {
+  public int getNumber() {
+	return number;
+}
+
+public void setNumber(int number) {
+	this.number = number;
+}
+
+public int getMaxNumber() {
+	return maxNumber;
+}
+
+public void setMaxNumber(int maxNumber) {
+	this.maxNumber = maxNumber;
+}
+
+public void nextPlayer() {
 	  if (activePlayer == players.size()-1){
 		  activePlayer = 0 ;
 		  number=number+1;
@@ -58,8 +76,11 @@ public class Turn { //OK
 		  activePlayer=activePlayer+1;
   }
 
-  public void nextTurn() {
+  public void nextTurn() { // inutile finalement, on utilise nextPlayer
 	  	number=number+1;
+	  	if(number>maxNumber){
+	  		//Compte des points et gestion du vainqueur
+	  	}
   }
   
   public void addPlayer(String nom, int nb){
@@ -83,6 +104,18 @@ public Vector<Player> getPlayers() {
 
 public int getActive(){
 	return activePlayer;
+}
+
+public void determineVictory() {
+	
+	Player winner = players.get(0);
+	for(Player test : players){
+		if(test.getGold()>winner.getGold()){
+			winner = test;
+		}
+	}
+	System.out.println("The winner is "+winner.getName()+" with "+winner.getGold()+" UV !"); // a mettre dans une fenetre
+	System.out.println("BRAVO !");
 }
 
 }

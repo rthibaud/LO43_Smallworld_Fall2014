@@ -6,7 +6,7 @@ public class PplUnit extends Dynamic { //OK
     private People people;
 
     public PplUnit(){
-    	super(0,0);
+    	super();
     	people = null;
     }
     

@@ -118,4 +118,18 @@ public People getPeopleOfUnit(){
 	return null;
 }
 
+public Unit removeNextPplUnit() {
+	
+	Unit u = null;
+	for(Unit unit : unitList){
+		if(unit instanceof PplUnit){
+			u = unit;
+			unitList.remove(unit);
+			return u;
+		}
+	}
+	
+	return u;
+}
+
 }

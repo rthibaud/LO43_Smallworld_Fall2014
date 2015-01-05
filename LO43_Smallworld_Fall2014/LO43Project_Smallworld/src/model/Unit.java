@@ -3,9 +3,9 @@ package model;
 public class Unit {//OK
 
 	//attribute
-  private int def;
+  protected int def;
 
-  private int atk;
+  protected int atk;
 
   	//constructors
   public Unit() {
@@ -14,7 +14,7 @@ public class Unit {//OK
   }
 
   
-	public Unit(int def, int atk) {
+	public Unit(int atk, int def) {
 		this.def = def;
 		this.atk = atk;
 	}

@@ -105,13 +105,20 @@ public class Board { //OK
 					  for(Unit u : sq.getUnitList()){
 						  if (j<i+1){
 						  if (u instanceof PplUnit){
+							  p.getPeople().getPplUnitList().add((PplUnit)u); //cast to PplUnit a vérifier
 							  sq.getUnitList().remove(u);
 							  j++;
 						  }	  
 						  }
 					  }
 				  }
+<<<<<<< HEAD
+
+				  p.getPeople().addPawnPlayed(-i+1);
+
+=======
 				  p.getPeople().setPawnPlayed(p.getPeople().getPawnPlayed()-i+1);
+>>>>>>> origin/master
 				  p.getPeople().addStock(i-1);
 			  }
 		  }
@@ -200,10 +207,9 @@ public class Board { //OK
 	 * if possible place def+2 pawns
 	 * 
 	 */
-	public void conquer(Player activePlayer,int choice,boolean lastConquest) {
+	public void conquer(Player activePlayer,/*int choice,*/boolean lastConquest) {
 	  
 	  HashSet <Integer>  possible = new HashSet<Integer>();
-	  PplUnit unit = new PplUnit(1,1,activePlayer.getPeople()); //PB HERE
 	  int dice = 0, def=0; //def pas forcement utile une fois intégré à l'interface
 	  
 	  if(activePlayer.getPeople().getPawnPlayed()==0){
@@ -214,6 +220,14 @@ public class Board { //OK
 				  possible.addAll(squareTable.get(i).getAdjacency());  
 			  }
 		  }
+		  possible.remove(0);
+		  /*for(Integer i : possible){
+			  if(squareTable.get(i).getOwner()!=null){
+				  if(squareTable.get(i).getOwner().getPeople()==activePlayer.getPeople()){
+					  possible.remove(i);
+				  }
+			  }
+		  }  on doit utiliser les iterateurs*/ 
 	  }
 	  
 	  //choosing section
@@ -222,7 +236,8 @@ public class Board { //OK
 		  System.out.print(possible);
 	//  }
 	  System.out.println();
-	  //A demander l'utilisateur, pour le moment je le rentre en parametre : choice
+	  Scanner sc = new Scanner(System.in);
+	  int choice = sc.nextInt();
 	  
 	  def=squareTable.get(choice).def();
 	  if(lastConquest){
@@ -234,24 +249,31 @@ public class Board { //OK
 	  if(activePlayer.getPeople().getStock()+dice>=def+2){
 		  //Warning ! should be modify to include power 
 		  if(squareTable.get(choice).getOwner()!=null){  
-			  System.out.println("pawn"+squareTable.get(choice).getOwner().getPeople().getPawnPlayed());
-			  System.out.println("size"+-squareTable.get(choice).getUnitList().size());
+			  System.out.println("pawn : "+squareTable.get(choice).getOwner().getPeople().getPawnPlayed());
+			  System.out.println("size : "+-squareTable.get(choice).getUnitList().size());
 			  squareTable.get(choice).getOwner().getPeople().addPawnPlayed(-squareTable.get(choice).getUnitList().size());
 			  squareTable.get(choice).getOwner().getPeople().addStock(+1);
-			  System.out.println(squareTable.get(choice).getOwner().getPeople().getStock());
+			  squareTable.get(choice).getOwner().getPeople().getPplUnitList().add((PplUnit) squareTable.get(choice).removeNextPplUnit());
+			  System.out.println("stock : "+squareTable.get(choice).getOwner().getPeople().getStock());
 		  }
 		  squareTable.get(choice).getUnitList().clear();
 		 	 
 		  System.out.println("def :"+def);
-		  for(int i=dice;i<def+2;i++){
-			  squareTable.get(choice).getUnitList().add(unit);
+		  if(dice>=def+2){
+			  dice=def+1;
+		  }
+		  for(int i=0;i<def+2-dice;i++){
+			  squareTable.get(choice).getUnitList().add(activePlayer.getPeople().getPplUnitList().remove(0));
 			  activePlayer.getPeople().addStock(-1);
 			  activePlayer.getPeople().addPawnPlayed(+1);
 			  System.out.println("stock : "+activePlayer.getPeople().getStock()+" PP : "+activePlayer.getPeople().getPawnPlayed());
 		  }
+		  squareTable.get(choice).setOwner(activePlayer);
 		  System.out.println( squareTable.get(choice).getUnitList());
 	  }
 	}
+
+				  
 	
 	public void deploy(Player p, int choiceSq, int choiceNb) {
 		HashSet <Integer>  possible = new HashSet<Integer>();

@@ -23,7 +23,7 @@ public class People {//OK
   
   private Vector<PplUnit> pplUnitList;
   
-  //getters and setters
+  // Constructors
   
   	public People(String name, int nb){
   		this.name = name;
@@ -38,8 +38,36 @@ public class People {//OK
   		
   	}
   	
+  	public People() {
+  	  name="";
+  	  maxPawn=0;
+  	  realMax=0;
+  	  pawnPlayed=0;
+  	  gold=0;
+  	  power=null;
+  	  state=State.draw;
+  	  pplUnitList = new Vector<PplUnit>();
+  	  
+    }
+    
+    public People(String name, int max, Power pow) {
+  	  this.name=name;
+  	  pawnPlayed=0;
+  	  gold=0;
+  	  power=pow;
+  	  state=State.draw;
+  	  maxPawn=max;
+  	  realMax = max+pow.getMaxPawn();
+  	  for (int i=0; i<realMax; i++){
+  		  this.pplUnitList.add(new PplUnit(1,1,this));
+  	  }
   	
-  
+  	  //for()
+  	  //this.pplUnitList
+    }
+  	
+    //getters and setters
+    
     public int getStock() {
 		return stock;
 	}
@@ -81,6 +109,18 @@ public class People {//OK
 	public void setState(State st){
 		state = st;
 	}
+<<<<<<< HEAD
+
+
+  public Vector<PplUnit> getPplUnitList() {
+		return pplUnitList;
+	}
+
+	public void setPplUnitList(Vector<PplUnit> pplUnitList) {
+		this.pplUnitList = pplUnitList;
+	}
+
+=======
 	
   	//method
 
@@ -109,6 +149,7 @@ public class People {//OK
 		pplUnitList = new Vector <PplUnit> ();
 	
   }
+>>>>>>> origin/master
 
   public String getName() {
 	return name;
@@ -134,17 +175,24 @@ public class People {//OK
 	  stock+=nb;
   }
   
+<<<<<<< HEAD
+=======
   public Vector <PplUnit> getPplUnitList(){
 	  return this.pplUnitList;
   }
   
+>>>>>>> origin/master
   
 //initialize a people that was already used
   public void init(){
 	  this.gold=0;
 	  this.power=null;
 	  this.pawnPlayed=0;
+	  this.stock=0;
 	  state=State.draw;
+	  this.realMax=0;
+	  this.pplUnitList.clear();
   }
+  
 
 }

@@ -21,7 +21,8 @@ private Application app;
 		if(source.getName()=="bt1"){ //normal conquest
 			app.lockButtons(false);
 			/*****!!!****/
-			app.board.conquer(app.turn.getPlayers().get(app.turn.getActive()),3,false); //DEBUG
+			app.board.putUnitsAway(app.turn.getPlayers().get(app.turn.getActive()));
+			app.board.conquer(app.turn.getPlayers().get(app.turn.getActive()),false); //DEBUG
 			/*****!!!****/
 
 		}else if (source.getName()=="bt2"){//deploy
@@ -33,12 +34,21 @@ private Application app;
 			//mtn faut aussi les replacer
 			
 		}else if (source.getName()=="bt3"){ //finish turn
-			app.turn.getPlayers().get(app.turn.getActive()).addGold(app.board.countPoints(app.turn.getPlayers().get(app.turn.getActive())));
+		//	app.turn.getPlayers().get(app.turn.getActive()).addGold(app.board.countPoints(app.turn.getPlayers().get(app.turn.getActive())));
 			app.turn.nextPlayer();
+			if(app.turn.getNumber()>app.turn.getMaxNumber()){
+				app.turn.determineVictory();//décompte des points
+			}
 			app.lockButtons(true);
+<<<<<<< HEAD
+			app.actions.pan1.conquerbt.setText("Conquer");
+			app.actions.pan1.conquerbt.setVisible(true);
+			app.actions.pan1.deploybt.setEnabled(true);
+=======
 			app.actions.action.pan1.conquerbt.setText("Conquer");
 			app.actions.action.pan1.conquerbt.setVisible(true);
 			app.actions.action.pan1.deploybt.setEnabled(true);
+>>>>>>> origin/master
 			app.replaceAvailable();			
 		}
 	}

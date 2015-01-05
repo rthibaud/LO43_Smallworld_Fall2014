@@ -43,15 +43,15 @@ public class Application {
 	
 	public void createNewActionsWindow() {
 		actions = new Window(turn, draw);	
-		actions.addListeners(new ActionChoiceListener(this), new ChoicePplListener(this));
+		//actions.addListeners(new ActionChoiceListener(this), new ChoicePplListener(this));
 	}
 
 	public void replaceAvailable() {
-		actions.actualise(draw, turn);	
+		//actions.actualise(draw, turn);	
 	}
 	
 	public void choiceErrorMess(int i) {
-		actions.choiceErrMsg(i);
+		//actions.choiceErrMsg(i);
 	}
 	
 	
@@ -61,7 +61,7 @@ public class Application {
 	}
 
 	public void lockButtons(boolean bool) {
-		actions.lockbt(bool);	
+		//actions.lockbt(bool);	
 	}
 	
 
