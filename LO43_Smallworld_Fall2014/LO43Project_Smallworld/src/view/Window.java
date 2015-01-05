@@ -1,14 +1,11 @@
 package view;
 
 import javax.swing.JFrame;
-<<<<<<< HEAD
-=======
 
 import model.Draw;
 import model.Player;
 import model.Turn;
 
->>>>>>> origin/master
 import java.awt.BorderLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;

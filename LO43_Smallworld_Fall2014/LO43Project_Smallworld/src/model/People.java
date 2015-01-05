@@ -109,7 +109,6 @@ public class People {//OK
 	public void setState(State st){
 		state = st;
 	}
-<<<<<<< HEAD
 
 
   public Vector<PplUnit> getPplUnitList() {
@@ -119,37 +118,8 @@ public class People {//OK
 	public void setPplUnitList(Vector<PplUnit> pplUnitList) {
 		this.pplUnitList = pplUnitList;
 	}
-
-=======
 	
   	//method
-
-  public People() {
-	  name="";
-	  maxPawn=0;
-	  realMax=0;
-	  pawnPlayed=0;
-	  gold=0;
-	  power=null;
-	  state=State.draw;
-
-		pplUnitList = new Vector <PplUnit> ();
-	  
-  }
-  
-  public People(String name, int max, Power pow) {
-	  this.name=name;
-	  pawnPlayed=0;
-	  gold=0;
-	  power=pow;
-	  state=State.draw;
-	  maxPawn=max;
-	  realMax = max+pow.getMaxPawn();
-
-		pplUnitList = new Vector <PplUnit> ();
-	
-  }
->>>>>>> origin/master
 
   public String getName() {
 	return name;
@@ -175,13 +145,6 @@ public class People {//OK
 	  stock+=nb;
   }
   
-<<<<<<< HEAD
-=======
-  public Vector <PplUnit> getPplUnitList(){
-	  return this.pplUnitList;
-  }
-  
->>>>>>> origin/master
   
 //initialize a people that was already used
   public void init(){

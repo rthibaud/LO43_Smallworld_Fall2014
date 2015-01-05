@@ -40,15 +40,9 @@ private Application app;
 				app.turn.determineVictory();//décompte des points
 			}
 			app.lockButtons(true);
-<<<<<<< HEAD
-			app.actions.pan1.conquerbt.setText("Conquer");
-			app.actions.pan1.conquerbt.setVisible(true);
-			app.actions.pan1.deploybt.setEnabled(true);
-=======
 			app.actions.action.pan1.conquerbt.setText("Conquer");
 			app.actions.action.pan1.conquerbt.setVisible(true);
 			app.actions.action.pan1.deploybt.setEnabled(true);
->>>>>>> origin/master
 			app.replaceAvailable();			
 		}
 	}

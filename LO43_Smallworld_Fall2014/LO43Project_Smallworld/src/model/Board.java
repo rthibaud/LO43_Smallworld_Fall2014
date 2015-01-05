@@ -112,13 +112,7 @@ public class Board { //OK
 						  }
 					  }
 				  }
-<<<<<<< HEAD
-
 				  p.getPeople().addPawnPlayed(-i+1);
-
-=======
-				  p.getPeople().setPawnPlayed(p.getPeople().getPawnPlayed()-i+1);
->>>>>>> origin/master
 				  p.getPeople().addStock(i-1);
 			  }
 		  }
