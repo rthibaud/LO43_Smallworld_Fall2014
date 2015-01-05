@@ -24,13 +24,13 @@ public class InfoPanel extends JPanel {
 		nbTurnprint = new JLabel(" " +nbTurn);
 		add(nbTurnprint);
 		
-		JLabel lblNewLabel_2 = new JLabel("Possibilité de passer en déclin");
+		JLabel lblNewLabel_2 = new JLabel("Possibilite de passer en declin");
 		add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Phase d'expansion");
 		add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("Redéploiement des unités");
+		JLabel lblNewLabel_4 = new JLabel("Redeploiement des unites");
 		add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("Fin du tour");

@@ -199,7 +199,7 @@ public class Board { //OK
 	public void conquer(Player activePlayer,int choice,boolean lastConquest) {
 	  
 	  HashSet <Integer>  possible = new HashSet<Integer>();
-	  PplUnit unit = new PplUnit(1,1,activePlayer.getPeople()); 
+	  PplUnit unit = new PplUnit(1,1,activePlayer.getPeople()); //PB HERE
 	  int dice = 0, def=0; //def pas forcement utile une fois intégré à l'interface
 	  
 	  if(activePlayer.getPeople().getPawnPlayed()==0){
@@ -223,20 +223,29 @@ public class Board { //OK
 	  def=squareTable.get(choice).def();
 	  if(lastConquest){
 		  dice = dice();
+		  System.out.println("dice = "+dice);
 	  }else{
 		  dice = 0;
 	  }
 	  if(activePlayer.getPeople().getStock()+dice>=def+2){
 		  //Warning ! should be modify to include power 
-			  squareTable.get(choice).getOwner().getPeople().addPawnPlayed(-squareTable.get(choice).getUnitList().size());// error here(null pointer exception
+		  if(squareTable.get(choice).getOwner()!=null){  
+			  System.out.println("pawn"+squareTable.get(choice).getOwner().getPeople().getPawnPlayed());
+			  System.out.println("size"+-squareTable.get(choice).getUnitList().size());
+			  squareTable.get(choice).getOwner().getPeople().addPawnPlayed(-squareTable.get(choice).getUnitList().size());
 			  squareTable.get(choice).getOwner().getPeople().addStock(+1);
-			  squareTable.get(choice).getUnitList().clear();
-			  
-			  for(int i=dice;i<def+2;i++){
-				  squareTable.get(choice).getUnitList().add(unit);
-				  activePlayer.getPeople().addStock(-1);
-				  activePlayer.getPeople().addPawnPlayed(+1);
-			  }
+			  System.out.println(squareTable.get(choice).getOwner().getPeople().getStock());
+		  }
+		  squareTable.get(choice).getUnitList().clear();
+		 	 
+		  System.out.println("def :"+def);
+		  for(int i=dice;i<def+2;i++){
+			  squareTable.get(choice).getUnitList().add(unit);
+			  activePlayer.getPeople().addStock(-1);
+			  activePlayer.getPeople().addPawnPlayed(+1);
+			  System.out.println("stock : "+activePlayer.getPeople().getStock()+" PP : "+activePlayer.getPeople().getPawnPlayed());
+		  }
+		  System.out.println( squareTable.get(choice).getUnitList());
 	  }
 	}
 	

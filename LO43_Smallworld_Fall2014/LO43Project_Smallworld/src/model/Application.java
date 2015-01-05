@@ -1,8 +1,5 @@
 package model;
 
-import java.awt.Image;
-
-import javax.swing.JFrame;
 
 import view.*;
 import controller.*;
