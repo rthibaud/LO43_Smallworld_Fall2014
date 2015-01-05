@@ -29,7 +29,7 @@ private Application app;
 			app.actions.pan1.deploybt.setEnabled(false);getClass();
 			app.lockButtons(false);
 			app.board.putUnitsAway(app.turn.getPlayers().get(app.turn.getActive()));
-			app.board.deploy(app.turn.getPlayers().get(app.turn.getActive()));
+			app.board.deploy(app.turn.getPlayers().get(app.turn.getActive()), 3, 1);
 			//mtn faut aussi les replacer
 			
 		}else if (source.getName()=="bt3"){ //finish turn

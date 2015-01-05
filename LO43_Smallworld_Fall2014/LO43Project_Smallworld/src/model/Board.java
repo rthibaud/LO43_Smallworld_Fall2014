@@ -253,7 +253,7 @@ public class Board { //OK
 	  }
 	}
 	
-	public void deploy(Player p) {
+	public void deploy(Player p, int choiceSq, int choiceNb) {
 		HashSet <Integer>  possible = new HashSet<Integer>();
 		for(Square sq : this.squareTable){
 			if (sq.getPeopleOfUnit()==p.getPeople()){
@@ -261,22 +261,11 @@ public class Board { //OK
 			}
 		}
 		
-		String str="1";
-		
-		while (str=="1"){
 		 System.out.println("Choose a square from this list :");
 		  for(int i=0;i<possible.size();i++){
 			  System.out.print(possible);
 		  }
-		  System.out.println();
-		  
-		  Scanner sc = new Scanner(System.in);
-		  int choiceSq, choiceNb;
-		  choiceSq = sc.nextInt();
-		  
-		  System.out.println("How many units?");
-		  choiceNb = sc.nextInt();
-		  
+		  System.out.println();		  
 		  
 		  if (choiceNb<=p.getPeople().getStock()){
 			  int k = 0;
@@ -289,13 +278,8 @@ public class Board { //OK
 		  } else
 			  System.out.println("you don't have enough units");
 		  
-		  
-		  System.out.println("Do you want to continue? (Yes = 1)");
-		  str = sc.next();  
-		  
 		} 
-		  
-	}
+		 
 	
 	  public int dice(){
 		  Random rand = new Random();
