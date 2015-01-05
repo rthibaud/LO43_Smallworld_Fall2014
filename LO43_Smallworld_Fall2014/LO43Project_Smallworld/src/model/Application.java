@@ -10,13 +10,13 @@ public class Application {
 	public NewPlayerWindow newplay;
 	public Turn turn;
 	public Draw draw;
-	public ActionsPanel actions;
+	public Window actions;
 	public Board board;
 	
 	public Application()
 	{
-		win=new Window();
-		win.setVisible(true);
+		//win=new Window();
+		//win.setVisible(true);
 		
 		nbplay = new NbPlayersWindow();
 		nbplay.okbtAddListener(new ButtonListener(this));
@@ -42,16 +42,16 @@ public class Application {
 	}
 	
 	public void createNewActionsWindow() {
-		actions = new ActionsPanel(turn, draw);	
-		actions.addListeners(new ActionChoiceListener(this), new ChoicePplListener(this));
+		actions = new Window(turn, draw);	
+		//actions.addListeners(new ActionChoiceListener(this), new ChoicePplListener(this));
 	}
 
 	public void replaceAvailable() {
-		actions.actualise(draw, turn);	
+		//actions.actualise(draw, turn);	
 	}
 	
 	public void choiceErrorMess(int i) {
-		actions.choiceErrMsg(i);
+		//actions.choiceErrMsg(i);
 	}
 	
 	
@@ -61,7 +61,7 @@ public class Application {
 	}
 
 	public void lockButtons(boolean bool) {
-		actions.lockbt(bool);	
+		//actions.lockbt(bool);	
 	}
 	
 

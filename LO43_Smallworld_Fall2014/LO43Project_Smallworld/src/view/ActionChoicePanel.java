@@ -15,26 +15,30 @@ public class ActionChoicePanel extends JPanel {
 	
 	//attributes
 	public  JButton conquerbt, deploybt, finishbt;
-	public JLabel errorlab;
+	public JLabel errorlab, lab1, lab2;
 	
 	//constructor
 	public ActionChoicePanel(Turn turn){
 		
-	    this.setSize(350, 600);
+	    this.setSize(250, 600);
 	    this.setVisible(true); 
 	    
-	    this.setLayout(new GridLayout(4,1)); 
+	    this.setLayout(new GridLayout(6, 1)); 
 	    
 	    //creates the elements 
 	    conquerbt = new JButton("Conquer");
 	    deploybt = new JButton("Deploy");
 	    errorlab = new JLabel();
 	    finishbt = new JButton("Finish turn");
+	    lab1 =new JLabel("");
+	    lab2 = new JLabel("");
 	    
 	    //options on the elements
 	    errorlab.setForeground(Color.red);
 	    
 	    //add elements to this
+	    this.add(lab1);
+	    this.add(lab2);
 	    this.add(conquerbt);
 	    this.add(deploybt);
 	    this.add(errorlab);

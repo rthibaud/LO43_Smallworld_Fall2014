@@ -11,24 +11,24 @@ import javax.swing.JPanel;
 import model.Draw;
 import model.Turn;
 
-public class ActionsPanel extends JFrame {
+public class ActionsPanel extends JPanel {
 	public ActionChoicePanel pan1;
 	public ChoicePpl pan2;
 	
 	
 	public ActionsPanel(Turn turn, Draw draw){
-		this.setTitle("Game");		
+		//this.setTitle("Game");		
 		Toolkit toolkit = getToolkit();
 		Dimension screenDim = toolkit.getScreenSize(); //gets the screen's resolution
-		this.setBounds(screenDim.width/2-175,screenDim.height/2-125,700,600); //creates the window in the middle of the screen
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setLocationRelativeTo(null);
-		this.setResizable(false);
+		this.setBounds(screenDim.width/2-175,screenDim.height/2-125,500,600); //creates the window in the middle of the screen
+		//this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//this.setLocationRelativeTo(null);
+		//this.setResizable(false);
 		this.setVisible(true);
 		
 		//creates the container
 		final JPanel container = new JPanel();
-		this.setContentPane(container);
+		//this.setContentPane(container);
 		
 		//creates the elements 
 		pan1 = new ActionChoicePanel(turn);
@@ -37,8 +37,8 @@ public class ActionsPanel extends JFrame {
 		container.setLayout(new GridLayout(1,2));
 		
 		//adds the elements
-		container.add(pan1);
-		container.add(pan2);
+		this.add(pan1);
+		this.add(pan2);
 	}	
 	
 	public void addListeners(ActionListener a, ActionListener b){

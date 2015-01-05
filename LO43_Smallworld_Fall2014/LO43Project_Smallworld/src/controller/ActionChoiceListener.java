@@ -25,8 +25,8 @@ private Application app;
 			/*****!!!****/
 
 		}else if (source.getName()=="bt2"){//deploy
-			app.actions.pan1.conquerbt.setVisible(false);
-			app.actions.pan1.deploybt.setEnabled(false);getClass();
+			app.actions.action.pan1.conquerbt.setVisible(false);
+			app.actions.action.pan1.deploybt.setEnabled(false);getClass();
 			app.lockButtons(false);
 			app.board.putUnitsAway(app.turn.getPlayers().get(app.turn.getActive()));
 			app.board.deploy(app.turn.getPlayers().get(app.turn.getActive()), 3, 1);
@@ -36,9 +36,9 @@ private Application app;
 			app.turn.getPlayers().get(app.turn.getActive()).addGold(app.board.countPoints(app.turn.getPlayers().get(app.turn.getActive())));
 			app.turn.nextPlayer();
 			app.lockButtons(true);
-			app.actions.pan1.conquerbt.setText("Conquer");
-			app.actions.pan1.conquerbt.setVisible(true);
-			app.actions.pan1.deploybt.setEnabled(true);
+			app.actions.action.pan1.conquerbt.setText("Conquer");
+			app.actions.action.pan1.conquerbt.setVisible(true);
+			app.actions.action.pan1.deploybt.setEnabled(true);
 			app.replaceAvailable();			
 		}
 	}

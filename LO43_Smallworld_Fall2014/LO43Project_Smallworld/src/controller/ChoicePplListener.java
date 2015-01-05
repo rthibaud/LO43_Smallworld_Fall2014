@@ -98,7 +98,7 @@ public class ChoicePplListener implements ActionListener {
 				app.turn.getPlayers().get(app.turn.getActive()).putPplDecline();
 				app.replaceAvailable();
 				app.lockButtons(false);
-				app.actions.pan1.finishbt.setVisible(true);
+				app.actions.action.pan1.finishbt.setVisible(true);
 			}
 			
 		}
