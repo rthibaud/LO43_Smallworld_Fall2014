@@ -101,14 +101,18 @@ public class Board { //OK
 			  if (sq.getPeopleOfUnit()==p.getPeople()){
 				  i = sq.countPplUnit();
 				  int j =0;
-				  while (j <i-1){
+				  if (i!=1){
 					  for(Unit u : sq.getUnitList()){
+						  if (j<i+1){
 						  if (u instanceof PplUnit){
 							  sq.getUnitList().remove(u);
+							  j++;
 						  }	  
+						  }
 					  }
 				  }
 				  p.getPeople().setPawnPlayed(p.getPeople().getPawnPlayed()-i+1);
+				  p.getPeople().addStock(i-1);
 			  }
 		  }
 	  }
@@ -257,9 +261,9 @@ public class Board { //OK
 			}
 		}
 		
-		String str="0";
+		String str="1";
 		
-		while (str!="N"){
+		while (str=="1"){
 		 System.out.println("Choose a square from this list :");
 		  for(int i=0;i<possible.size();i++){
 			  System.out.print(possible);
@@ -271,11 +275,24 @@ public class Board { //OK
 		  choiceSq = sc.nextInt();
 		  
 		  System.out.println("How many units?");
-		  System.out.println();
 		  choiceNb = sc.nextInt();
 		  
-		  System.out.println("Do you want to continue? (No = N)");
+		  
+		  if (choiceNb<=p.getPeople().getStock()){
+			  int k = 0;
+			  while(k<choiceNb){
+				  squareTable.get(choiceSq).getUnitList().add(p.getPeople().getPplUnitList().get(0));
+				  p.getPeople().addPawnPlayed(1);
+				  p.getPeople().addStock(-1);
+				  k++;
+			  }
+		  } else
+			  System.out.println("you don't have enough units");
+		  
+		  
+		  System.out.println("Do you want to continue? (Yes = 1)");
 		  str = sc.next();  
+		  
 		} 
 		  
 	}

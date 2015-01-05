@@ -119,17 +119,17 @@ public class MapPanel extends JPanel{
 		
 		switch(type)
 		{
-		case 0: ImageIcon background = new ImageIcon(new ImageIcon("./LO43_Smallworld_Fall2014/LO43Project_Smallworld/img/salle_info.jpg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
+		case 0: ImageIcon background = new ImageIcon(new ImageIcon("img/salle_info.jpg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
 				tmp.setIcon(background);break;
-		case 1: ImageIcon background1 = new ImageIcon(new ImageIcon("./LO43_Smallworld_Fall2014/LO43Project_Smallworld/img/atelier.jpg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
+		case 1: ImageIcon background1 = new ImageIcon(new ImageIcon("img/atelier.jpg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
 				tmp.setIcon(background1);break;
-		case 2: ImageIcon background2 = new ImageIcon(new ImageIcon("./LO43_Smallworld_Fall2014/LO43Project_Smallworld/img/entreprise.jpg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
+		case 2: ImageIcon background2 = new ImageIcon(new ImageIcon("img/entreprise.jpg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
 				tmp.setIcon(background2);break;
-		case 3: ImageIcon background3 = new ImageIcon(new ImageIcon("./LO43_Smallworld_Fall2014/LO43Project_Smallworld/img/foyer.jpeg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
+		case 3: ImageIcon background3 = new ImageIcon(new ImageIcon("img/foyer.jpeg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
 				tmp.setIcon(background3);break;
-		case 4: ImageIcon background4 = new ImageIcon(new ImageIcon("./LO43_Smallworld_Fall2014/LO43Project_Smallworld/img/amphi.jpg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
+		case 4: ImageIcon background4 = new ImageIcon(new ImageIcon("img/amphi.jpg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
 				tmp.setIcon(background4);break;
-		case 5: ImageIcon background5 = new ImageIcon(new ImageIcon("./LO43_Smallworld_Fall2014/LO43Project_Smallworld/img/gare.jpg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
+		case 5: ImageIcon background5 = new ImageIcon(new ImageIcon("img/gare.jpg").getImage().getScaledInstance(100, 120, Image.SCALE_DEFAULT));
 				tmp.setIcon(background5);break;
 		}
 	}

@@ -133,6 +133,12 @@ public class People {//OK
   public void addStock(int nb){
 	  stock+=nb;
   }
+  
+  public Vector <PplUnit> getPplUnitList(){
+	  return this.pplUnitList;
+  }
+  
+  
 //initialize a people that was already used
   public void init(){
 	  this.gold=0;
