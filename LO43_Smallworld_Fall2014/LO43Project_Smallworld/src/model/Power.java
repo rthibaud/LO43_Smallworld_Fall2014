@@ -4,8 +4,6 @@ public class Power { //OK
 
 	//attribute
   private String name;
-  
-  private int nb;
 
   private int maxPawn;
 
@@ -22,7 +20,6 @@ public class Power { //OK
 
   public Power(String name, int number, int maxPawn) {
 	this.name = name;
-	this.nb=number;
 	this.maxPawn = maxPawn;
 	this.decline = false;
   }
