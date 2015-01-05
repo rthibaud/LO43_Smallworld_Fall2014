@@ -34,6 +34,7 @@ public class People {//OK
   		gold = 0;
   		power = null;
   		state = state.draw;
+  		pplUnitList = new Vector <PplUnit> ();
   		
   	}
   	
@@ -73,7 +74,7 @@ public class People {//OK
 		this.power = power;
 		this.realMax = power.getMaxPawn() + this.maxPawn;
 		for (int i=0; i<realMax; i++){
-			this.pplUnitList.add(new PplUnit());
+			this.pplUnitList.add(new PplUnit(1,1,this));
 		}
 	}
 	
@@ -91,6 +92,8 @@ public class People {//OK
 	  gold=0;
 	  power=null;
 	  state=State.draw;
+
+		pplUnitList = new Vector <PplUnit> ();
 	  
   }
   
@@ -102,9 +105,9 @@ public class People {//OK
 	  state=State.draw;
 	  maxPawn=max;
 	  realMax = max+pow.getMaxPawn();
+
+		pplUnitList = new Vector <PplUnit> ();
 	
-	  //for()
-	  //this.pplUnitList
   }
 
   public String getName() {

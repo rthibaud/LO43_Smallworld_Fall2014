@@ -173,7 +173,7 @@ public class Board { //OK
 		}
 	}
 	
-	if (p.getDeclinePpl().getName()=="Administratif"){ 
+	if (p.getDeclinePpl()!=null && p.getDeclinePpl().getName()=="Administratif"){ 
 		for(Square sq : squareTable){ // pour toutes les cases
 			 if (!sq.getUnitList().isEmpty()){ //verifier que ce n'est pas vide
 				if (sq.getPeopleOfUnit()==p.getDeclinePpl()) 

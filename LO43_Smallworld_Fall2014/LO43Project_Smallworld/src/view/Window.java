@@ -1,7 +1,6 @@
 package view;
 
 import javax.swing.JFrame;
-import net.miginfocom.swing.MigLayout;
 import java.awt.BorderLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
