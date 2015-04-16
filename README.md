@@ -3,6 +3,8 @@ Scolar project for LO43 (UTBM) :
 
 Subject : Smallworld
 
+Language : Java
+
 Contibutors :
 -Salomé Welche
 -Romain Thibaud
